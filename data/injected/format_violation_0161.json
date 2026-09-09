@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0161",
+  "injected_failure": "format_violation",
+  "task_id": "HumanEval/160",
+  "task": "\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. Use the two given lists to build the algebric \n    expression and return the evaluation of this expression.\n\n    The basic algebra operations:\n    Addition ( + ) \n    Subtraction ( - ) \n    Multiplication ( * ) \n    Floor division ( // ) \n    Exponentiation ( ** ) \n\n    Example:\n    operator['+', '*', '-']\n    array = ",
+  "domain": "code_generation",
+  "source": "humaneval",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3932705,
+      "action": "ingest",
+      "input": "\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. Use the two given lists to build the algebric \n    expression and return the evaluation of this expression.\n\n    The bas",
+      "output": "\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. Use the two given lists to build the algebric \n    expression and return the evaluation of this expression.\n\n    The bas",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.3932714,
+      "action": "llm_call",
+      "input": "\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. Use the two given lists to build the algebric \n    expression and return the evaluation of this expression.\n\n    The bas",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.3932722,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

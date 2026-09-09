@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0392",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL0140.json",
+  "task": "I'm looking for an expensive indian restaurant.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2412803,
+      "action": "ingest",
+      "input": "I'm looking for an expensive indian restaurant.",
+      "output": "I'm looking for an expensive indian restaurant.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2412813,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2412817,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2412822,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

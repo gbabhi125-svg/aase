@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0251",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG0831.json",
+  "task": "I am looking for a moderately priced place to stay with free wifi.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4030356,
+      "action": "ingest",
+      "input": "I am looking for a moderately priced place to stay with free wifi.",
+      "output": "I am looking for a moderately priced place to stay with free wifi.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4030366,
+      "action": "llm_call",
+      "input": "I am looking for a moderately priced place to stay with free wifi.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.403037,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

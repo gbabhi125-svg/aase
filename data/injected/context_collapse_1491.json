@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1491",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL3659.json",
+  "task": "I'm interested in finding a train to peterborough on Wednesday please",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3730319,
+      "action": "ingest",
+      "input": "I'm interested in finding a train to peterborough on Wednesday please",
+      "output": "I'm interested in finding a train to peterborough on Wednesday please",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.373033,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3730335,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.373034,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

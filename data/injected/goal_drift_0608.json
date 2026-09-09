@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0608",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL1882.json",
+  "task": "i need a hotel with wifi in the north part of town",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.768157,
+      "action": "ingest",
+      "input": "i need a hotel with wifi in the north part of town",
+      "output": "i need a hotel with wifi in the north part of town",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7681577,
+      "action": "subtask_1",
+      "input": "i need a hotel with wifi in the north part of town",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7681582,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7681587,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

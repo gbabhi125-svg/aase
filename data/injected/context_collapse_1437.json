@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1437",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG02263.json",
+  "task": "I was just the victim of a robbery and I need to contact the police please!",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.366708,
+      "action": "ingest",
+      "input": "I was just the victim of a robbery and I need to contact the police please!",
+      "output": "I was just the victim of a robbery and I need to contact the police please!",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.366709,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3667095,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.36671,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0185",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01804.json",
+  "task": "I'd like a taxie from my home please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2163553,
+      "action": "ingest",
+      "input": "I'd like a taxie from my home please.",
+      "output": "I'd like a taxie from my home please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.216356,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2163565,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2163572,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

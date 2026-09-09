@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0500",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL2139.json",
+  "task": "I need to find a guesthouse in the north.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2545307,
+      "action": "ingest",
+      "input": "I need to find a guesthouse in the north.",
+      "output": "I need to find a guesthouse in the north.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2545316,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.254532,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2545326,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

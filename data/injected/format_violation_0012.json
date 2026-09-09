@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0012",
+  "injected_failure": "format_violation",
+  "task_id": "HumanEval/11",
+  "task": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n",
+  "domain": "code_generation",
+  "source": "humaneval",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3764226,
+      "action": "ingest",
+      "input": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n",
+      "output": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.3764234,
+      "action": "llm_call",
+      "input": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.376424,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

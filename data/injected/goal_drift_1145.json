@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1145",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SSNG0368.json",
+  "task": "Yes, I'm searching for a 4 star rated places to stay in town. It does not need to have any internet connection.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8285007,
+      "action": "ingest",
+      "input": "Yes, I'm searching for a 4 star rated places to stay in town. It does not need to have any internet connection.",
+      "output": "Yes, I'm searching for a 4 star rated places to stay in town. It does not need to have any internet connection.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8285017,
+      "action": "subtask_1",
+      "input": "Yes, I'm searching for a 4 star rated places to stay in town. It does not need to have any internet connection.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8285022,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8285031,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

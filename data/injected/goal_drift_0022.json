@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0022",
+  "injected_failure": "goal_drift",
+  "task_id": "HumanEval/21",
+  "task": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n",
+  "domain": "code_generation",
+  "source": "humaneval",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7022047,
+      "action": "ingest",
+      "input": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4",
+      "output": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.702206,
+      "action": "subtask_1",
+      "input": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7022064,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.702207,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

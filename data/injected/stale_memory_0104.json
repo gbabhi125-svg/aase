@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0104",
+  "injected_failure": "stale_memory",
+  "task_id": "HumanEval/103",
+  "task": "\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b11\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1111\"\n    rounded_avg(20, 33) => \"0b11010\"\n    \"\"\"\n",
+  "domain": "code_generation",
+  "source": "humaneval",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5561094,
+      "action": "memory_fetch",
+      "input": "\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n ",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5561104,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5561109,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

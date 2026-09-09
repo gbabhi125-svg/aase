@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1220",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL2330.json",
+  "task": "Find me a caribbean restaurant in the centre, please?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8368082,
+      "action": "ingest",
+      "input": "Find me a caribbean restaurant in the centre, please?",
+      "output": "Find me a caribbean restaurant in the centre, please?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.836809,
+      "action": "subtask_1",
+      "input": "Find me a caribbean restaurant in the centre, please?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8368094,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8368099,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

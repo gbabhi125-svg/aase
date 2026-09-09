@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0151",
+  "injected_failure": "hallucination",
+  "task_id": "HumanEval/150",
+  "task": "\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n",
+  "domain": "code_generation",
+  "source": "humaneval",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.634733,
+      "action": "ingest",
+      "input": "\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n",
+      "output": "\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6347342,
+      "action": "tool_call",
+      "input": "\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6347346,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.634735,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

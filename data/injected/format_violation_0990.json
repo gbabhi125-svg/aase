@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0990",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL0491.json",
+  "task": "Hi, I was wondering if there were any swimming pools in the centre of town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4848192,
+      "action": "ingest",
+      "input": "Hi, I was wondering if there were any swimming pools in the centre of town?",
+      "output": "Hi, I was wondering if there were any swimming pools in the centre of town?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4848201,
+      "action": "llm_call",
+      "input": "Hi, I was wondering if there were any swimming pools in the centre of town?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4848208,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

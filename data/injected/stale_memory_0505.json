@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0505",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_SNG0214.json",
+  "task": "I am trying to find a hospital that has a transplant high dependency unit.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5969641,
+      "action": "memory_fetch",
+      "input": "I am trying to find a hospital that has a transplant high dependency unit.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5969648,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5969656,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

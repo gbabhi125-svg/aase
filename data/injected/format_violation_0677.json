@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0677",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL0276.json",
+  "task": "I am looking for an expensive place to eat.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4499245,
+      "action": "ingest",
+      "input": "I am looking for an expensive place to eat.",
+      "output": "I am looking for an expensive place to eat.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4499254,
+      "action": "llm_call",
+      "input": "I am looking for an expensive place to eat.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.449926,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

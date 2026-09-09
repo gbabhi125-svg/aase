@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_1017",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_PMUL3851.json",
+  "task": "Is there a place in the centre that serves asian oriental food?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.647995,
+      "action": "memory_fetch",
+      "input": "Is there a place in the centre that serves asian oriental food?",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.647996,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6479964,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

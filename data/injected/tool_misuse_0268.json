@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0268",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1668.json",
+  "task": "I've got a craving for some pasta. Can you find me a good Italian restaurant on the west side of the city?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8109446,
+      "action": "tool_selection",
+      "input": "I've got a craving for some pasta. Can you find me a good Italian restaurant on the west side of the city?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8109453,
+      "action": "wrong_tool",
+      "input": "I've got a craving for some pasta. Can you find me a good Italian restaurant on the west side of the city?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.810946,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8109465,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

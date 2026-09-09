@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0100",
+  "injected_failure": "tool_misuse",
+  "task_id": "HumanEval/99",
+  "task": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. ",
+  "domain": "code_generation",
+  "source": "humaneval",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7928932,
+      "action": "tool_selection",
+      "input": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_inte",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.792894,
+      "action": "wrong_tool",
+      "input": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_inte",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7928946,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7928953,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

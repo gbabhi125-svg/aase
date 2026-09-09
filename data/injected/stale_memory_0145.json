@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0145",
+  "injected_failure": "stale_memory",
+  "task_id": "HumanEval/144",
+  "task": "\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") =",
+  "domain": "code_generation",
+  "source": "humaneval",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.560218,
+      "action": "memory_fetch",
+      "input": "\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5602188,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5602198,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

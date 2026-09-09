@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1391",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL0008.json",
+  "task": "I would like to find a 1 star hotel to stay at that includes free parking. Do you know of any?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5320601,
+      "action": "ingest",
+      "input": "I would like to find a 1 star hotel to stay at that includes free parking. Do you know of any?",
+      "output": "I would like to find a 1 star hotel to stay at that includes free parking. Do you know of any?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5320609,
+      "action": "llm_call",
+      "input": "I would like to find a 1 star hotel to stay at that includes free parking. Do you know of any?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5320613,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

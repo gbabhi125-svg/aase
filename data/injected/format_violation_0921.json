@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0921",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SSNG0186.json",
+  "task": "I'm looking for a cheap restaurant in the west area.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4768796,
+      "action": "ingest",
+      "input": "I'm looking for a cheap restaurant in the west area.",
+      "output": "I'm looking for a cheap restaurant in the west area.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4768803,
+      "action": "llm_call",
+      "input": "I'm looking for a cheap restaurant in the west area.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4768808,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

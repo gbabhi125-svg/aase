@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0163",
+  "injected_failure": "stale_memory",
+  "task_id": "HumanEval/162",
+  "task": "\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n",
+  "domain": "code_generation",
+  "source": "humaneval",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5619912,
+      "action": "memory_fetch",
+      "input": "\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.561992,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5619926,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

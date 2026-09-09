@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1459",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL2288.json",
+  "task": "I am in Cambridge and would like to try the restaurant City Stop Restaurant.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9600244,
+      "action": "tool_selection",
+      "input": "I am in Cambridge and would like to try the restaurant City Stop Restaurant.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9600258,
+      "action": "wrong_tool",
+      "input": "I am in Cambridge and would like to try the restaurant City Stop Restaurant.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.960027,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.960028,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

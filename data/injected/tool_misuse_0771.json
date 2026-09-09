@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0771",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG02031.json",
+  "task": "Are there any places that offer rooms in the north that also give free wifi, or do you have to go to other parts of town for that?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8691566,
+      "action": "tool_selection",
+      "input": "Are there any places that offer rooms in the north that also give free wifi, or do you have to go to other parts of town for that?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8691573,
+      "action": "wrong_tool",
+      "input": "Are there any places that offer rooms in the north that also give free wifi, or do you have to go to other parts of town for that?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8691578,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8691585,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0994",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL0915.json",
+  "task": "Please list all moderately priced restaurants in the centre of Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4855368,
+      "action": "ingest",
+      "input": "Please list all moderately priced restaurants in the centre of Cambridge.",
+      "output": "Please list all moderately priced restaurants in the centre of Cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4855375,
+      "action": "llm_call",
+      "input": "Please list all moderately priced restaurants in the centre of Cambridge.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4855382,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

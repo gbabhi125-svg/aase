@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1499",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG0482.json",
+  "task": "Is there a restaurant that serves italian food in the expensive price bracket?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9674184,
+      "action": "tool_selection",
+      "input": "Is there a restaurant that serves italian food in the expensive price bracket?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9674196,
+      "action": "wrong_tool",
+      "input": "Is there a restaurant that serves italian food in the expensive price bracket?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9674203,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9674213,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

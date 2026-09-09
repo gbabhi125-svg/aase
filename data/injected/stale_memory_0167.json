@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0167",
+  "injected_failure": "stale_memory",
+  "task_id": "toolbench_G1_2",
+  "task": "I'm organizing a sustainability event for my community and would like to showcase various projects promoting eco-friendly practices. Could you provide me with a list of projects available on the SQUAKE platform using the 'Projects' API? Additionally, I would like to check the health of the SQUAKE API using the 'Checkhealth' API.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.562849,
+      "action": "memory_fetch",
+      "input": "I'm organizing a sustainability event for my community and would like to showcase various projects promoting eco-friendly practices. Could you provide me with a list of projects available on the SQUAKE platform using the 'Projects' API? Additionally, I would like to check the health of the SQUAKE AP",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5628502,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5628507,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

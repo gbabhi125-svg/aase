@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0713",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0625.json",
+  "task": "Hi there. I heard someone mention the Bloomsbury Restaurant and I was wondering if you could give me some information for them.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7811909,
+      "action": "ingest",
+      "input": "Hi there. I heard someone mention the Bloomsbury Restaurant and I was wondering if you could give me some information for them.",
+      "output": "Hi there. I heard someone mention the Bloomsbury Restaurant and I was wondering if you could give me some information for them.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7811918,
+      "action": "subtask_1",
+      "input": "Hi there. I heard someone mention the Bloomsbury Restaurant and I was wondering if you could give me some information for them.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7811928,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7811933,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

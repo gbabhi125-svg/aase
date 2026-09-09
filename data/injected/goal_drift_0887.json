@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0887",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0785.json",
+  "task": "Hi, I'm looking for an upscale hotel. Could you recommend me anywhere in the west part of the area?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8003561,
+      "action": "ingest",
+      "input": "Hi, I'm looking for an upscale hotel. Could you recommend me anywhere in the west part of the area?",
+      "output": "Hi, I'm looking for an upscale hotel. Could you recommend me anywhere in the west part of the area?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.800357,
+      "action": "subtask_1",
+      "input": "Hi, I'm looking for an upscale hotel. Could you recommend me anywhere in the west part of the area?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8003576,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8003583,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

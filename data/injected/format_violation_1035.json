@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1035",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG1195.json",
+  "task": "Hey there! Can you give me some options for trains leaving Wednesday from Norwich? We are going to Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4900675,
+      "action": "ingest",
+      "input": "Hey there! Can you give me some options for trains leaving Wednesday from Norwich? We are going to Cambridge.",
+      "output": "Hey there! Can you give me some options for trains leaving Wednesday from Norwich? We are going to Cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4900684,
+      "action": "llm_call",
+      "input": "Hey there! Can you give me some options for trains leaving Wednesday from Norwich? We are going to Cambridge.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.490069,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

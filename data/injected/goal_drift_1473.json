@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1473",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SSNG0254.json",
+  "task": "I am looking for a hotel that can offer me both free wifi and free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.864152,
+      "action": "ingest",
+      "input": "I am looking for a hotel that can offer me both free wifi and free parking.",
+      "output": "I am looking for a hotel that can offer me both free wifi and free parking.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.864153,
+      "action": "subtask_1",
+      "input": "I am looking for a hotel that can offer me both free wifi and free parking.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8641536,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8641543,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

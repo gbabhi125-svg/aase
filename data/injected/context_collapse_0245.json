@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0245",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01696.json",
+  "task": "Please help, I've been in a car accident and am not sure who to call for help.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2233539,
+      "action": "ingest",
+      "input": "Please help, I've been in a car accident and am not sure who to call for help.",
+      "output": "Please help, I've been in a car accident and am not sure who to call for help.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2233548,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2233555,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2233562,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

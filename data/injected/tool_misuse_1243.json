@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1243",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG0821.json",
+  "task": "I need a hotel on the north side with free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9265406,
+      "action": "tool_selection",
+      "input": "I need a hotel on the north side with free parking.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9265416,
+      "action": "wrong_tool",
+      "input": "I need a hotel on the north side with free parking.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.926542,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9265425,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

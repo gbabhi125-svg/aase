@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0626",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL2293.json",
+  "task": "I'm planning a trip to Cambridge and I was told the A and B Guest House was a great place to stay.  Can you give me information about it?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7703187,
+      "action": "ingest",
+      "input": "I'm planning a trip to Cambridge and I was told the A and B Guest House was a great place to stay.  Can you give me information about it?",
+      "output": "I'm planning a trip to Cambridge and I was told the A and B Guest House was a great place to stay.  Can you give me information about it?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.77032,
+      "action": "subtask_1",
+      "input": "I'm planning a trip to Cambridge and I was told the A and B Guest House was a great place to stay.  Can you give me information about it?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7703207,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7703211,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

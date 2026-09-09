@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0605",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL0018.json",
+  "task": "I want to find an Italian place to eat near the center of cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.442064,
+      "action": "ingest",
+      "input": "I want to find an Italian place to eat near the center of cambridge.",
+      "output": "I want to find an Italian place to eat near the center of cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4420652,
+      "action": "llm_call",
+      "input": "I want to find an Italian place to eat near the center of cambridge.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4420657,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

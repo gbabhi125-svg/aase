@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1294",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG1217.json",
+  "task": "Could you find me a room at a four star hotel that is kind of cheap?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9336176,
+      "action": "tool_selection",
+      "input": "Could you find me a room at a four star hotel that is kind of cheap?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9336185,
+      "action": "wrong_tool",
+      "input": "Could you find me a room at a four star hotel that is kind of cheap?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.933619,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9336195,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

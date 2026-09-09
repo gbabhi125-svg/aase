@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1437",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0687.json",
+  "task": "I'd love some help finding more information about the Michaelhouse Cafe.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.860402,
+      "action": "ingest",
+      "input": "I'd love some help finding more information about the Michaelhouse Cafe.",
+      "output": "I'd love some help finding more information about the Michaelhouse Cafe.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8604033,
+      "action": "subtask_1",
+      "input": "I'd love some help finding more information about the Michaelhouse Cafe.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8604038,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8604043,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1315",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4703.json",
+  "task": "I need a restaurant in the south that is moderately priced.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3523703,
+      "action": "ingest",
+      "input": "I need a restaurant in the south that is moderately priced.",
+      "output": "I need a restaurant in the south that is moderately priced.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3523712,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3523715,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.352372,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

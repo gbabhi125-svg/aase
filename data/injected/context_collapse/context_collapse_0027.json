@@ -1,0 +1,90 @@
+{
+  "trace_id": "CONT_0027",
+  "failure_type": "context_collapse",
+  "task": "Produce individual summaries for all 50 incident reports. Formal tone is mandatory throughout the batch.",
+  "domain": "bulk_correspondence",
+  "source_dataset": "aase_synthetic_v2",
+  "trace": [
+    {
+      "step": 1,
+      "action": "ingest",
+      "input": "Produce individual summaries for all 50 incident reports. Formal tone is mandatory throughout the batch.",
+      "output": "Task received. Standing constraint registered: formal English. 50 items queued.",
+      "status": "success"
+    },
+    {
+      "step": 2,
+      "action": "process_item",
+      "input": "Items 1-4",
+      "output": "Processed. Formal register maintained.",
+      "status": "success"
+    },
+    {
+      "step": 3,
+      "action": "process_item",
+      "input": "Items 5-9",
+      "output": "Processed. Formal register maintained.",
+      "status": "success"
+    },
+    {
+      "step": 4,
+      "action": "process_item",
+      "input": "Items 10-13",
+      "output": "Processed. Formal register maintained.",
+      "status": "success"
+    },
+    {
+      "step": 5,
+      "action": "process_item",
+      "input": "Items 14-20",
+      "output": "Processed. Formal register maintained.",
+      "status": "success"
+    },
+    {
+      "step": 6,
+      "action": "process_item",
+      "input": "Items 21-25",
+      "output": "Processed. Formal register maintained.",
+      "status": "success"
+    },
+    {
+      "step": 7,
+      "action": "process_item",
+      "input": "Items 26-32",
+      "output": "Processed. Formal register maintained.",
+      "status": "success"
+    },
+    {
+      "step": 8,
+      "action": "process_item",
+      "input": "Items 33-36",
+      "output": "Processed. Formal register maintained.",
+      "status": "success"
+    },
+    {
+      "step": 9,
+      "action": "context_warning",
+      "input": "Context 74% utilised",
+      "output": "Early instructions at risk of truncation. Execution continues.",
+      "status": "warning"
+    },
+    {
+      "step": 10,
+      "action": "llm_response",
+      "input": "Item 50",
+      "output": "hey so basically ur issue is noted lol we'll get to it",
+      "status": "success"
+    },
+    {
+      "step": 11,
+      "action": "validate",
+      "input": "Check register against standing constraint",
+      "output": "VIOLATION: informal register. Original constraint was formal English. Agent still running \u2014 no crash occurred.",
+      "status": "error",
+      "error": "context_collapse_detected"
+    }
+  ],
+  "num_steps": 11,
+  "failure_detected_at_step": 11,
+  "ground_truth_fix": "Tone, language and format constraints are invariant. Restate them internally every 10 steps and on any context warning."
+}

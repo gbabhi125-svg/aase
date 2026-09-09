@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0877",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG01274.json",
+  "task": "I am injured I need a hospital that has the cambridge eye unit department",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.471998,
+      "action": "ingest",
+      "input": "I am injured I need a hospital that has the cambridge eye unit department",
+      "output": "I am injured I need a hospital that has the cambridge eye unit department",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.471999,
+      "action": "llm_call",
+      "input": "I am injured I need a hospital that has the cambridge eye unit department",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4719994,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

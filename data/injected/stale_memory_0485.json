@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0485",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_SNG0528.json",
+  "task": "Hi, I'm looking for a restaurant with modern european food. It should be in the moderate price range.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5949554,
+      "action": "memory_fetch",
+      "input": "Hi, I'm looking for a restaurant with modern european food. It should be in the moderate price range.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5949566,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.594957,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

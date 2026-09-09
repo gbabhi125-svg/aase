@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1489",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0550.json",
+  "task": "I'm looking for a modern European restaurant near the centre, could you hook me up?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.372813,
+      "action": "ingest",
+      "input": "I'm looking for a modern European restaurant near the centre, could you hook me up?",
+      "output": "I'm looking for a modern European restaurant near the centre, could you hook me up?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3728142,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3728147,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3728151,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

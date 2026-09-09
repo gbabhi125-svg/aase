@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1066",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG1086.json",
+  "task": "I'm looking for some info on an attraction called Kettle's Yard.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.902563,
+      "action": "tool_selection",
+      "input": "I'm looking for some info on an attraction called Kettle's Yard.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.902564,
+      "action": "wrong_tool",
+      "input": "I'm looking for some info on an attraction called Kettle's Yard.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9025645,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.902565,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

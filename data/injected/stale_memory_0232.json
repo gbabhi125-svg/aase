@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0232",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_SNG1134.json",
+  "task": "Someone told me about a place called Old Schools. It's supposed to be some kind of attraction. Can you tell me anything about it?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5698981,
+      "action": "memory_fetch",
+      "input": "Someone told me about a place called Old Schools. It's supposed to be some kind of attraction. Can you tell me anything about it?",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5698993,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5699,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

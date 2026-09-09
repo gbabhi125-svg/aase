@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0951",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL4522.json",
+  "task": "I would like to find a place to stay that has wifi, I'm not a fan of this new guesthouse trend, so a regular hotel please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4804406,
+      "action": "ingest",
+      "input": "I would like to find a place to stay that has wifi, I'm not a fan of this new guesthouse trend, so a regular hotel please.",
+      "output": "I would like to find a place to stay that has wifi, I'm not a fan of this new guesthouse trend, so a regular hotel please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4804413,
+      "action": "llm_call",
+      "input": "I would like to find a place to stay that has wifi, I'm not a fan of this new guesthouse trend, so a regular hotel please.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.480442,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

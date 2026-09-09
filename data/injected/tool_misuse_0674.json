@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0674",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL3868.json",
+  "task": "i am looking for a particular attraction. Its name is called the fitzwilliam museum.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8579748,
+      "action": "tool_selection",
+      "input": "i am looking for a particular attraction. Its name is called the fitzwilliam museum.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8579757,
+      "action": "wrong_tool",
+      "input": "i am looking for a particular attraction. Its name is called the fitzwilliam museum.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8579764,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.857977,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

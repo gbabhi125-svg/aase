@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0394",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2634.json",
+  "task": "Can you let me know about 4 star places in cambridge?  I want a personal touch, so a guesthouse who be perfect.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.742753,
+      "action": "ingest",
+      "input": "Can you let me know about 4 star places in cambridge?  I want a personal touch, so a guesthouse who be perfect.",
+      "output": "Can you let me know about 4 star places in cambridge?  I want a personal touch, so a guesthouse who be perfect.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.742754,
+      "action": "subtask_1",
+      "input": "Can you let me know about 4 star places in cambridge?  I want a personal touch, so a guesthouse who be perfect.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7427545,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7427552,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

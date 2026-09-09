@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0514",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2358.json",
+  "task": "I could really go for some Italian food - is there a good place in the city centre?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6662004,
+      "action": "ingest",
+      "input": "I could really go for some Italian food - is there a good place in the city centre?",
+      "output": "I could really go for some Italian food - is there a good place in the city centre?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.666201,
+      "action": "tool_call",
+      "input": "I could really go for some Italian food - is there a good place in the city centre?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6662064,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6662073,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

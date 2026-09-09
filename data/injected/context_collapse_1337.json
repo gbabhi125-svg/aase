@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1337",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01648.json",
+  "task": "I need a taxi at 24:00 to take me to Milton Country Park.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3549755,
+      "action": "ingest",
+      "input": "I need a taxi at 24:00 to take me to Milton Country Park.",
+      "output": "I need a taxi at 24:00 to take me to Milton Country Park.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3549764,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3549771,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3549776,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

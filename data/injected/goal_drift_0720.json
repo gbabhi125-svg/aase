@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0720",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0584.json",
+  "task": "I am looking for a restaurant in the center with a cheap price range",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7818549,
+      "action": "ingest",
+      "input": "I am looking for a restaurant in the center with a cheap price range",
+      "output": "I am looking for a restaurant in the center with a cheap price range",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.781856,
+      "action": "subtask_1",
+      "input": "I am looking for a restaurant in the center with a cheap price range",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7818565,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.781857,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

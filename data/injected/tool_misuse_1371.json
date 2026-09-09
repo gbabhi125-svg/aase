@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1371",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL0453.json",
+  "task": "Okay I'm looking for a restaurant today.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9456038,
+      "action": "tool_selection",
+      "input": "Okay I'm looking for a restaurant today.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9456048,
+      "action": "wrong_tool",
+      "input": "Okay I'm looking for a restaurant today.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9456053,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.945606,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

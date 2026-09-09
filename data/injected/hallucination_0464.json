@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0464",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0939.json",
+  "task": "Hi, I'm looking to book a train to Cambridge.  I need it to arrive by 14:15.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6606848,
+      "action": "ingest",
+      "input": "Hi, I'm looking to book a train to Cambridge.  I need it to arrive by 14:15.",
+      "output": "Hi, I'm looking to book a train to Cambridge.  I need it to arrive by 14:15.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6606858,
+      "action": "tool_call",
+      "input": "Hi, I'm looking to book a train to Cambridge.  I need it to arrive by 14:15.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6606863,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6606867,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

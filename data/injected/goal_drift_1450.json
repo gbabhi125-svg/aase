@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1450",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL4086.json",
+  "task": "Hello! I'm needing a place to stay in the center of town. Parking is not important to me. What do you have?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8617692,
+      "action": "ingest",
+      "input": "Hello! I'm needing a place to stay in the center of town. Parking is not important to me. What do you have?",
+      "output": "Hello! I'm needing a place to stay in the center of town. Parking is not important to me. What do you have?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.86177,
+      "action": "subtask_1",
+      "input": "Hello! I'm needing a place to stay in the center of town. Parking is not important to me. What do you have?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8617704,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.861771,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

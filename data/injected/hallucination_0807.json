@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0807",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL0941.json",
+  "task": "I am looking for a museum in the west to go to.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7017941,
+      "action": "ingest",
+      "input": "I am looking for a museum in the west to go to.",
+      "output": "I am looking for a museum in the west to go to.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.701795,
+      "action": "tool_call",
+      "input": "I am looking for a museum in the west to go to.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7017956,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7017963,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0171",
+  "injected_failure": "goal_drift",
+  "task_id": "toolbench_G2_1",
+  "task": "I'm planning a trip to Istanbul and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Istanbul with plate number 34? Additionally, I would like to track a package with the task ID 987654321.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7188914,
+      "action": "ingest",
+      "input": "I'm planning a trip to Istanbul and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Istanbul with plate number 34? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "I'm planning a trip to Istanbul and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Istanbul with plate number 34? Additionally, I would like to track a package with the task ID 987654321.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7188923,
+      "action": "subtask_1",
+      "input": "I'm planning a trip to Istanbul and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Istanbul with plate number 34? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.718893,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7188935,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

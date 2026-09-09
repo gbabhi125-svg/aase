@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1432",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG01537.json",
+  "task": "I am looking for a place to stay. The hotel should have a star of 0 and should be in the type of hotel",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9551394,
+      "action": "tool_selection",
+      "input": "I am looking for a place to stay. The hotel should have a star of 0 and should be in the type of hotel",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9551408,
+      "action": "wrong_tool",
+      "input": "I am looking for a place to stay. The hotel should have a star of 0 and should be in the type of hotel",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9551413,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9551423,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

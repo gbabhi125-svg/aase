@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1307",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG01851.json",
+  "task": "can i get a hospital nearby which has a haematology day unit department",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.758565,
+      "action": "ingest",
+      "input": "can i get a hospital nearby which has a haematology day unit department",
+      "output": "can i get a hospital nearby which has a haematology day unit department",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.758566,
+      "action": "tool_call",
+      "input": "can i get a hospital nearby which has a haematology day unit department",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7585664,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7585669,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

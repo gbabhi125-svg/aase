@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0829",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG02146.json",
+  "task": "Hi, I just had a fight with someone regarding an automobile accident we had and I need to contact the police!",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2951515,
+      "action": "ingest",
+      "input": "Hi, I just had a fight with someone regarding an automobile accident we had and I need to contact the police!",
+      "output": "Hi, I just had a fight with someone regarding an automobile accident we had and I need to contact the police!",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2951522,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2951527,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.295153,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

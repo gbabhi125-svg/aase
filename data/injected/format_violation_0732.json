@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0732",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG0207.json",
+  "task": "Hello! I need a hospital with a oral and maxillofacial surgery and ent department please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4559598,
+      "action": "ingest",
+      "input": "Hello! I need a hospital with a oral and maxillofacial surgery and ent department please.",
+      "output": "Hello! I need a hospital with a oral and maxillofacial surgery and ent department please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4559605,
+      "action": "llm_call",
+      "input": "Hello! I need a hospital with a oral and maxillofacial surgery and ent department please.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.455961,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

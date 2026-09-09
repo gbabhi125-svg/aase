@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1403",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG01811.json",
+  "task": "Good evening, where would I find a hospital in town please?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5334146,
+      "action": "ingest",
+      "input": "Good evening, where would I find a hospital in town please?",
+      "output": "Good evening, where would I find a hospital in town please?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5334158,
+      "action": "llm_call",
+      "input": "Good evening, where would I find a hospital in town please?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5334163,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

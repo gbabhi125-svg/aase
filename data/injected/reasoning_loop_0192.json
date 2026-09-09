@@ -1,0 +1,65 @@
+{
+  "id": "reasoning_loop_0192",
+  "injected_failure": "reasoning_loop",
+  "task_id": "mwoz_SNG01406.json",
+  "task": "I'm wanting Indian food, is there a restaurant that serves that near the centre of town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9980145,
+      "action": "search",
+      "input": "I'm wanting Indian food, is there a restaurant that serves that near the centre of town?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9980156,
+      "action": "search",
+      "input": "I'm wanting Indian food, is there a restaurant that serves that near the centre of town?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9980164,
+      "action": "search",
+      "input": "I'm wanting Indian food, is there a restaurant that serves that near the centre of town?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9980166,
+      "action": "search",
+      "input": "I'm wanting Indian food, is there a restaurant that serves that near the centre of town?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 5,
+      "timestamp": 1787208587.998017,
+      "action": "search",
+      "input": "I'm wanting Indian food, is there a restaurant that serves that near the centre of town?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 6,
+      "timestamp": 1787208587.9980178,
+      "action": "loop_detected",
+      "input": "I'm wanting Indian food, is there a restaurant that serves that near the centre of town?",
+      "output": "None",
+      "status": "error",
+      "error": "identical action repeated 5x, no progress"
+    }
+  ],
+  "success": false
+}

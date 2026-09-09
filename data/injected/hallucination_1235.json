@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1235",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_WOZ20021.json",
+  "task": "Can you find me a corsica restaurant?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7502224,
+      "action": "ingest",
+      "input": "Can you find me a corsica restaurant?",
+      "output": "Can you find me a corsica restaurant?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7502234,
+      "action": "tool_call",
+      "input": "Can you find me a corsica restaurant?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7502239,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7502246,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

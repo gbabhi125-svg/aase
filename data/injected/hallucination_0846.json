@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0846",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG01301.json",
+  "task": "Am injured and are looking for a hospital nearby",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7059698,
+      "action": "ingest",
+      "input": "Am injured and are looking for a hospital nearby",
+      "output": "Am injured and are looking for a hospital nearby",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7059708,
+      "action": "tool_call",
+      "input": "Am injured and are looking for a hospital nearby",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7059712,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7059717,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

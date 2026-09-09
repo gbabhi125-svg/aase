@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1044",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL1604.json",
+  "task": "I'm looking for a hotel in the east, and it doesn't need to include internet.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.899912,
+      "action": "tool_selection",
+      "input": "I'm looking for a hotel in the east, and it doesn't need to include internet.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.899913,
+      "action": "wrong_tool",
+      "input": "I'm looking for a hotel in the east, and it doesn't need to include internet.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8999135,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.899914,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

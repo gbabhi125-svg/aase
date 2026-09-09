@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1127",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL0875.json",
+  "task": "Hello, I am new to town and would like some ideas on whee I should go in the centre.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3297563,
+      "action": "ingest",
+      "input": "Hello, I am new to town and would like some ideas on whee I should go in the centre.",
+      "output": "Hello, I am new to town and would like some ideas on whee I should go in the centre.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.329757,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3297575,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.329758,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

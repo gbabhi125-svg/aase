@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1223",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL2246.json",
+  "task": "Hello, I'm looking for a guesthouse in the north of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5128696,
+      "action": "ingest",
+      "input": "Hello, I'm looking for a guesthouse in the north of town.",
+      "output": "Hello, I'm looking for a guesthouse in the north of town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5128703,
+      "action": "llm_call",
+      "input": "Hello, I'm looking for a guesthouse in the north of town.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5128713,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

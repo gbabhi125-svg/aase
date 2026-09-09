@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0781",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL4958.json",
+  "task": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4613688,
+      "action": "ingest",
+      "input": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+      "output": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4613695,
+      "action": "llm_call",
+      "input": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4613705,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

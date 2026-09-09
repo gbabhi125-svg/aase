@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0931",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL2332.json",
+  "task": "My friends told me to look into a restaurant called The Gandhi, could you please give me some information on it?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4779327,
+      "action": "ingest",
+      "input": "My friends told me to look into a restaurant called The Gandhi, could you please give me some information on it?",
+      "output": "My friends told me to look into a restaurant called The Gandhi, could you please give me some information on it?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4779336,
+      "action": "llm_call",
+      "input": "My friends told me to look into a restaurant called The Gandhi, could you please give me some information on it?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4779344,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

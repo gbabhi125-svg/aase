@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0573",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SSNG0057.json",
+  "task": "Can you find a moderately priced restaurant in the east side?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2636185,
+      "action": "ingest",
+      "input": "Can you find a moderately priced restaurant in the east side?",
+      "output": "Can you find a moderately priced restaurant in the east side?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2636197,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2636201,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2636206,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

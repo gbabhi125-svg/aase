@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0574",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL0887.json",
+  "task": "I want to go to a restaurant in the south of Cambridge that serves Spanish food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.438682,
+      "action": "ingest",
+      "input": "I want to go to a restaurant in the south of Cambridge that serves Spanish food.",
+      "output": "I want to go to a restaurant in the south of Cambridge that serves Spanish food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4386828,
+      "action": "llm_call",
+      "input": "I want to go to a restaurant in the south of Cambridge that serves Spanish food.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4386835,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

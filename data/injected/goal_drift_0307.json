@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0307",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1371.json",
+  "task": "Need a place to eat in the south of town that has moroccan food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7334871,
+      "action": "ingest",
+      "input": "Need a place to eat in the south of town that has moroccan food.",
+      "output": "Need a place to eat in the south of town that has moroccan food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.733488,
+      "action": "subtask_1",
+      "input": "Need a place to eat in the south of town that has moroccan food.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7334886,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.733489,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

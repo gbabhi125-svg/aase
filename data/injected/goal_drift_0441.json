@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0441",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0291.json",
+  "task": "I need a train leaving from Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7476244,
+      "action": "ingest",
+      "input": "I need a train leaving from Cambridge.",
+      "output": "I need a train leaving from Cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7476256,
+      "action": "subtask_1",
+      "input": "I need a train leaving from Cambridge.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.747626,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7476265,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

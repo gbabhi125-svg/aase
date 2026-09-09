@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1340",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG1081.json",
+  "task": "I am looking for things to do in Cambridge.  Can you tell me if there are any nightclubs?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9415104,
+      "action": "tool_selection",
+      "input": "I am looking for things to do in Cambridge.  Can you tell me if there are any nightclubs?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9415114,
+      "action": "wrong_tool",
+      "input": "I am looking for things to do in Cambridge.  Can you tell me if there are any nightclubs?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9415119,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9415123,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

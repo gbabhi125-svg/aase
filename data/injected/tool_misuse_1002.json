@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1002",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4595.json",
+  "task": "Find me a place to stay. I need a hotel in the moderate price range with a star of 4.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8951206,
+      "action": "tool_selection",
+      "input": "Find me a place to stay. I need a hotel in the moderate price range with a star of 4.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8951213,
+      "action": "wrong_tool",
+      "input": "Find me a place to stay. I need a hotel in the moderate price range with a star of 4.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8951218,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8951228,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

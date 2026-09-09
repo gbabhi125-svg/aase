@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1309",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2494.json",
+  "task": "We need to find the address of a theater in the center of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.846669,
+      "action": "ingest",
+      "input": "We need to find the address of a theater in the center of town.",
+      "output": "We need to find the address of a theater in the center of town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8466702,
+      "action": "subtask_1",
+      "input": "We need to find the address of a theater in the center of town.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8466706,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.846671,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

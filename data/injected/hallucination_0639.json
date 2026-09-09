@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0639",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL1400.json",
+  "task": "Hi there. I'd like to find a place to stay. It doesn't need to have any stars, but I'm willing to pay a moderate amount of money.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6825392,
+      "action": "ingest",
+      "input": "Hi there. I'd like to find a place to stay. It doesn't need to have any stars, but I'm willing to pay a moderate amount of money.",
+      "output": "Hi there. I'd like to find a place to stay. It doesn't need to have any stars, but I'm willing to pay a moderate amount of money.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6825402,
+      "action": "tool_call",
+      "input": "Hi there. I'd like to find a place to stay. It doesn't need to have any stars, but I'm willing to pay a moderate amount of money.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.682541,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6825411,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

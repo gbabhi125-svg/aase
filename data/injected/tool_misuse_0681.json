@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0681",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL3488.json",
+  "task": "i am looking for places to go in town. The attraction should be in the centre and should be in the type of theatre.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8588536,
+      "action": "tool_selection",
+      "input": "i am looking for places to go in town. The attraction should be in the centre and should be in the type of theatre.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8588548,
+      "action": "wrong_tool",
+      "input": "i am looking for places to go in town. The attraction should be in the centre and should be in the type of theatre.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8588552,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8588557,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

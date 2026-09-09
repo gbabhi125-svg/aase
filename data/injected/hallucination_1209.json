@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1209",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0035.json",
+  "task": "I am looking for a restaurant in the center with a moderite price range.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7471392,
+      "action": "ingest",
+      "input": "I am looking for a restaurant in the center with a moderite price range.",
+      "output": "I am looking for a restaurant in the center with a moderite price range.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7471404,
+      "action": "tool_call",
+      "input": "I am looking for a restaurant in the center with a moderite price range.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.747141,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7471411,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

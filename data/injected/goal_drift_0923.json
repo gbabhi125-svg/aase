@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0923",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL1597.json",
+  "task": "I need a place to stay with a star rating of 0.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8042634,
+      "action": "ingest",
+      "input": "I need a place to stay with a star rating of 0.",
+      "output": "I need a place to stay with a star rating of 0.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8042643,
+      "action": "subtask_1",
+      "input": "I need a place to stay with a star rating of 0.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8042648,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8042655,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

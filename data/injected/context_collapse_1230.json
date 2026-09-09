@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1230",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SSNG0390.json",
+  "task": "Can you find me a hotel in the moderate price range?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3425276,
+      "action": "ingest",
+      "input": "Can you find me a hotel in the moderate price range?",
+      "output": "Can you find me a hotel in the moderate price range?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3425288,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.342529,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3425295,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

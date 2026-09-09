@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0189",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL0906.json",
+  "task": "I am traveling to Cambridge and am looking for places to go in the east part of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7208772,
+      "action": "ingest",
+      "input": "I am traveling to Cambridge and am looking for places to go in the east part of town.",
+      "output": "I am traveling to Cambridge and am looking for places to go in the east part of town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7208781,
+      "action": "subtask_1",
+      "input": "I am traveling to Cambridge and am looking for places to go in the east part of town.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7208788,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7208793,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1253",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01725.json",
+  "task": "looking for a place to dine. The restaurant should serve british food and should be in the expensive price range.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8405418,
+      "action": "ingest",
+      "input": "looking for a place to dine. The restaurant should serve british food and should be in the expensive price range.",
+      "output": "looking for a place to dine. The restaurant should serve british food and should be in the expensive price range.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.840543,
+      "action": "subtask_1",
+      "input": "looking for a place to dine. The restaurant should serve british food and should be in the expensive price range.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8405435,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.840544,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

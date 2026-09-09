@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0387",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0069.json",
+  "task": "Can you book me a taxi from Avalon to De Luca Cucina and Bar?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7419884,
+      "action": "ingest",
+      "input": "Can you book me a taxi from Avalon to De Luca Cucina and Bar?",
+      "output": "Can you book me a taxi from Avalon to De Luca Cucina and Bar?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7419891,
+      "action": "subtask_1",
+      "input": "Can you book me a taxi from Avalon to De Luca Cucina and Bar?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7419896,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7419903,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

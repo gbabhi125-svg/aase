@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0756",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG1231.json",
+  "task": "Yes,  please help me book a train on Saturday.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6954803,
+      "action": "ingest",
+      "input": "Yes,  please help me book a train on Saturday.",
+      "output": "Yes,  please help me book a train on Saturday.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.695481,
+      "action": "tool_call",
+      "input": "Yes,  please help me book a train on Saturday.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6954815,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.695482,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

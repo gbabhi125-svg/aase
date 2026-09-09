@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1008",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG0586.json",
+  "task": "Hi I am looking for a restaurant in the centre of town serving north indian food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.724299,
+      "action": "ingest",
+      "input": "Hi I am looking for a restaurant in the centre of town serving north indian food.",
+      "output": "Hi I am looking for a restaurant in the centre of town serving north indian food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7242997,
+      "action": "tool_call",
+      "input": "Hi I am looking for a restaurant in the centre of town serving north indian food.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7243004,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7243009,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

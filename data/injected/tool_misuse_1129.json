@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1129",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG01238.json",
+  "task": "Send a taxi to the Parkside Police Station to go to Little Seoul",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9118805,
+      "action": "tool_selection",
+      "input": "Send a taxi to the Parkside Police Station to go to Little Seoul",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9118812,
+      "action": "wrong_tool",
+      "input": "Send a taxi to the Parkside Police Station to go to Little Seoul",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.911882,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9118824,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

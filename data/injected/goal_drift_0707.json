@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0707",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01949.json",
+  "task": "I'd like to reserve a taxi to take me to jesus green outdoor pool today",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7803643,
+      "action": "ingest",
+      "input": "I'd like to reserve a taxi to take me to jesus green outdoor pool today",
+      "output": "I'd like to reserve a taxi to take me to jesus green outdoor pool today",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7803652,
+      "action": "subtask_1",
+      "input": "I'd like to reserve a taxi to take me to jesus green outdoor pool today",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7803657,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7803664,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

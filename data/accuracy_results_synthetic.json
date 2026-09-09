@@ -1,0 +1,531 @@
+{
+  "evaluation_set": "1,050 injected failure traces (MultiWOZ / HumanEval / ToolBench)",
+  "source": "synthetic",
+  "total_traces": 70,
+  "correct": 34,
+  "accuracy_pct": 48.6,
+  "unknown": 27,
+  "avg_time_sec": 14.8,
+  "per_type": {
+    "hallucination": {
+      "correct": 10,
+      "total": 10
+    },
+    "tool_misuse": {
+      "correct": 10,
+      "total": 10
+    },
+    "reasoning_loop": {
+      "correct": 9,
+      "total": 10
+    },
+    "context_collapse": {
+      "correct": 4,
+      "total": 10
+    },
+    "goal_drift": {
+      "correct": 1,
+      "total": 10
+    },
+    "prompt_injection": {
+      "correct": 0,
+      "total": 10
+    },
+    "memory_overflow": {
+      "correct": 0,
+      "total": 10
+    }
+  },
+  "all_results": [
+    {
+      "trace_id": "HALL_0001",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 1.7
+    },
+    {
+      "trace_id": "HALL_0002",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 1.4
+    },
+    {
+      "trace_id": "HALL_0003",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 5.4
+    },
+    {
+      "trace_id": "HALL_0004",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 17.1
+    },
+    {
+      "trace_id": "HALL_0005",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 16.5
+    },
+    {
+      "trace_id": "HALL_0006",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 19.8
+    },
+    {
+      "trace_id": "HALL_0007",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 19.7
+    },
+    {
+      "trace_id": "HALL_0008",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 15.4
+    },
+    {
+      "trace_id": "HALL_0009",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 35.4
+    },
+    {
+      "trace_id": "HALL_0010",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 22.4
+    },
+    {
+      "trace_id": "TOOL_0001",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 17.2
+    },
+    {
+      "trace_id": "TOOL_0002",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 17.0
+    },
+    {
+      "trace_id": "TOOL_0003",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 18.3
+    },
+    {
+      "trace_id": "TOOL_0004",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 16.4
+    },
+    {
+      "trace_id": "TOOL_0005",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 19.8
+    },
+    {
+      "trace_id": "TOOL_0006",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 15.3
+    },
+    {
+      "trace_id": "TOOL_0007",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 23.2
+    },
+    {
+      "trace_id": "TOOL_0008",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 15.9
+    },
+    {
+      "trace_id": "TOOL_0009",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 19.6
+    },
+    {
+      "trace_id": "TOOL_0010",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 31.2
+    },
+    {
+      "trace_id": "REAS_0001",
+      "actual": "reasoning_loop",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 57.5
+    },
+    {
+      "trace_id": "REAS_0002",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 4.8
+    },
+    {
+      "trace_id": "REAS_0003",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 2.0
+    },
+    {
+      "trace_id": "REAS_0004",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 1.6
+    },
+    {
+      "trace_id": "REAS_0005",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 14.1
+    },
+    {
+      "trace_id": "REAS_0006",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 16.4
+    },
+    {
+      "trace_id": "REAS_0007",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 16.8
+    },
+    {
+      "trace_id": "REAS_0008",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 17.3
+    },
+    {
+      "trace_id": "REAS_0009",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 17.3
+    },
+    {
+      "trace_id": "REAS_0010",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 15.2
+    },
+    {
+      "trace_id": "CONT_0001",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 40.9
+    },
+    {
+      "trace_id": "CONT_0002",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 40.6
+    },
+    {
+      "trace_id": "CONT_0003",
+      "actual": "context_collapse",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 40.4
+    },
+    {
+      "trace_id": "CONT_0004",
+      "actual": "context_collapse",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 41.0
+    },
+    {
+      "trace_id": "CONT_0005",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 40.2
+    },
+    {
+      "trace_id": "CONT_0006",
+      "actual": "context_collapse",
+      "diagnosed": "reasoning_loop",
+      "correct": false,
+      "time": 40.3
+    },
+    {
+      "trace_id": "CONT_0007",
+      "actual": "context_collapse",
+      "diagnosed": "reasoning_loop",
+      "correct": false,
+      "time": 40.9
+    },
+    {
+      "trace_id": "CONT_0008",
+      "actual": "context_collapse",
+      "diagnosed": "memory_overflow",
+      "correct": false,
+      "time": 41.4
+    },
+    {
+      "trace_id": "CONT_0009",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 42.5
+    },
+    {
+      "trace_id": "CONT_0010",
+      "actual": "context_collapse",
+      "diagnosed": "reasoning_loop",
+      "correct": false,
+      "time": 42.2
+    },
+    {
+      "trace_id": "GOAL_0001",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 13.8
+    },
+    {
+      "trace_id": "GOAL_0002",
+      "actual": "goal_drift",
+      "diagnosed": "context_collapse",
+      "correct": false,
+      "time": 16.2
+    },
+    {
+      "trace_id": "GOAL_0003",
+      "actual": "goal_drift",
+      "diagnosed": "hallucination",
+      "correct": false,
+      "time": 17.1
+    },
+    {
+      "trace_id": "GOAL_0004",
+      "actual": "goal_drift",
+      "diagnosed": "context_collapse",
+      "correct": false,
+      "time": 16.0
+    },
+    {
+      "trace_id": "GOAL_0005",
+      "actual": "goal_drift",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 8.9
+    },
+    {
+      "trace_id": "GOAL_0006",
+      "actual": "goal_drift",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 3.4
+    },
+    {
+      "trace_id": "GOAL_0007",
+      "actual": "goal_drift",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.6
+    },
+    {
+      "trace_id": "GOAL_0008",
+      "actual": "goal_drift",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.4
+    },
+    {
+      "trace_id": "GOAL_0009",
+      "actual": "goal_drift",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.5
+    },
+    {
+      "trace_id": "GOAL_0010",
+      "actual": "goal_drift",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 2.4
+    },
+    {
+      "trace_id": "PROM_0001",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.8
+    },
+    {
+      "trace_id": "PROM_0002",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 2.8
+    },
+    {
+      "trace_id": "PROM_0003",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 3.3
+    },
+    {
+      "trace_id": "PROM_0004",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.0
+    },
+    {
+      "trace_id": "PROM_0005",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 3.3
+    },
+    {
+      "trace_id": "PROM_0006",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 2.2
+    },
+    {
+      "trace_id": "PROM_0007",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 0.4
+    },
+    {
+      "trace_id": "PROM_0008",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 0.9
+    },
+    {
+      "trace_id": "PROM_0009",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.2
+    },
+    {
+      "trace_id": "PROM_0010",
+      "actual": "prompt_injection",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 0.9
+    },
+    {
+      "trace_id": "MEMO_0001",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 0.8
+    },
+    {
+      "trace_id": "MEMO_0002",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.5
+    },
+    {
+      "trace_id": "MEMO_0003",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 0.9
+    },
+    {
+      "trace_id": "MEMO_0004",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.4
+    },
+    {
+      "trace_id": "MEMO_0005",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 2.6
+    },
+    {
+      "trace_id": "MEMO_0006",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.5
+    },
+    {
+      "trace_id": "MEMO_0007",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 0.8
+    },
+    {
+      "trace_id": "MEMO_0008",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 1.6
+    },
+    {
+      "trace_id": "MEMO_0009",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 0.8
+    },
+    {
+      "trace_id": "MEMO_0010",
+      "actual": "memory_overflow",
+      "diagnosed": "unknown",
+      "correct": false,
+      "time": 0.8
+    }
+  ]
+}

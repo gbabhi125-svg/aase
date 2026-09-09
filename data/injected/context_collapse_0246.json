@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0246",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL1713.json",
+  "task": "Help me find a train that leaves after 09:45 on Saturday.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.223476,
+      "action": "ingest",
+      "input": "Help me find a train that leaves after 09:45 on Saturday.",
+      "output": "Help me find a train that leaves after 09:45 on Saturday.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.223477,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2234776,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.223478,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

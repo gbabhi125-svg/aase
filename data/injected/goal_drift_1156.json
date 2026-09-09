@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1156",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01537.json",
+  "task": "I am looking for a place to stay. The hotel should have a star of 0 and should be in the type of hotel",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.829825,
+      "action": "ingest",
+      "input": "I am looking for a place to stay. The hotel should have a star of 0 and should be in the type of hotel",
+      "output": "I am looking for a place to stay. The hotel should have a star of 0 and should be in the type of hotel",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.829826,
+      "action": "subtask_1",
+      "input": "I am looking for a place to stay. The hotel should have a star of 0 and should be in the type of hotel",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8298266,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.829827,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0903",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_WOZ20121.json",
+  "task": "I am looking for a restaurant in the expensive price range that serves Belgian food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3037407,
+      "action": "ingest",
+      "input": "I am looking for a restaurant in the expensive price range that serves Belgian food.",
+      "output": "I am looking for a restaurant in the expensive price range that serves Belgian food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3037417,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3037422,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3037424,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

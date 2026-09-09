@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0478",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG02227.json",
+  "task": "I have had an injury! Where do I find the nearest hospital?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.83499,
+      "action": "tool_selection",
+      "input": "I have had an injury! Where do I find the nearest hospital?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8349907,
+      "action": "wrong_tool",
+      "input": "I have had an injury! Where do I find the nearest hospital?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8349915,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8349922,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

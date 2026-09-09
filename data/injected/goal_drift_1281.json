@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1281",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL3478.json",
+  "task": "i am looking for a place to dine. The restaurant should be in the west and should serve swiss food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8435748,
+      "action": "ingest",
+      "input": "i am looking for a place to dine. The restaurant should be in the west and should serve swiss food.",
+      "output": "i am looking for a place to dine. The restaurant should be in the west and should serve swiss food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8435757,
+      "action": "subtask_1",
+      "input": "i am looking for a place to dine. The restaurant should be in the west and should serve swiss food.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8435764,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.843577,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

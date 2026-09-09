@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0328",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_WOZ20309.json",
+  "task": "I'd like to find a north american restaurant in any area. I'd  like the address, phone, and price range.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7356899,
+      "action": "ingest",
+      "input": "I'd like to find a north american restaurant in any area. I'd  like the address, phone, and price range.",
+      "output": "I'd like to find a north american restaurant in any area. I'd  like the address, phone, and price range.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7356908,
+      "action": "subtask_1",
+      "input": "I'd like to find a north american restaurant in any area. I'd  like the address, phone, and price range.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7356915,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7356918,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

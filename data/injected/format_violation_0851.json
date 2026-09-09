@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0851",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG1362.json",
+  "task": "Can you help me find a place to have dinner?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.469149,
+      "action": "ingest",
+      "input": "Can you help me find a place to have dinner?",
+      "output": "Can you help me find a place to have dinner?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4691503,
+      "action": "llm_call",
+      "input": "Can you help me find a place to have dinner?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4691508,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

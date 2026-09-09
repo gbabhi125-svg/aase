@@ -1,0 +1,65 @@
+{
+  "id": "reasoning_loop_0240",
+  "injected_failure": "reasoning_loop",
+  "task_id": "mwoz_SNG02308.json",
+  "task": "I am looking for a restaurant. The restaurant should serve asian oriental food and should be in the centre",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.004024,
+      "action": "search",
+      "input": "I am looking for a restaurant. The restaurant should serve asian oriental food and should be in the centre",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.004025,
+      "action": "search",
+      "input": "I am looking for a restaurant. The restaurant should serve asian oriental food and should be in the centre",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.0040257,
+      "action": "search",
+      "input": "I am looking for a restaurant. The restaurant should serve asian oriental food and should be in the centre",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.0040262,
+      "action": "search",
+      "input": "I am looking for a restaurant. The restaurant should serve asian oriental food and should be in the centre",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 5,
+      "timestamp": 1787208588.0040267,
+      "action": "search",
+      "input": "I am looking for a restaurant. The restaurant should serve asian oriental food and should be in the centre",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 6,
+      "timestamp": 1787208588.0040271,
+      "action": "loop_detected",
+      "input": "I am looking for a restaurant. The restaurant should serve asian oriental food and should be in the centre",
+      "output": "None",
+      "status": "error",
+      "error": "identical action repeated 5x, no progress"
+    }
+  ],
+  "success": false
+}

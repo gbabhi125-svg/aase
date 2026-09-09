@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1152",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4420.json",
+  "task": "I need a train to Cambridge please. I plan to leave out on Tuesday",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9151156,
+      "action": "tool_selection",
+      "input": "I need a train to Cambridge please. I plan to leave out on Tuesday",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9151165,
+      "action": "wrong_tool",
+      "input": "I need a train to Cambridge please. I plan to leave out on Tuesday",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9151173,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9151177,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

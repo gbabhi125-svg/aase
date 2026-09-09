@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0375",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL1502.json",
+  "task": "I am looking for a train departing ely and should arrive by 16:45.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6508517,
+      "action": "ingest",
+      "input": "I am looking for a train departing ely and should arrive by 16:45.",
+      "output": "I am looking for a train departing ely and should arrive by 16:45.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.650853,
+      "action": "tool_call",
+      "input": "I am looking for a train departing ely and should arrive by 16:45.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6508534,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6508536,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

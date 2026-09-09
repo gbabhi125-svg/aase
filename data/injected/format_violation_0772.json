@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0772",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL3253.json",
+  "task": "I'm craving Indian food and money isn't an issue so find me an expensive restaurant that serves it please",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4604187,
+      "action": "ingest",
+      "input": "I'm craving Indian food and money isn't an issue so find me an expensive restaurant that serves it please",
+      "output": "I'm craving Indian food and money isn't an issue so find me an expensive restaurant that serves it please",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4604201,
+      "action": "llm_call",
+      "input": "I'm craving Indian food and money isn't an issue so find me an expensive restaurant that serves it please",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.460421,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

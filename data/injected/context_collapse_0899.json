@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0899",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL0231.json",
+  "task": "Finches Bed and Breakfast was recommended to me highly. Could you help me find it?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.303318,
+      "action": "ingest",
+      "input": "Finches Bed and Breakfast was recommended to me highly. Could you help me find it?",
+      "output": "Finches Bed and Breakfast was recommended to me highly. Could you help me find it?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.303319,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3033195,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3033202,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

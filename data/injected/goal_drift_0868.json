@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0868",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0680.json",
+  "task": "I am looking for information on the Yippee Noodle bar.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7983394,
+      "action": "ingest",
+      "input": "I am looking for information on the Yippee Noodle bar.",
+      "output": "I am looking for information on the Yippee Noodle bar.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.79834,
+      "action": "subtask_1",
+      "input": "I am looking for information on the Yippee Noodle bar.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7983406,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7983413,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

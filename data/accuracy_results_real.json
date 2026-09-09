@@ -1,0 +1,108 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "source": "real",
+  "attempted": 5,
+  "scored": 0,
+  "excluded_api": 5,
+  "api_failures": {
+    "RATE_LIMIT": 5
+  },
+  "correct": 0,
+  "accuracy_pct": 0,
+  "accuracy_basis": "scored traces only; API failures excluded",
+  "unknown": 0,
+  "median_time_sec": 0,
+  "per_type": {
+    "hallucination": {
+      "ok": 0,
+      "n": 0,
+      "api": 5
+    },
+    "tool_misuse": {
+      "ok": 0,
+      "n": 0,
+      "api": 0
+    },
+    "reasoning_loop": {
+      "ok": 0,
+      "n": 0,
+      "api": 0
+    },
+    "context_collapse": {
+      "ok": 0,
+      "n": 0,
+      "api": 0
+    },
+    "goal_drift": {
+      "ok": 0,
+      "n": 0,
+      "api": 0
+    },
+    "prompt_injection": {
+      "ok": 0,
+      "n": 0,
+      "api": 0
+    },
+    "memory_overflow": {
+      "ok": 0,
+      "n": 0,
+      "api": 0
+    }
+  },
+  "confusion": {},
+  "all_results": [
+    {
+      "trace_id": "REAL_ALGO_1",
+      "actual": "hallucination",
+      "diagnosed": null,
+      "correct": false,
+      "time": 1.1,
+      "how": "RATE_LIMIT",
+      "excluded": true,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_10",
+      "actual": "hallucination",
+      "diagnosed": null,
+      "correct": false,
+      "time": 2.0,
+      "how": "RATE_LIMIT",
+      "excluded": true,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_100",
+      "actual": "hallucination",
+      "diagnosed": null,
+      "correct": false,
+      "time": 2.0,
+      "how": "RATE_LIMIT",
+      "excluded": true,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_101",
+      "actual": "hallucination",
+      "diagnosed": null,
+      "correct": false,
+      "time": 2.1,
+      "how": "RATE_LIMIT",
+      "excluded": true,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_102",
+      "actual": "hallucination",
+      "diagnosed": null,
+      "correct": false,
+      "time": 1.9,
+      "how": "RATE_LIMIT",
+      "excluded": true,
+      "src": "real"
+    }
+  ],
+  "generated": "2026-09-09 13:06:00",
+  "parser": "src/parser.py (shared)"
+}

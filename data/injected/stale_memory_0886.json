@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0886",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_MUL0992.json",
+  "task": "I need to find somewhere to eat that is moderately priced in the city's center.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6348214,
+      "action": "memory_fetch",
+      "input": "I need to find somewhere to eat that is moderately priced in the city's center.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6348224,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6348228,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

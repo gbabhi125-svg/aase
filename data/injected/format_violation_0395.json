@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0395",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL1620.json",
+  "task": "Hello! I'd like to eat at a cheap restaurant in the north. Any ideas for me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.418809,
+      "action": "ingest",
+      "input": "Hello! I'd like to eat at a cheap restaurant in the north. Any ideas for me?",
+      "output": "Hello! I'd like to eat at a cheap restaurant in the north. Any ideas for me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.41881,
+      "action": "llm_call",
+      "input": "Hello! I'd like to eat at a cheap restaurant in the north. Any ideas for me?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4188104,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

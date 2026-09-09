@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0745",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0046.json",
+  "task": "I would like to book a taxi that should leave at 12:45 and depart from the Museum of Classical Archaeology.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2843904,
+      "action": "ingest",
+      "input": "I would like to book a taxi that should leave at 12:45 and depart from the Museum of Classical Archaeology.",
+      "output": "I would like to book a taxi that should leave at 12:45 and depart from the Museum of Classical Archaeology.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2843914,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2843919,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2843924,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0502",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG0991.json",
+  "task": "I want to find a guesthouse with free parking included. Can you help?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8375866,
+      "action": "tool_selection",
+      "input": "I want to find a guesthouse with free parking included. Can you help?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8375874,
+      "action": "wrong_tool",
+      "input": "I want to find a guesthouse with free parking included. Can you help?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.837588,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8375885,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

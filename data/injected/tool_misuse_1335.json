@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1335",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1386.json",
+  "task": "Hi there, can you help me find a good Chinese restaurant? I seriously need some egg rolls.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9409,
+      "action": "tool_selection",
+      "input": "Hi there, can you help me find a good Chinese restaurant? I seriously need some egg rolls.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.940901,
+      "action": "wrong_tool",
+      "input": "Hi there, can you help me find a good Chinese restaurant? I seriously need some egg rolls.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9409015,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9409022,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

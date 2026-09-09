@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0971",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL4384.json",
+  "task": "I am excited to be coming and would love to find an expensive mexican restaurant.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7201037,
+      "action": "ingest",
+      "input": "I am excited to be coming and would love to find an expensive mexican restaurant.",
+      "output": "I am excited to be coming and would love to find an expensive mexican restaurant.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7201047,
+      "action": "tool_call",
+      "input": "I am excited to be coming and would love to find an expensive mexican restaurant.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7201052,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7201056,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1123",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL0078.json",
+  "task": "I need a hotel in Cambridge that is rated 4 stars be located in the south area.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5015728,
+      "action": "ingest",
+      "input": "I need a hotel in Cambridge that is rated 4 stars be located in the south area.",
+      "output": "I need a hotel in Cambridge that is rated 4 stars be located in the south area.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5015738,
+      "action": "llm_call",
+      "input": "I need a hotel in Cambridge that is rated 4 stars be located in the south area.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5015745,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

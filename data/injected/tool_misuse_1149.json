@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1149",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL1682.json",
+  "task": "Hi, I need to find out if there's a train going to leicester that leaves on Monday.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9147391,
+      "action": "tool_selection",
+      "input": "Hi, I need to find out if there's a train going to leicester that leaves on Monday.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9147403,
+      "action": "wrong_tool",
+      "input": "Hi, I need to find out if there's a train going to leicester that leaves on Monday.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9147408,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.914741,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

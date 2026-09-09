@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0291",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG1312.json",
+  "task": "I am looking for a cheap restaurant to have a meal.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6444345,
+      "action": "ingest",
+      "input": "I am looking for a cheap restaurant to have a meal.",
+      "output": "I am looking for a cheap restaurant to have a meal.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6444352,
+      "action": "tool_call",
+      "input": "I am looking for a cheap restaurant to have a meal.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6444354,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.644436,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

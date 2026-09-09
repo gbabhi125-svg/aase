@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0594",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_WOZ20382.json",
+  "task": "I'm looking for a place serving spanish food somewhere in town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7666187,
+      "action": "ingest",
+      "input": "I'm looking for a place serving spanish food somewhere in town.",
+      "output": "I'm looking for a place serving spanish food somewhere in town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7666194,
+      "action": "subtask_1",
+      "input": "I'm looking for a place serving spanish food somewhere in town.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.76662,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7666206,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

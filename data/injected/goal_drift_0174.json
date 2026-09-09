@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0174",
+  "injected_failure": "goal_drift",
+  "task_id": "toolbench_G3_1",
+  "task": "I'm a food enthusiast and I want to explore different cuisines. Can you suggest some popular cocktails and their recipes that pair well with different types of cuisine? Also, find some interesting news articles about the culinary world. Additionally, provide me with the current threshold securities list for NVIDIA's stock.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7191992,
+      "action": "ingest",
+      "input": "I'm a food enthusiast and I want to explore different cuisines. Can you suggest some popular cocktails and their recipes that pair well with different types of cuisine? Also, find some interesting news articles about the culinary world. Additionally, provide me with the current threshold securities ",
+      "output": "I'm a food enthusiast and I want to explore different cuisines. Can you suggest some popular cocktails and their recipes that pair well with different types of cuisine? Also, find some interesting news articles about the culinary world. Additionally, provide me with the current threshold securities ",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7192004,
+      "action": "subtask_1",
+      "input": "I'm a food enthusiast and I want to explore different cuisines. Can you suggest some popular cocktails and their recipes that pair well with different types of cuisine? Also, find some interesting news articles about the culinary world. Additionally, provide me with the current threshold securities ",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7192008,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7192016,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

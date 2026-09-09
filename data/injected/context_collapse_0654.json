@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0654",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL1373.json",
+  "task": "Hello, can you help me find a train that leaves after 16:00? The train should also leave Kings Lynn too. Thankyou.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.27341,
+      "action": "ingest",
+      "input": "Hello, can you help me find a train that leaves after 16:00? The train should also leave Kings Lynn too. Thankyou.",
+      "output": "Hello, can you help me find a train that leaves after 16:00? The train should also leave Kings Lynn too. Thankyou.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.273411,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2734113,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2734118,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0627",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0222.json",
+  "task": "Hey I'm looking for the Addenbrookes Hopistal. Please make sure it has the medicine for the elderly department.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7704208,
+      "action": "ingest",
+      "input": "Hey I'm looking for the Addenbrookes Hopistal. Please make sure it has the medicine for the elderly department.",
+      "output": "Hey I'm looking for the Addenbrookes Hopistal. Please make sure it has the medicine for the elderly department.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7704215,
+      "action": "subtask_1",
+      "input": "Hey I'm looking for the Addenbrookes Hopistal. Please make sure it has the medicine for the elderly department.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.770422,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7704225,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

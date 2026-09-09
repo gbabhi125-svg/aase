@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0253",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL3689.json",
+  "task": "Hey could you help me figure out the train schedule? I need to go to Cambridge I am leaving from bishops Stanford station. Do you know the times?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8093402,
+      "action": "tool_selection",
+      "input": "Hey could you help me figure out the train schedule? I need to go to Cambridge I am leaving from bishops Stanford station. Do you know the times?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.809341,
+      "action": "wrong_tool",
+      "input": "Hey could you help me figure out the train schedule? I need to go to Cambridge I am leaving from bishops Stanford station. Do you know the times?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8093414,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.809342,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

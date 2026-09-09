@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1105",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1676.json",
+  "task": "Hi! Do you know anything about a restaurant called clowns cafe?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3272805,
+      "action": "ingest",
+      "input": "Hi! Do you know anything about a restaurant called clowns cafe?",
+      "output": "Hi! Do you know anything about a restaurant called clowns cafe?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3272815,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.327282,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3272824,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

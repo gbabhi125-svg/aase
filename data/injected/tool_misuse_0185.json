@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0185",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1012.json",
+  "task": "I'm looking for a hotel named Express by Holiday Inn Cambridge. Do you have any information on that?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8021417,
+      "action": "tool_selection",
+      "input": "I'm looking for a hotel named Express by Holiday Inn Cambridge. Do you have any information on that?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8021426,
+      "action": "wrong_tool",
+      "input": "I'm looking for a hotel named Express by Holiday Inn Cambridge. Do you have any information on that?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8021436,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.802144,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

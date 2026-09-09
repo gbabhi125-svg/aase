@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1244",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL0292.json",
+  "task": "Could you help me find a train? I am looking for one to take me to Cambridge and I need it to leave by 17:45 on Saturday.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3441896,
+      "action": "ingest",
+      "input": "Could you help me find a train? I am looking for one to take me to Cambridge and I need it to leave by 17:45 on Saturday.",
+      "output": "Could you help me find a train? I am looking for one to take me to Cambridge and I need it to leave by 17:45 on Saturday.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3441908,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.344191,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3441916,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

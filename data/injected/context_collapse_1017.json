@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1017",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL2510.json",
+  "task": "Hello, could you tell me if Downing College is still operating?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3170109,
+      "action": "ingest",
+      "input": "Hello, could you tell me if Downing College is still operating?",
+      "output": "Hello, could you tell me if Downing College is still operating?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3170116,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3170123,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3170128,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

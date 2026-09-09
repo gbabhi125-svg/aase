@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0915",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG1105.json",
+  "task": "I'm looking for an attraction to visit. Is there anything located in the west part of town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3051193,
+      "action": "ingest",
+      "input": "I'm looking for an attraction to visit. Is there anything located in the west part of town?",
+      "output": "I'm looking for an attraction to visit. Is there anything located in the west part of town?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3051202,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3051207,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.305121,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

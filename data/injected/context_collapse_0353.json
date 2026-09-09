@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0353",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL2679.json",
+  "task": "Hi, I am planning my upcoming trip and am looking for a place to stay.  Can you recommend something for me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2366292,
+      "action": "ingest",
+      "input": "Hi, I am planning my upcoming trip and am looking for a place to stay.  Can you recommend something for me?",
+      "output": "Hi, I am planning my upcoming trip and am looking for a place to stay.  Can you recommend something for me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2366302,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2366307,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2366314,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0485",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL4685.json",
+  "task": "i'm looking for a place to stay that is on the cheap side.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.752544,
+      "action": "ingest",
+      "input": "i'm looking for a place to stay that is on the cheap side.",
+      "output": "i'm looking for a place to stay that is on the cheap side.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7525449,
+      "action": "subtask_1",
+      "input": "i'm looking for a place to stay that is on the cheap side.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7525454,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7525458,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

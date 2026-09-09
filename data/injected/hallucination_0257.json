@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0257",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL4611.json",
+  "task": "Can I please get a train ticket from Norwich to Cambridge?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6420677,
+      "action": "ingest",
+      "input": "Can I please get a train ticket from Norwich to Cambridge?",
+      "output": "Can I please get a train ticket from Norwich to Cambridge?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6420681,
+      "action": "tool_call",
+      "input": "Can I please get a train ticket from Norwich to Cambridge?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6420686,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.642069,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

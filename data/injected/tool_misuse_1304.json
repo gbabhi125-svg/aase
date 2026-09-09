@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1304",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4599.json",
+  "task": "Please find an Indian restaurant in the North.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.934758,
+      "action": "tool_selection",
+      "input": "Please find an Indian restaurant in the North.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.934759,
+      "action": "wrong_tool",
+      "input": "Please find an Indian restaurant in the North.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9347594,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.93476,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

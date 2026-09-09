@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0668",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0764.json",
+  "task": "I need to find a four stars hotel in the north that has indoor free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7761126,
+      "action": "ingest",
+      "input": "I need to find a four stars hotel in the north that has indoor free parking.",
+      "output": "I need to find a four stars hotel in the north that has indoor free parking.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7761135,
+      "action": "subtask_1",
+      "input": "I need to find a four stars hotel in the north that has indoor free parking.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.776114,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7761145,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

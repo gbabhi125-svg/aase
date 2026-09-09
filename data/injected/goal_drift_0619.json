@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0619",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0419.json",
+  "task": "I need a guesthouse.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7694476,
+      "action": "ingest",
+      "input": "I need a guesthouse.",
+      "output": "I need a guesthouse.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7694485,
+      "action": "subtask_1",
+      "input": "I need a guesthouse.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.769449,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7694495,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

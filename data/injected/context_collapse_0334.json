@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0334",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0158.json",
+  "task": "Hello I am injured and am looking for a nearby hospital please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.234288,
+      "action": "ingest",
+      "input": "Hello I am injured and am looking for a nearby hospital please.",
+      "output": "Hello I am injured and am looking for a nearby hospital please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.234289,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2342894,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.23429,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

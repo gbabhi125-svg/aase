@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0693",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL2595.json",
+  "task": "I will be in Cambridge soon and look forward to seeing at least one of your attractions.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2779584,
+      "action": "ingest",
+      "input": "I will be in Cambridge soon and look forward to seeing at least one of your attractions.",
+      "output": "I will be in Cambridge soon and look forward to seeing at least one of your attractions.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.277959,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2779598,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2779605,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

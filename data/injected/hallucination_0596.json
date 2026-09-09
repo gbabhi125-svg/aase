@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0596",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL2294.json",
+  "task": "I am planning a visit to Cambridge very soon and need some information about types of lodging available.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6776783,
+      "action": "ingest",
+      "input": "I am planning a visit to Cambridge very soon and need some information about types of lodging available.",
+      "output": "I am planning a visit to Cambridge very soon and need some information about types of lodging available.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.677679,
+      "action": "tool_call",
+      "input": "I am planning a visit to Cambridge very soon and need some information about types of lodging available.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6776795,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.67768,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

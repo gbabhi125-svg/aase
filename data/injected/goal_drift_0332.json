@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0332",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1139.json",
+  "task": "Hello there! Could you help me find a hotel? I am looking for one that has free parking and is expensive.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7361023,
+      "action": "ingest",
+      "input": "Hello there! Could you help me find a hotel? I am looking for one that has free parking and is expensive.",
+      "output": "Hello there! Could you help me find a hotel? I am looking for one that has free parking and is expensive.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.736103,
+      "action": "subtask_1",
+      "input": "Hello there! Could you help me find a hotel? I am looking for one that has free parking and is expensive.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.736104,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7361045,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0858",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0369.json",
+  "task": "Hi, do you know of a hotel called finches bed and breakfast?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7072747,
+      "action": "ingest",
+      "input": "Hi, do you know of a hotel called finches bed and breakfast?",
+      "output": "Hi, do you know of a hotel called finches bed and breakfast?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7072759,
+      "action": "tool_call",
+      "input": "Hi, do you know of a hotel called finches bed and breakfast?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7072763,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7072768,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

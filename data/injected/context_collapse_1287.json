@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1287",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_WOZ20181.json",
+  "task": "I am looking for an upscale restaurant with European food, please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3490329,
+      "action": "ingest",
+      "input": "I am looking for an upscale restaurant with European food, please.",
+      "output": "I am looking for an upscale restaurant with European food, please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3490338,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3490343,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.349035,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

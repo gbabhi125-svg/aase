@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0769",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL2494.json",
+  "task": "We need to find the address of a theater in the center of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.868955,
+      "action": "tool_selection",
+      "input": "We need to find the address of a theater in the center of town.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8689556,
+      "action": "wrong_tool",
+      "input": "We need to find the address of a theater in the center of town.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8689563,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.868957,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

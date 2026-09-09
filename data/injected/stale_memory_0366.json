@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0366",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_PMUL4078.json",
+  "task": "please find me a place to go in the centre and it should be a collage",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5831861,
+      "action": "memory_fetch",
+      "input": "please find me a place to go in the centre and it should be a collage",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.583187,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5831878,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

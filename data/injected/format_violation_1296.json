@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1296",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL1989.json",
+  "task": "Hello. I'd like a train to ely please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5211172,
+      "action": "ingest",
+      "input": "Hello. I'd like a train to ely please.",
+      "output": "Hello. I'd like a train to ely please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5211182,
+      "action": "llm_call",
+      "input": "Hello. I'd like a train to ely please.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5211189,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

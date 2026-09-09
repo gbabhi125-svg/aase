@@ -1,0 +1,55 @@
+{
+  "trace_id": "REAS_0149",
+  "failure_type": "reasoning_loop",
+  "task": "Find the email address of customer David Chen in the CRM.",
+  "domain": "enterprise_lookup",
+  "source_dataset": "aase_synthetic_v2",
+  "trace": [
+    {
+      "step": 1,
+      "action": "ingest",
+      "input": "Find the email address of customer David Chen in the CRM.",
+      "output": "Task received.",
+      "status": "success"
+    },
+    {
+      "step": 2,
+      "action": "search",
+      "input": "CRM",
+      "output": "Multiple records found \u2014 ambiguous.",
+      "status": "success"
+    },
+    {
+      "step": 3,
+      "action": "search",
+      "input": "CRM",
+      "output": "Multiple records found \u2014 ambiguous.",
+      "status": "success"
+    },
+    {
+      "step": 4,
+      "action": "search",
+      "input": "CRM",
+      "output": "Multiple records found \u2014 ambiguous.",
+      "status": "success"
+    },
+    {
+      "step": 5,
+      "action": "search",
+      "input": "CRM",
+      "output": "Multiple records found \u2014 ambiguous.",
+      "status": "success"
+    },
+    {
+      "step": 6,
+      "action": "loop_detected",
+      "input": "Identical query executed 4 times",
+      "output": "No refinement between attempts. No progress made.",
+      "status": "error",
+      "error": "reasoning_loop_detected"
+    }
+  ],
+  "num_steps": 6,
+  "failure_detected_at_step": 6,
+  "ground_truth_fix": "If the same action returns the same result twice, do not repeat it. Refine the query or stop and report."
+}

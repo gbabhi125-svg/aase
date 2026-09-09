@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0386",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL3697.json",
+  "task": "Can you help me find a good steakhouse?  Ideally I would like it to be moderately priced, not too fancy or cheap.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2404597,
+      "action": "ingest",
+      "input": "Can you help me find a good steakhouse?  Ideally I would like it to be moderately priced, not too fancy or cheap.",
+      "output": "Can you help me find a good steakhouse?  Ideally I would like it to be moderately priced, not too fancy or cheap.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2404606,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.240461,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2404618,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

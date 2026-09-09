@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1457",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG1149.json",
+  "task": "My brother told me about this attraction place called Abbey Pool and Astroturf Pitch. Would you be able to tell me where it is?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5394568,
+      "action": "ingest",
+      "input": "My brother told me about this attraction place called Abbey Pool and Astroturf Pitch. Would you be able to tell me where it is?",
+      "output": "My brother told me about this attraction place called Abbey Pool and Astroturf Pitch. Would you be able to tell me where it is?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5394578,
+      "action": "llm_call",
+      "input": "My brother told me about this attraction place called Abbey Pool and Astroturf Pitch. Would you be able to tell me where it is?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5394583,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

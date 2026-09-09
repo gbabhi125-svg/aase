@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1193",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG02031.json",
+  "task": "Are there any places that offer rooms in the north that also give free wifi, or do you have to go to other parts of town for that?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8338597,
+      "action": "ingest",
+      "input": "Are there any places that offer rooms in the north that also give free wifi, or do you have to go to other parts of town for that?",
+      "output": "Are there any places that offer rooms in the north that also give free wifi, or do you have to go to other parts of town for that?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8338604,
+      "action": "subtask_1",
+      "input": "Are there any places that offer rooms in the north that also give free wifi, or do you have to go to other parts of town for that?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8338609,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8338614,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

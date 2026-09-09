@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1171",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL3340.json",
+  "task": "Would I be able to get a train from Cambridge to London King's Cross?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.506882,
+      "action": "ingest",
+      "input": "Would I be able to get a train from Cambridge to London King's Cross?",
+      "output": "Would I be able to get a train from Cambridge to London King's Cross?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5068831,
+      "action": "llm_call",
+      "input": "Would I be able to get a train from Cambridge to London King's Cross?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5068836,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

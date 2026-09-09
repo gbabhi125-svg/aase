@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_1267",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_MUL2457.json",
+  "task": "I am looking for corsica restaurants in the east of cambridge, can you help me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.673157,
+      "action": "memory_fetch",
+      "input": "I am looking for corsica restaurants in the east of cambridge, can you help me?",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.673158,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6731584,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

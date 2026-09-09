@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0406",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01220.json",
+  "task": "I've been injured and I need a hospital near me, one with a coronary care unit department please!",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7439554,
+      "action": "ingest",
+      "input": "I've been injured and I need a hospital near me, one with a coronary care unit department please!",
+      "output": "I've been injured and I need a hospital near me, one with a coronary care unit department please!",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7439563,
+      "action": "subtask_1",
+      "input": "I've been injured and I need a hospital near me, one with a coronary care unit department please!",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7439568,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7439573,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

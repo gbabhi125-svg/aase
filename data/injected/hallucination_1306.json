@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1306",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL3492.json",
+  "task": "Hi, I am looking for a hotel called the Acorn Guest House.  Could I get the address?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7584536,
+      "action": "ingest",
+      "input": "Hi, I am looking for a hotel called the Acorn Guest House.  Could I get the address?",
+      "output": "Hi, I am looking for a hotel called the Acorn Guest House.  Could I get the address?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7584543,
+      "action": "tool_call",
+      "input": "Hi, I am looking for a hotel called the Acorn Guest House.  Could I get the address?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7584548,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7584553,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

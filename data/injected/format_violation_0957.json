@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0957",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL2255.json",
+  "task": "I am seeking a concerthall in the west part of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4810414,
+      "action": "ingest",
+      "input": "I am seeking a concerthall in the west part of town.",
+      "output": "I am seeking a concerthall in the west part of town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4810424,
+      "action": "llm_call",
+      "input": "I am seeking a concerthall in the west part of town.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4810429,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

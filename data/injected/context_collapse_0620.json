@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0620",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_WOZ20655.json",
+  "task": "Could you recommend a restaurant that serves french food?  I'll need the address, phone number and postcode.  Thank you.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.269485,
+      "action": "ingest",
+      "input": "Could you recommend a restaurant that serves french food?  I'll need the address, phone number and postcode.  Thank you.",
+      "output": "Could you recommend a restaurant that serves french food?  I'll need the address, phone number and postcode.  Thank you.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2694857,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2694864,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.269487,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

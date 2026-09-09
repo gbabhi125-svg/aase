@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0190",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL2048.json",
+  "task": "I'm seeking an attraction! A boat one will be nice.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8026867,
+      "action": "tool_selection",
+      "input": "I'm seeking an attraction! A boat one will be nice.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8026874,
+      "action": "wrong_tool",
+      "input": "I'm seeking an attraction! A boat one will be nice.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.802688,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8026886,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

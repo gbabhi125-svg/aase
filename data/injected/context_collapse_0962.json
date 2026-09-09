@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0962",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1690.json",
+  "task": "Are there trains arriving in Cambridge before 18:45 on Sunday?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3104658,
+      "action": "ingest",
+      "input": "Are there trains arriving in Cambridge before 18:45 on Sunday?",
+      "output": "Are there trains arriving in Cambridge before 18:45 on Sunday?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.310467,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3104675,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3104684,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0855",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL2515.json",
+  "task": "I am planning a visit to Cambridge soon and want to visit a specific attraction people are talking about. Have you heard of the funky fun house?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7969828,
+      "action": "ingest",
+      "input": "I am planning a visit to Cambridge soon and want to visit a specific attraction people are talking about. Have you heard of the funky fun house?",
+      "output": "I am planning a visit to Cambridge soon and want to visit a specific attraction people are talking about. Have you heard of the funky fun house?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7969835,
+      "action": "subtask_1",
+      "input": "I am planning a visit to Cambridge soon and want to visit a specific attraction people are talking about. Have you heard of the funky fun house?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.796984,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7969847,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0226",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01527.json",
+  "task": "I am looking for a place to dine. The restaurant should be in the expensive price range and should serve british food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.221017,
+      "action": "ingest",
+      "input": "I am looking for a place to dine. The restaurant should be in the expensive price range and should serve british food.",
+      "output": "I am looking for a place to dine. The restaurant should be in the expensive price range and should serve british food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2210176,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2210178,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2210183,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

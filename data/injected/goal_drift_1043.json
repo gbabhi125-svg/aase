@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1043",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL0340.json",
+  "task": "I am going to Cambridge and need a place to eat that serves lebanese food and is cheaply priced.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.817446,
+      "action": "ingest",
+      "input": "I am going to Cambridge and need a place to eat that serves lebanese food and is cheaply priced.",
+      "output": "I am going to Cambridge and need a place to eat that serves lebanese food and is cheaply priced.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.817447,
+      "action": "subtask_1",
+      "input": "I am going to Cambridge and need a place to eat that serves lebanese food and is cheaply priced.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8174477,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8174481,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

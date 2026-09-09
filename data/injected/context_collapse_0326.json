@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0326",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0849.json",
+  "task": "Can you navigate me to a 5 star hotel with free wifi please?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.233407,
+      "action": "ingest",
+      "input": "Can you navigate me to a 5 star hotel with free wifi please?",
+      "output": "Can you navigate me to a 5 star hotel with free wifi please?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.233408,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2334085,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.233409,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0493",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL3089.json",
+  "task": "Yes I'm looking for a train that departs on Wednesday from Peterborough.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6636398,
+      "action": "ingest",
+      "input": "Yes I'm looking for a train that departs on Wednesday from Peterborough.",
+      "output": "Yes I'm looking for a train that departs on Wednesday from Peterborough.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6636407,
+      "action": "tool_call",
+      "input": "Yes I'm looking for a train that departs on Wednesday from Peterborough.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6636417,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6636422,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

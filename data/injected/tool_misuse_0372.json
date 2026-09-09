@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0372",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_WOZ20428.json",
+  "task": "I am searching for a Lebanese restaurant in the east part of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8225243,
+      "action": "tool_selection",
+      "input": "I am searching for a Lebanese restaurant in the east part of town.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8225255,
+      "action": "wrong_tool",
+      "input": "I am searching for a Lebanese restaurant in the east part of town.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.822526,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8225265,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

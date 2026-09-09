@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1481",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1749.json",
+  "task": "I'm looking for some information please. What can you tell me about Clare Hall?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3718865,
+      "action": "ingest",
+      "input": "I'm looking for some information please. What can you tell me about Clare Hall?",
+      "output": "I'm looking for some information please. What can you tell me about Clare Hall?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3718877,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3718882,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3718886,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

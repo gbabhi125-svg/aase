@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1269",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL0699.json",
+  "task": "I'm looking for a hotel in Cambridge in the higher prices ranges and would like for it to include free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3470337,
+      "action": "ingest",
+      "input": "I'm looking for a hotel in Cambridge in the higher prices ranges and would like for it to include free parking.",
+      "output": "I'm looking for a hotel in Cambridge in the higher prices ranges and would like for it to include free parking.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3470347,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3470352,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3470356,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

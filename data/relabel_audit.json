@@ -1,0 +1,656 @@
+{
+  "generated": "2026-09-09 09:10:39",
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "method": "LLM labeller applied to human annotation text only; trace never shown",
+  "examined": 184,
+  "relabelled": 105,
+  "confirmed": 79,
+  "api_failed": 0,
+  "before": {
+    "hallucination": 171,
+    "tool_misuse": 7,
+    "reasoning_loop": 2,
+    "goal_drift": 3,
+    "context_collapse": 1
+  },
+  "after": {
+    "hallucination": 81,
+    "tool_misuse": 69,
+    "goal_drift": 27,
+    "memory_overflow": 6,
+    "reasoning_loop": 1
+  },
+  "changes": [
+    {
+      "trace_id": "REAL_ALGO_103",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The Python code is incorrect."
+    },
+    {
+      "trace_id": "REAL_ALGO_104",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The assistant provides an incorrect plan in response to an inaccurate question."
+    },
+    {
+      "trace_id": "REAL_ALGO_105",
+      "old": "tool_misuse",
+      "new": "hallucination",
+      "reason": "The Verification_Expert fails to identify issues with other agents, namely the Fitness_Expert and Local_Knowledge_Expert, who are not providing accurate information. These agents should utilize tools such as Python to ob"
+    },
+    {
+      "trace_id": "REAL_ALGO_107",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The verification process is incorrect. It should provide the most relevant link; instead, it provides a summary of the search results."
+    },
+    {
+      "trace_id": "REAL_ALGO_108",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The expert should continue examining the search results for the remaining board members to finalize the findings."
+    },
+    {
+      "trace_id": "REAL_ALGO_11",
+      "old": "hallucination",
+      "new": "memory_overflow",
+      "reason": "The agent wrote incorrect code twice, exhausting the interaction limits."
+    },
+    {
+      "trace_id": "REAL_ALGO_111",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The Verification_Expert does not question the 0% result, which is highly unusual. It should take responsibility for further verifying the outcome and raising concerns with other agents."
+    },
+    {
+      "trace_id": "REAL_ALGO_112",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The expert uses placeholders in the code to fetch data from an API, resulting in errors due to missing actual values."
+    },
+    {
+      "trace_id": "REAL_ALGO_117",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The assistant provides an incorrect plan in response to an incorrect question."
+    },
+    {
+      "trace_id": "REAL_ALGO_119",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code is incorrect, as executing it returns no output."
+    },
+    {
+      "trace_id": "REAL_ALGO_121",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code provided by the Debugging_Expert is incorrect and unrelated to the task."
+    },
+    {
+      "trace_id": "REAL_ALGO_122",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code provided by the BingAPI_Expert is incorrect."
+    },
+    {
+      "trace_id": "REAL_ALGO_124",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code is incorrect because it did not import the perform_web_search function."
+    },
+    {
+      "trace_id": "REAL_ALGO_126",
+      "old": "reasoning_loop",
+      "new": "hallucination",
+      "reason": "The CorporateHistory_IPOs_MondayCom_Expert repeatedly writes incorrect code and provides inaccurate information in step 5, leading to a false conclusion."
+    },
+    {
+      "trace_id": "REAL_ALGO_14",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent is approaching the task in the wrong direction. It failed to locate the restaurant's name."
+    },
+    {
+      "trace_id": "REAL_ALGO_19",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The task description is not well aligned with the question, causing the subsequent steps to deviate from the correct direction and leading to an inaccurate or irrelevant resolution."
+    },
+    {
+      "trace_id": "REAL_ALGO_20",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The plan to solve the problem is incorrect."
+    },
+    {
+      "trace_id": "REAL_ALGO_22",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The steps to solve this question are completely irrelevant to the question."
+    },
+    {
+      "trace_id": "REAL_ALGO_23",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code is incorrect because it does not import the necessary Python packages."
+    },
+    {
+      "trace_id": "REAL_ALGO_28",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code provided by DataVerification_Expert is not working, resulting in the failure of execution."
+    },
+    {
+      "trace_id": "REAL_ALGO_31",
+      "old": "goal_drift",
+      "new": "hallucination",
+      "reason": "The expert directly reached a conclusion without further verifying the search results. The OpenCV contribution list is incomplete."
+    },
+    {
+      "trace_id": "REAL_ALGO_32",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code provided by SpeciesSightingsData_Expert is incorrect."
+    },
+    {
+      "trace_id": "REAL_ALGO_33",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "While obtaining the web link, the expert should download the PDF file and extract the corresponding text. They should not rely on web search to locate specific content within the book."
+    },
+    {
+      "trace_id": "REAL_ALGO_34",
+      "old": "hallucination",
+      "new": "reasoning_loop",
+      "reason": "The agent made a mistake in calculating the total number of wheels for the steam locomotives. The Whyte notation directly represents the number of leading, driving, and trailing wheels on one side of the locomotive. Ther"
+    },
+    {
+      "trace_id": "REAL_ALGO_35",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent should review the page history of the Wikipedia article to obtain the information. Instead, it initiated a search on Bing."
+    },
+    {
+      "trace_id": "REAL_ALGO_36",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The expert misinterprets the output of the OCR function and provides the simplified fractions in an incorrect format."
+    },
+    {
+      "trace_id": "REAL_ALGO_39",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "GIS_DataAnalysis_Expert did not directly access the USGS database to verify the ZIP codes. The expert should have independently verified the ZIP codes using the USGS database to ensure the accuracy of the findings."
+    },
+    {
+      "trace_id": "REAL_ALGO_40",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent wrote incorrect code to calculate the desired value."
+    },
+    {
+      "trace_id": "REAL_ALGO_45",
+      "old": "tool_misuse",
+      "new": "hallucination",
+      "reason": "The agent makes an incorrect assumption that the total number of articles is 1,000. However, the exact number of articles published by Nature in 2020 is not provided in the question. The agent should have used the exact "
+    },
+    {
+      "trace_id": "REAL_ALGO_46",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The agent made a logical error in reasoning about scenario 2. If there is at least one vampire, then the statement 'At least one of us is a human,' made by vampires, would be true and would lead to a contradiction."
+    },
+    {
+      "trace_id": "REAL_ALGO_49",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The expert should not use OCR, and analyzing data is not the responsibility of the Validation_Expert, leading to the exhaustion of step limits."
+    },
+    {
+      "trace_id": "REAL_ALGO_5",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent wrote incorrect code and obtained the wrong result."
+    },
+    {
+      "trace_id": "REAL_ALGO_50",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code is incorrect because it attempts to extract columns that do not exist."
+    },
+    {
+      "trace_id": "REAL_ALGO_51",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The agent provided information that is completely irrelevant to the problems."
+    },
+    {
+      "trace_id": "REAL_ALGO_53",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The Verification_Expert provided incorrect code to solve the task."
+    },
+    {
+      "trace_id": "REAL_ALGO_55",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The WebServing_Expert failed to retrieve useful information from the paper link."
+    },
+    {
+      "trace_id": "REAL_ALGO_58",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The expert incorrectly identified BaseBagging as the predictor base command that received a bug fix, when, according to the ground truth, it should have been BaseLabelPropagation."
+    },
+    {
+      "trace_id": "REAL_ALGO_59",
+      "old": "hallucination",
+      "new": "memory_overflow",
+      "reason": "The expert wrote code with bugs multiple times, leading to the exhaustion of the step limits."
+    },
+    {
+      "trace_id": "REAL_ALGO_60",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The expert wrote code with bugs, leading the following experts to follow the same method for extracting winner information in an incorrect way."
+    },
+    {
+      "trace_id": "REAL_ALGO_61",
+      "old": "context_collapse",
+      "new": "tool_misuse",
+      "reason": "The script failed to locate the C++ code on the webpage because it was not targeting the correct elements. Despite multiple attempts to extract the code, the specific structure or class of the C++ content was overlooked."
+    },
+    {
+      "trace_id": "REAL_ALGO_62",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The expert provided incorrect text in the in-line citation, leading to an error in the comparison. The correct word in the citation that does not match is 'cloak.'"
+    },
+    {
+      "trace_id": "REAL_ALGO_64",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The code provided by MilitaryHistory_Expert is unreasonable, as it is overly hasty. He should investigate step by step instead of attempting to find the solution all at once."
+    },
+    {
+      "trace_id": "REAL_ALGO_69",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code is wrong"
+    },
+    {
+      "trace_id": "REAL_ALGO_70",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The question is not related to Python. He misunderstood the problem and failed to solve it."
+    },
+    {
+      "trace_id": "REAL_ALGO_71",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code provided by DataExtraction_Expert is incorrect. Executing the code did not yield the correct information."
+    },
+    {
+      "trace_id": "REAL_ALGO_73",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The expert provided the setting as 'INT. CASTLE BEDROOM' instead of the correct setting, 'THE CASTLE.'"
+    },
+    {
+      "trace_id": "REAL_ALGO_74",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code provided by MerriamWebsterWordOfTheDay_Historian_Expert is incorrect. Executing the code did not return the correct information."
+    },
+    {
+      "trace_id": "REAL_ALGO_76",
+      "old": "hallucination",
+      "new": "memory_overflow",
+      "reason": "The expert wrote code with bugs multiple times, leading to the exhaustion of the step limits."
+    },
+    {
+      "trace_id": "REAL_ALGO_77",
+      "old": "hallucination",
+      "new": "memory_overflow",
+      "reason": "The agent assumes that the video is available for download, exhausting the step limit."
+    },
+    {
+      "trace_id": "REAL_ALGO_78",
+      "old": "tool_misuse",
+      "new": "hallucination",
+      "reason": "The expert should not suggest manual inspection. Instead, they should use relevant tools or methods to extract the required information. Additionally, too many incorrect codes are being suggested."
+    },
+    {
+      "trace_id": "REAL_ALGO_79",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code provided by WaybackMachine_Expert is not reasonable."
+    },
+    {
+      "trace_id": "REAL_ALGO_8",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent writes code using pandas, which cannot handle the color data in the Excel file. As a result, the code fails to retrieve the color information from the final position."
+    },
+    {
+      "trace_id": "REAL_ALGO_80",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The experts incorrectly present the problems."
+    },
+    {
+      "trace_id": "REAL_ALGO_83",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent failed to locate the correct URL for the dataset from the USGS Nonindigenous Aquatic Species database."
+    },
+    {
+      "trace_id": "REAL_ALGO_86",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code is not appropriate for the task."
+    },
+    {
+      "trace_id": "REAL_ALGO_9",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The calculation incorrectly assumes that Bob's guesses will always match the number of coins in each box, guaranteeing maximum winnings of $30,000. The task specifically asks for the minimum amount Bob can win under an o"
+    },
+    {
+      "trace_id": "REAL_ALGO_90",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent should use Python to obtain the website content and extract the chapter numbers quoted in the titles of the paintings. Instead, it is suggested to manually extract the chapter numbers from the painting titles."
+    },
+    {
+      "trace_id": "REAL_ALGO_91",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent made a mistake in handling the NaN values in the 'Platform' column by dropping all NaN values from the DataFrame. As a result, entries with missing 'Platform' values were removed, leading the code to incorrectl"
+    },
+    {
+      "trace_id": "REAL_ALGO_92",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The proposed method to solve the problem is incorrect because no Python code is provided."
+    },
+    {
+      "trace_id": "REAL_ALGO_93",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The experts provide factual inaccuracies."
+    },
+    {
+      "trace_id": "REAL_ALGO_97",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code provided by WikipediaHistory_Expert is incorrect and does not return any useful results."
+    },
+    {
+      "trace_id": "REAL_ALGO_98",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent made an error in the simulation implementation, resulting in an incorrect outcome."
+    },
+    {
+      "trace_id": "REAL_HAND_1",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "WebSurfer clicks on an irrelevant website and disrupts the task-solving process."
+    },
+    {
+      "trace_id": "REAL_HAND_10",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The Orchestrator should not directly decide to check other criteria. In fact, WebSurfer did not provide a full list of supermarkets in the previous step."
+    },
+    {
+      "trace_id": "REAL_HAND_11",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent should recognize that the website has clickable and expandable tabs containing the full rhyme for each flavor."
+    },
+    {
+      "trace_id": "REAL_HAND_13",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The websurfer did not actually enter the location and click the view. Therefore the website keeps on the same page and the same OCR result. If the location is correctly entered, the website link will change."
+    },
+    {
+      "trace_id": "REAL_HAND_14",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The code is wrong."
+    },
+    {
+      "trace_id": "REAL_HAND_15",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "WebSurfer should refer to the list of funds on Fidelity's official website to find the correct answer and should not rely on third-party websites, which may lack comprehensive information."
+    },
+    {
+      "trace_id": "REAL_HAND_16",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The Orchestrator should let the Websurfer scroll down to check more movies. Moreover, there are search filters for keywords related to the runtime of the movie, but the agent fails to recognize based on the OCR. This can"
+    },
+    {
+      "trace_id": "REAL_HAND_17",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "WebSurfer did not retrieve a list of eateries near Harkness Memorial State Park sorted by distance and operating hours. The keyword it entered was insufficient."
+    },
+    {
+      "trace_id": "REAL_HAND_19",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The Orchestrator should not decide to replan. WebSurfer has already triggered the button for 2020, but the Orchestrator did not give it a chance to click."
+    },
+    {
+      "trace_id": "REAL_HAND_20",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "WebSurfer's inability to reliably access the requested documents resulted in the overall task failure, as the necessary time span data could not be extracted or compared. This underscores the need for enhanced fallback m"
+    },
+    {
+      "trace_id": "REAL_HAND_21",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "WebSurfer encountered difficulties in locating and accessing the acknowledgment section of the paper, causing a delay in identifying the NASA award number associated with R.G. Arendt."
+    },
+    {
+      "trace_id": "REAL_HAND_23",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The WebSurfer did not return the useful information needed to answer the question."
+    },
+    {
+      "trace_id": "REAL_HAND_25",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The Orchestrator should count the total number of revisions. The task has not yet been fully completed."
+    },
+    {
+      "trace_id": "REAL_HAND_27",
+      "old": "goal_drift",
+      "new": "tool_misuse",
+      "reason": "WebSurfer failed to locate the specific volume in the University of Leicester paper due to incomplete data retrieval from the journal's website and insufficient progress in analyzing the full PDF."
+    },
+    {
+      "trace_id": "REAL_HAND_28",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The searching result is wrong."
+    },
+    {
+      "trace_id": "REAL_HAND_29",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "It did not return anything useful."
+    },
+    {
+      "trace_id": "REAL_HAND_3",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The WebSurfer should find the clickable link to the APOD image for the first week of August 2015 and extract the city name from the image's description."
+    },
+    {
+      "trace_id": "REAL_HAND_30",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "Assistant naviagtes the agents group to a wrong direction - contacting the offices for the result. Instead, the agents should solve the problems by themselves."
+    },
+    {
+      "trace_id": "REAL_HAND_31",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The list of gyms within 5 miles of 400 Main Street, Point Pleasant, WV 25550 is actually not shown in full at step 8. The Orchestrator then decides to search them one by one but does not confirm whether the list is compl"
+    },
+    {
+      "trace_id": "REAL_HAND_32",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "It provides incorrect instructions."
+    },
+    {
+      "trace_id": "REAL_HAND_33",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "WebSurfer failed to provide useful information and encountered errors during the process."
+    },
+    {
+      "trace_id": "REAL_HAND_34",
+      "old": "goal_drift",
+      "new": "tool_misuse",
+      "reason": "WebSurfer returned general and unrelated information due to poorly refined queries and failed to identify the specific version of OpenCV where Mask-RCNN support was added. This failure caused subsequent steps to proceed "
+    },
+    {
+      "trace_id": "REAL_HAND_35",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "WebSurfer's OCR did not correctly extract the required information (the prices of daily and season passes), leading the Orchestrator to think that the required information is not on the current page, when in fact it is."
+    },
+    {
+      "trace_id": "REAL_HAND_36",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The Orchestrator should instruct WebSurfer to collect the full list of Daniel Craig's movies on IMDb. Instead, it only displayed 18% of the page, leading the Orchestrator to incorrectly conclude that the movie list was c"
+    },
+    {
+      "trace_id": "REAL_HAND_37",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The key word should include Monterey Bay Aquarium website."
+    },
+    {
+      "trace_id": "REAL_HAND_38",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The Orchestrator should instruct WebSurfer to search for hikes on TripAdvisor to verify the ratings and review counts, instead of merely searching the web."
+    },
+    {
+      "trace_id": "REAL_HAND_39",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The instrcution is wrong."
+    },
+    {
+      "trace_id": "REAL_HAND_4",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The WebSurfer should visit TripAdvisor pages for specific trails to verify the number of reviews, average rating, instead it over relys on search results."
+    },
+    {
+      "trace_id": "REAL_HAND_40",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "WebSurfer makes two mistakes in this step, leading to failure. 1. It does not include the '2+ bathrooms' criterion in the search, resulting in invalid results. 2. It directly reaches a wrong conclusion by using intermedi"
+    },
+    {
+      "trace_id": "REAL_HAND_42",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The Orchestrator should not directly draw a conclusion if enough information has not been gathered to answer the query. It should replan to address the query."
+    },
+    {
+      "trace_id": "REAL_HAND_44",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The retrieved information is not useful."
+    },
+    {
+      "trace_id": "REAL_HAND_45",
+      "old": "hallucination",
+      "new": "memory_overflow",
+      "reason": "The Orchestrator encountered an error while processing the data."
+    },
+    {
+      "trace_id": "REAL_HAND_46",
+      "old": "tool_misuse",
+      "new": "goal_drift",
+      "reason": "The search tool does not return the desired information regarding the passenger count of each train in 2019. Therefore, the train with the highest number of passengers and its scheduled arrival time at Pompano Beach cann"
+    },
+    {
+      "trace_id": "REAL_HAND_47",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The Orchestrator writes incorrect code."
+    },
+    {
+      "trace_id": "REAL_HAND_49",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The reasoning process is wrong."
+    },
+    {
+      "trace_id": "REAL_HAND_5",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The WebSurfer did not provide the correct OCR text for the lyrics of the song 'Human Nature' by Michael Jackson in the bing search results."
+    },
+    {
+      "trace_id": "REAL_HAND_51",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The agent should provide a transcription of the audio file to extract the page numbers, but it failed to transcribe the audio."
+    },
+    {
+      "trace_id": "REAL_HAND_54",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The agent provides information about the current roster, but the question asks for the roster as of July 2023. THe agent should search for the roster of Hokkaido Nippon-Ham Fighters in 2023."
+    },
+    {
+      "trace_id": "REAL_HAND_55",
+      "old": "reasoning_loop",
+      "new": "tool_misuse",
+      "reason": "The Orchestrator should instruct WebSurfer to search for the professional history of each board member to determine whether they held C-suite positions before joining Apple's Board. Instead, it repeatedly instructs WebSu"
+    },
+    {
+      "trace_id": "REAL_HAND_57",
+      "old": "hallucination",
+      "new": "memory_overflow",
+      "reason": "WebSurfer's query is not concise enough to retrieve complete information to answer the original question, which leads to reaching the maximum time limit."
+    },
+    {
+      "trace_id": "REAL_HAND_58",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "It failed to extract useful information from the Issue page."
+    },
+    {
+      "trace_id": "REAL_HAND_8",
+      "old": "hallucination",
+      "new": "tool_misuse",
+      "reason": "The WebSurfer does not click on useful information."
+    },
+    {
+      "trace_id": "REAL_HAND_9",
+      "old": "hallucination",
+      "new": "goal_drift",
+      "reason": "The Orchestrator should not replan. The answer is in the previous step, while it should try to verify the birthdate of the provided winners one by one."
+    }
+  ]
+}

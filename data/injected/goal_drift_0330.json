@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0330",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG1101.json",
+  "task": "I'm in the north area of town and need to get a room to stay in.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7359257,
+      "action": "ingest",
+      "input": "I'm in the north area of town and need to get a room to stay in.",
+      "output": "I'm in the north area of town and need to get a room to stay in.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7359269,
+      "action": "subtask_1",
+      "input": "I'm in the north area of town and need to get a room to stay in.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7359273,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.735928,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

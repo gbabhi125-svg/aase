@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0170",
+  "injected_failure": "tool_misuse",
+  "task_id": "toolbench_G2_0",
+  "task": "I'm starting an e-commerce business and I need to integrate a package tracking feature. Can you provide me with the tracking data for the shipment with ID 6045e2f44e1b233199a5e77a? Also, I would like to check the health status of the SQUAKE authentication system.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.800396,
+      "action": "tool_selection",
+      "input": "I'm starting an e-commerce business and I need to integrate a package tracking feature. Can you provide me with the tracking data for the shipment with ID 6045e2f44e1b233199a5e77a? Also, I would like to check the health status of the SQUAKE authentication system.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8003972,
+      "action": "wrong_tool",
+      "input": "I'm starting an e-commerce business and I need to integrate a package tracking feature. Can you provide me with the tracking data for the shipment with ID 6045e2f44e1b233199a5e77a? Also, I would like to check the health status of the SQUAKE authentication system.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8003976,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8003983,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

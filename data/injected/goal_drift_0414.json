@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0414",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0606.json",
+  "task": "Hey there,  I am traveling to Cambridge and needing to see about booking a place to eat.  I am interested in Portuguese food and don't mine a more expensive menu.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7448826,
+      "action": "ingest",
+      "input": "Hey there,  I am traveling to Cambridge and needing to see about booking a place to eat.  I am interested in Portuguese food and don't mine a more expensive menu.",
+      "output": "Hey there,  I am traveling to Cambridge and needing to see about booking a place to eat.  I am interested in Portuguese food and don't mine a more expensive menu.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7448835,
+      "action": "subtask_1",
+      "input": "Hey there,  I am traveling to Cambridge and needing to see about booking a place to eat.  I am interested in Portuguese food and don't mine a more expensive menu.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.744884,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7448845,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

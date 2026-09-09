@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0959",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0935.json",
+  "task": "I live in the centre of town and want to see if I can find a reasonable room for my parents to stay while they are visiting.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8081079,
+      "action": "ingest",
+      "input": "I live in the centre of town and want to see if I can find a reasonable room for my parents to stay while they are visiting.",
+      "output": "I live in the centre of town and want to see if I can find a reasonable room for my parents to stay while they are visiting.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8081088,
+      "action": "subtask_1",
+      "input": "I live in the centre of town and want to see if I can find a reasonable room for my parents to stay while they are visiting.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8081093,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.80811,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0648",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL3793.json",
+  "task": "Where can I find malaysian food? I prefer an expensive restaurant please",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.77383,
+      "action": "ingest",
+      "input": "Where can I find malaysian food? I prefer an expensive restaurant please",
+      "output": "Where can I find malaysian food? I prefer an expensive restaurant please",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7738307,
+      "action": "subtask_1",
+      "input": "Where can I find malaysian food? I prefer an expensive restaurant please",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7738314,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7738318,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

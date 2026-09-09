@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0806",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1287.json",
+  "task": "Hello, I need to find a place to stay for the night. I'd rather be in the north than the city centre, and I'm willing to pay a moderate sum.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7917054,
+      "action": "ingest",
+      "input": "Hello, I need to find a place to stay for the night. I'd rather be in the north than the city centre, and I'm willing to pay a moderate sum.",
+      "output": "Hello, I need to find a place to stay for the night. I'd rather be in the north than the city centre, and I'm willing to pay a moderate sum.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7917063,
+      "action": "subtask_1",
+      "input": "Hello, I need to find a place to stay for the night. I'd rather be in the north than the city centre, and I'm willing to pay a moderate sum.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7917068,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7917073,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

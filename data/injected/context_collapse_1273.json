@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1273",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL3151.json",
+  "task": "Can you help me find a 4 star hotel to stay at that has free wifi? Thanks.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.347475,
+      "action": "ingest",
+      "input": "Can you help me find a 4 star hotel to stay at that has free wifi? Thanks.",
+      "output": "Can you help me find a 4 star hotel to stay at that has free wifi? Thanks.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3474762,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3474767,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3474774,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

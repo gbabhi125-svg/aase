@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0321",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0167.json",
+  "task": "Hello I'd like to get some information on a place to eat in the north side of Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6466913,
+      "action": "ingest",
+      "input": "Hello I'd like to get some information on a place to eat in the north side of Cambridge.",
+      "output": "Hello I'd like to get some information on a place to eat in the north side of Cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.646692,
+      "action": "tool_call",
+      "input": "Hello I'd like to get some information on a place to eat in the north side of Cambridge.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6466925,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6466932,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

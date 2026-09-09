@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1201",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SSNG0392.json",
+  "task": "yes you can help me I need to find a place to stay that includes free wifi and is in the moderate price range.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9211414,
+      "action": "tool_selection",
+      "input": "yes you can help me I need to find a place to stay that includes free wifi and is in the moderate price range.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9211426,
+      "action": "wrong_tool",
+      "input": "yes you can help me I need to find a place to stay that includes free wifi and is in the moderate price range.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.921143,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9211435,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

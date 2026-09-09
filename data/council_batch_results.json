@@ -1,0 +1,196 @@
+{
+  "total_traces": 20,
+  "correct": 15,
+  "accuracy": 0.75,
+  "per_type_accuracy": {
+    "hallucination": 0.8,
+    "context_collapse": 0.3333,
+    "tool_misuse": 1.0,
+    "reasoning_loop": 0.8,
+    "goal_drift": 0.5,
+    "stale_memory": 1.0,
+    "format_violation": 1.0
+  },
+  "results": [
+    {
+      "trace_id": "hallucination_0682",
+      "true_label": "hallucination",
+      "predicted_label": "hallucination",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"DO NOT MAKE UP UNJUSTIFIED CLAIMS\"",
+      "elapsed_seconds": 98.37
+    },
+    {
+      "trace_id": "context_collapse_0013",
+      "true_label": "context_collapse",
+      "predicted_label": "external_factor",
+      "correct": false,
+      "confidence": "high",
+      "final_fix": "\"NO REPAIR NEEDED\"",
+      "elapsed_seconds": 72.41
+    },
+    {
+      "trace_id": "tool_misuse_0407",
+      "true_label": "tool_misuse",
+      "predicted_label": "tool_misuse",
+      "correct": true,
+      "confidence": "medium",
+      "final_fix": "\"If tool_selection is unsuccessful or the selected tool is known to be unreliable, respond with a clear indication of uncertainty, such as 'I don't know' or 'I'm not sure'.\"",
+      "elapsed_seconds": 208.58
+    },
+    {
+      "trace_id": "hallucination_1148",
+      "true_label": "hallucination",
+      "predicted_label": "hallucination",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"IF TOOL CALL RETURNS EMPTY OUTPUT, STATE 'I DON'T KNOW' INSTEAD\"",
+      "elapsed_seconds": 72.86
+    },
+    {
+      "trace_id": "reasoning_loop_0459",
+      "true_label": "reasoning_loop",
+      "predicted_label": "reasoning_loop",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"or break if no results found after 3 attempts\" added to the agent's system prompt",
+      "elapsed_seconds": 80.85
+    },
+    {
+      "trace_id": "reasoning_loop_0490",
+      "true_label": "reasoning_loop",
+      "predicted_label": "reasoning_loop",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"If search for hotels with free parking fails after 3 attempts, try a broader search or ask for human assistance\"",
+      "elapsed_seconds": 75.44
+    },
+    {
+      "trace_id": "goal_drift_0062",
+      "true_label": "goal_drift",
+      "predicted_label": "goal_drift",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"stick to original goal and do not abandon it\"",
+      "elapsed_seconds": 79.99
+    },
+    {
+      "trace_id": "hallucination_1178",
+      "true_label": "hallucination",
+      "predicted_label": "hallucination",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"Only generate answers based on actual information from the tool output\"",
+      "elapsed_seconds": 95.28
+    },
+    {
+      "trace_id": "goal_drift_0814",
+      "true_label": "goal_drift",
+      "predicted_label": "context_collapse",
+      "correct": false,
+      "confidence": "medium",
+      "final_fix": "\"NO REPAIR NEEDED\"",
+      "elapsed_seconds": 77.15
+    },
+    {
+      "trace_id": "stale_memory_0220",
+      "true_label": "stale_memory",
+      "predicted_label": "stale_memory",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"Revalidate knowledge cache before responding, and invalidate outdated information when new data becomes available.\"",
+      "elapsed_seconds": 64.47
+    },
+    {
+      "trace_id": "context_collapse_0295",
+      "true_label": "context_collapse",
+      "predicted_label": "context_collapse",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"STICK TO THE ORIGINAL QUESTION\"",
+      "elapsed_seconds": 69.16
+    },
+    {
+      "trace_id": "reasoning_loop_0980",
+      "true_label": "reasoning_loop",
+      "predicted_label": "reasoning_loop",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"Max 3 search attempts. If not found after 3 attempts, provide explanation of what was searched.\"",
+      "elapsed_seconds": 78.78
+    },
+    {
+      "trace_id": "reasoning_loop_0793",
+      "true_label": "reasoning_loop",
+      "predicted_label": "reasoning_loop",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"If no results are found, try asking for clarification or provide an alternative solution\"",
+      "elapsed_seconds": 76.9
+    },
+    {
+      "trace_id": "tool_misuse_0614",
+      "true_label": "tool_misuse",
+      "predicted_label": "tool_misuse",
+      "correct": true,
+      "confidence": "medium",
+      "final_fix": "NO REPAIR NEEDED",
+      "elapsed_seconds": 74.61
+    },
+    {
+      "trace_id": "context_collapse_1381",
+      "true_label": "context_collapse",
+      "predicted_label": "tool_misuse",
+      "correct": false,
+      "confidence": "medium",
+      "final_fix": "\"Please follow the exact task prompt and do not deviate from the specified tone and format.\"",
+      "elapsed_seconds": 71.61
+    },
+    {
+      "trace_id": "format_violation_0191",
+      "true_label": "format_violation",
+      "predicted_label": "format_violation",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"Provide output in JSON format according to the schema\"",
+      "elapsed_seconds": 71.59
+    },
+    {
+      "trace_id": "hallucination_0313",
+      "true_label": "hallucination",
+      "predicted_label": "hallucination",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"IF TOOL_RESULT IS EMPTY, SAY 'I COULDN'T FIND ANY INFORMATION' TO USER\"",
+      "elapsed_seconds": 77.24
+    },
+    {
+      "trace_id": "hallucination_0360",
+      "true_label": "hallucination",
+      "predicted_label": "context_collapse",
+      "correct": false,
+      "confidence": "medium",
+      "final_fix": "\"If no relevant information is found in the tool call, respond with 'I couldn't find that information' or 'I don't know'.\"",
+      "elapsed_seconds": 74.74
+    },
+    {
+      "trace_id": "tool_misuse_0212",
+      "true_label": "tool_misuse",
+      "predicted_label": "tool_misuse",
+      "correct": true,
+      "confidence": "high",
+      "final_fix": "\"If the selected tool is not relevant to the question, provide an error message and request clarification instead of generating an answer.\"",
+      "elapsed_seconds": 75.09
+    },
+    {
+      "trace_id": "reasoning_loop_0177",
+      "true_label": "reasoning_loop",
+      "predicted_label": "context_collapse",
+      "correct": false,
+      "confidence": "high",
+      "final_fix": "\"if search yields no results 3+ times, then suggest rephrasing the task or asking for more specific information about the desired restaurant.\"",
+      "elapsed_seconds": 77.32
+    }
+  ]
+}

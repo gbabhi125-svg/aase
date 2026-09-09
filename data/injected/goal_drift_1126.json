@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1126",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0470.json",
+  "task": "I am looking for an indian restaurant.  I want this to be a special experience so expensive is preferred.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8262875,
+      "action": "ingest",
+      "input": "I am looking for an indian restaurant.  I want this to be a special experience so expensive is preferred.",
+      "output": "I am looking for an indian restaurant.  I want this to be a special experience so expensive is preferred.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8262885,
+      "action": "subtask_1",
+      "input": "I am looking for an indian restaurant.  I want this to be a special experience so expensive is preferred.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.826289,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8262894,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

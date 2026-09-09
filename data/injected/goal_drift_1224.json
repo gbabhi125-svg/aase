@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1224",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL1742.json",
+  "task": "Can you tell me more information on the avalon?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8373444,
+      "action": "ingest",
+      "input": "Can you tell me more information on the avalon?",
+      "output": "Can you tell me more information on the avalon?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8373456,
+      "action": "subtask_1",
+      "input": "Can you tell me more information on the avalon?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.837346,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8373468,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

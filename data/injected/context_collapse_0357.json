@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0357",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL0983.json",
+  "task": "I'm traveling to cambridge and I was hoping you could find me a train on tuesday that arrives by 13:30.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.237102,
+      "action": "ingest",
+      "input": "I'm traveling to cambridge and I was hoping you could find me a train on tuesday that arrives by 13:30.",
+      "output": "I'm traveling to cambridge and I was hoping you could find me a train on tuesday that arrives by 13:30.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2371027,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2371035,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.237104,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

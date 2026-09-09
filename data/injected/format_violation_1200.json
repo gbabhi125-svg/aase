@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1200",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_WOZ20050.json",
+  "task": "Find a moderately priced place for me please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.510148,
+      "action": "ingest",
+      "input": "Find a moderately priced place for me please.",
+      "output": "Find a moderately priced place for me please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5101488,
+      "action": "llm_call",
+      "input": "Find a moderately priced place for me please.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5101497,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1105",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL1910.json",
+  "task": "I will be visting in North Cambridge and would like to spend sometime at the pool, are there any in the area?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7349317,
+      "action": "ingest",
+      "input": "I will be visting in North Cambridge and would like to spend sometime at the pool, are there any in the area?",
+      "output": "I will be visting in North Cambridge and would like to spend sometime at the pool, are there any in the area?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7349327,
+      "action": "tool_call",
+      "input": "I will be visting in North Cambridge and would like to spend sometime at the pool, are there any in the area?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7349331,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7349339,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

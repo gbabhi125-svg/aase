@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0541",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0246.json",
+  "task": "Hello I am seeking a restaurant in the west side of Cambridge to eat at. Please only suggest expensive places.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7589169,
+      "action": "ingest",
+      "input": "Hello I am seeking a restaurant in the west side of Cambridge to eat at. Please only suggest expensive places.",
+      "output": "Hello I am seeking a restaurant in the west side of Cambridge to eat at. Please only suggest expensive places.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7589178,
+      "action": "subtask_1",
+      "input": "Hello I am seeking a restaurant in the west side of Cambridge to eat at. Please only suggest expensive places.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7589183,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7589192,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

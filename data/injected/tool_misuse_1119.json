@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1119",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_WOZ20482.json",
+  "task": "Hello, I am looking for a moderately priced restaurant on the east side of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9105628,
+      "action": "tool_selection",
+      "input": "Hello, I am looking for a moderately priced restaurant on the east side of town.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.910564,
+      "action": "wrong_tool",
+      "input": "Hello, I am looking for a moderately priced restaurant on the east side of town.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9105644,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.910565,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

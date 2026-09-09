@@ -1,0 +1,65 @@
+{
+  "id": "reasoning_loop_0989",
+  "injected_failure": "reasoning_loop",
+  "task_id": "mwoz_SNG0715.json",
+  "task": "Is there an expensive African restaurant in town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.1174176,
+      "action": "search",
+      "input": "Is there an expensive African restaurant in town.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.1174185,
+      "action": "search",
+      "input": "Is there an expensive African restaurant in town.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.117419,
+      "action": "search",
+      "input": "Is there an expensive African restaurant in town.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.1174195,
+      "action": "search",
+      "input": "Is there an expensive African restaurant in town.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 5,
+      "timestamp": 1787208588.1174197,
+      "action": "search",
+      "input": "Is there an expensive African restaurant in town.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 6,
+      "timestamp": 1787208588.1174202,
+      "action": "loop_detected",
+      "input": "Is there an expensive African restaurant in town.",
+      "output": "None",
+      "status": "error",
+      "error": "identical action repeated 5x, no progress"
+    }
+  ],
+  "success": false
+}

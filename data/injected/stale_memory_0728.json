@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0728",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_SNG01294.json",
+  "task": "I need to book a taxi to take me from Mumford Theatre to go to Darry's Cookhouse and Wine Shop.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.619019,
+      "action": "memory_fetch",
+      "input": "I need to book a taxi to take me from Mumford Theatre to go to Darry's Cookhouse and Wine Shop.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6190197,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6190202,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

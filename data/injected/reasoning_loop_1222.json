@@ -1,0 +1,65 @@
+{
+  "id": "reasoning_loop_1222",
+  "injected_failure": "reasoning_loop",
+  "task_id": "mwoz_PMUL3744.json",
+  "task": "I'm looking for an Indian restaurant in the expensive range.  Do you have anything available?  Thanks",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.1526809,
+      "action": "search",
+      "input": "I'm looking for an Indian restaurant in the expensive range.  Do you have anything available?  Thanks",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.1526818,
+      "action": "search",
+      "input": "I'm looking for an Indian restaurant in the expensive range.  Do you have anything available?  Thanks",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.1526823,
+      "action": "search",
+      "input": "I'm looking for an Indian restaurant in the expensive range.  Do you have anything available?  Thanks",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.1526825,
+      "action": "search",
+      "input": "I'm looking for an Indian restaurant in the expensive range.  Do you have anything available?  Thanks",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 5,
+      "timestamp": 1787208588.152683,
+      "action": "search",
+      "input": "I'm looking for an Indian restaurant in the expensive range.  Do you have anything available?  Thanks",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 6,
+      "timestamp": 1787208588.1526835,
+      "action": "loop_detected",
+      "input": "I'm looking for an Indian restaurant in the expensive range.  Do you have anything available?  Thanks",
+      "output": "None",
+      "status": "error",
+      "error": "identical action repeated 5x, no progress"
+    }
+  ],
+  "success": false
+}

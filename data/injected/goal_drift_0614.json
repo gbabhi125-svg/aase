@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0614",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2163.json",
+  "task": "Can you tell me if there's a concerthall in the city center?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7688746,
+      "action": "ingest",
+      "input": "Can you tell me if there's a concerthall in the city center?",
+      "output": "Can you tell me if there's a concerthall in the city center?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7688758,
+      "action": "subtask_1",
+      "input": "Can you tell me if there's a concerthall in the city center?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7688763,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.768877,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

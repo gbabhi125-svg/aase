@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0662",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL4638.json",
+  "task": "There are trains that run out of Broxbourne, right?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.77536,
+      "action": "ingest",
+      "input": "There are trains that run out of Broxbourne, right?",
+      "output": "There are trains that run out of Broxbourne, right?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.775361,
+      "action": "subtask_1",
+      "input": "There are trains that run out of Broxbourne, right?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7753615,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.775362,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

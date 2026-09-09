@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0717",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL1737.json",
+  "task": "I need to take a train on Tuesday. I want to visit somewhere I haven't been before.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4543974,
+      "action": "ingest",
+      "input": "I need to take a train on Tuesday. I want to visit somewhere I haven't been before.",
+      "output": "I need to take a train on Tuesday. I want to visit somewhere I haven't been before.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4543982,
+      "action": "llm_call",
+      "input": "I need to take a train on Tuesday. I want to visit somewhere I haven't been before.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4543989,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

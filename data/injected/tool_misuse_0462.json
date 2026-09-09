@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0462",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL2342.json",
+  "task": "I'm so hungry! Can you find me a really great modern european restaurant? Money is no object!",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8332994,
+      "action": "tool_selection",
+      "input": "I'm so hungry! Can you find me a really great modern european restaurant? Money is no object!",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8333006,
+      "action": "wrong_tool",
+      "input": "I'm so hungry! Can you find me a really great modern european restaurant? Money is no object!",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8333008,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8333013,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

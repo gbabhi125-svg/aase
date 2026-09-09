@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1311",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL3519.json",
+  "task": "I need informant on trains.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5228834,
+      "action": "ingest",
+      "input": "I need informant on trains.",
+      "output": "I need informant on trains.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5228844,
+      "action": "llm_call",
+      "input": "I need informant on trains.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5228848,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

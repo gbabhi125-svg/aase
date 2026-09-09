@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0298",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01874.json",
+  "task": "Hi, I'm trying to find Addenbrookes Hospital and they're supposed to have a medical decisions unit department, right?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7325447,
+      "action": "ingest",
+      "input": "Hi, I'm trying to find Addenbrookes Hospital and they're supposed to have a medical decisions unit department, right?",
+      "output": "Hi, I'm trying to find Addenbrookes Hospital and they're supposed to have a medical decisions unit department, right?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7325459,
+      "action": "subtask_1",
+      "input": "Hi, I'm trying to find Addenbrookes Hospital and they're supposed to have a medical decisions unit department, right?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7325463,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7325468,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

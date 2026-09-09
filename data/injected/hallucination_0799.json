@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0799",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2390.json",
+  "task": "I am looking for a place to dine in the south it needs to be cheap as well.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7007887,
+      "action": "ingest",
+      "input": "I am looking for a place to dine in the south it needs to be cheap as well.",
+      "output": "I am looking for a place to dine in the south it needs to be cheap as well.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7007897,
+      "action": "tool_call",
+      "input": "I am looking for a place to dine in the south it needs to be cheap as well.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7007902,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7007911,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

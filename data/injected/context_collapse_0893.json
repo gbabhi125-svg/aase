@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0893",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0864.json",
+  "task": "I need to make a reservation at a hotel called El Shaddai",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3025572,
+      "action": "ingest",
+      "input": "I need to make a reservation at a hotel called El Shaddai",
+      "output": "I need to make a reservation at a hotel called El Shaddai",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3025582,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3025587,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3025594,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

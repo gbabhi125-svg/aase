@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0408",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL3811.json",
+  "task": "I need a place to stay in Cambridge. I'm looking for a hotel with 0 stars.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2432559,
+      "action": "ingest",
+      "input": "I need a place to stay in Cambridge. I'm looking for a hotel with 0 stars.",
+      "output": "I need a place to stay in Cambridge. I'm looking for a hotel with 0 stars.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2432568,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2432573,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2432578,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

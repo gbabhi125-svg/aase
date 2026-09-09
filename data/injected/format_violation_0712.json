@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0712",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG0429.json",
+  "task": "Hi! Can you tell me what trains are available on Friday after 18:30?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.453794,
+      "action": "ingest",
+      "input": "Hi! Can you tell me what trains are available on Friday after 18:30?",
+      "output": "Hi! Can you tell me what trains are available on Friday after 18:30?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4537947,
+      "action": "llm_call",
+      "input": "Hi! Can you tell me what trains are available on Friday after 18:30?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4537957,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

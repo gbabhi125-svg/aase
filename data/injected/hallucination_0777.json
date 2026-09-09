@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0777",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL3653.json",
+  "task": "I will be traveling soon and am excited about seeing some attractions.  I am looking for a place to stay when I get there.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6975951,
+      "action": "ingest",
+      "input": "I will be traveling soon and am excited about seeing some attractions.  I am looking for a place to stay when I get there.",
+      "output": "I will be traveling soon and am excited about seeing some attractions.  I am looking for a place to stay when I get there.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.697596,
+      "action": "tool_call",
+      "input": "I will be traveling soon and am excited about seeing some attractions.  I am looking for a place to stay when I get there.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6975963,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.697597,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

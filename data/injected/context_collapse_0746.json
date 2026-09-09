@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0746",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_WOZ20320.json",
+  "task": "I'm looking for and expensive restaurant in the east part of town. Ask for address, phone number and type of food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2844906,
+      "action": "ingest",
+      "input": "I'm looking for and expensive restaurant in the east part of town. Ask for address, phone number and type of food.",
+      "output": "I'm looking for and expensive restaurant in the east part of town. Ask for address, phone number and type of food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2844915,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.284492,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2844925,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

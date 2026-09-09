@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0839",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1000.json",
+  "task": "I'm coming to Cambridge to visit, and I'd like to try some Chinese food in the centre. Can you help me, please?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2961993,
+      "action": "ingest",
+      "input": "I'm coming to Cambridge to visit, and I'd like to try some Chinese food in the centre. Can you help me, please?",
+      "output": "I'm coming to Cambridge to visit, and I'd like to try some Chinese food in the centre. Can you help me, please?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2962005,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.296201,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2962012,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0908",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG02161.json",
+  "task": "I got into a fender-bender with my rental car, and now I need help resolving the dispute with the owner of the other car.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.802679,
+      "action": "ingest",
+      "input": "I got into a fender-bender with my rental car, and now I need help resolving the dispute with the owner of the other car.",
+      "output": "I got into a fender-bender with my rental car, and now I need help resolving the dispute with the owner of the other car.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.80268,
+      "action": "subtask_1",
+      "input": "I got into a fender-bender with my rental car, and now I need help resolving the dispute with the owner of the other car.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8026805,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.802681,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

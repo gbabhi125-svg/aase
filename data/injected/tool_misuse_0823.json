@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0823",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1639.json",
+  "task": "I am looking for a restaurant in Cambridge that serves Indian food and is in the higher price range. Could you give me information on this kind of restaurant?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8750682,
+      "action": "tool_selection",
+      "input": "I am looking for a restaurant in Cambridge that serves Indian food and is in the higher price range. Could you give me information on this kind of restaurant?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8750691,
+      "action": "wrong_tool",
+      "input": "I am looking for a restaurant in Cambridge that serves Indian food and is in the higher price range. Could you give me information on this kind of restaurant?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8750696,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.87507,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0669",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL3283.json",
+  "task": "Can you help me find a particular restaurant that I'm looking for?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4490626,
+      "action": "ingest",
+      "input": "Can you help me find a particular restaurant that I'm looking for?",
+      "output": "Can you help me find a particular restaurant that I'm looking for?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4490635,
+      "action": "llm_call",
+      "input": "Can you help me find a particular restaurant that I'm looking for?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.449064,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

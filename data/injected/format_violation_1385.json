@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1385",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG1084.json",
+  "task": "Can you help me find a place to go in the west section of town? I would like to go to an architecture attraction.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.531446,
+      "action": "ingest",
+      "input": "Can you help me find a place to go in the west section of town? I would like to go to an architecture attraction.",
+      "output": "Can you help me find a place to go in the west section of town? I would like to go to an architecture attraction.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5314467,
+      "action": "llm_call",
+      "input": "Can you help me find a place to go in the west section of town? I would like to go to an architecture attraction.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5314474,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

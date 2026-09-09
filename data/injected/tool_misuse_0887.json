@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0887",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG0072.json",
+  "task": "Hiya, I need a taxi to get me to la margherita.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8820589,
+      "action": "tool_selection",
+      "input": "Hiya, I need a taxi to get me to la margherita.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8820598,
+      "action": "wrong_tool",
+      "input": "Hiya, I need a taxi to get me to la margherita.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8820605,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8820612,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

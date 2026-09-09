@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0306",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL3573.json",
+  "task": "I gotta eat. Find me an expensive modern eclectic place please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6456075,
+      "action": "ingest",
+      "input": "I gotta eat. Find me an expensive modern eclectic place please.",
+      "output": "I gotta eat. Find me an expensive modern eclectic place please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.645612,
+      "action": "tool_call",
+      "input": "I gotta eat. Find me an expensive modern eclectic place please.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6456125,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.645613,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0868",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL1282.json",
+  "task": "Help! I am hungry and need a cheap restaurant in the centre.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4709783,
+      "action": "ingest",
+      "input": "Help! I am hungry and need a cheap restaurant in the centre.",
+      "output": "Help! I am hungry and need a cheap restaurant in the centre.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.470979,
+      "action": "llm_call",
+      "input": "Help! I am hungry and need a cheap restaurant in the centre.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.47098,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

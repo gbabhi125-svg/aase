@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0704",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG1377.json",
+  "task": "I am looking for information on the kirkwood house.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.689694,
+      "action": "ingest",
+      "input": "I am looking for information on the kirkwood house.",
+      "output": "I am looking for information on the kirkwood house.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6896946,
+      "action": "tool_call",
+      "input": "I am looking for information on the kirkwood house.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6896951,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6896958,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_1120",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_PMUL4226.json",
+  "task": "I'm heading out on Saturday and need a train that arrives by 17:45",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.658353,
+      "action": "memory_fetch",
+      "input": "I'm heading out on Saturday and need a train that arrives by 17:45",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6583543,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6583548,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

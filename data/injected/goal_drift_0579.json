@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0579",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1008.json",
+  "task": "Hi, I'm looking for a place to stay that is moderate prices, and has free wifi please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7647965,
+      "action": "ingest",
+      "input": "Hi, I'm looking for a place to stay that is moderate prices, and has free wifi please.",
+      "output": "Hi, I'm looking for a place to stay that is moderate prices, and has free wifi please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7647972,
+      "action": "subtask_1",
+      "input": "Hi, I'm looking for a place to stay that is moderate prices, and has free wifi please.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7647977,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7647982,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

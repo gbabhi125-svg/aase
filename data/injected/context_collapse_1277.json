@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1277",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL3265.json",
+  "task": "I'm looking for a 4-star place to stay, it doesn't need to include internet.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3479438,
+      "action": "ingest",
+      "input": "I'm looking for a 4-star place to stay, it doesn't need to include internet.",
+      "output": "I'm looking for a 4-star place to stay, it doesn't need to include internet.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3479445,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3479452,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3479457,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0267",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG0389.json",
+  "task": "i need a train on tuesday out of kings lynn",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4046905,
+      "action": "ingest",
+      "input": "i need a train on tuesday out of kings lynn",
+      "output": "i need a train on tuesday out of kings lynn",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4046915,
+      "action": "llm_call",
+      "input": "i need a train on tuesday out of kings lynn",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.404692,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

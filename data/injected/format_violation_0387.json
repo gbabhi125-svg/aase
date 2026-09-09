@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0387",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL3706.json",
+  "task": "I need a place to stay that has free wifi. I don't need parking though. Thank you.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4178705,
+      "action": "ingest",
+      "input": "I need a place to stay that has free wifi. I don't need parking though. Thank you.",
+      "output": "I need a place to stay that has free wifi. I don't need parking though. Thank you.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4178715,
+      "action": "llm_call",
+      "input": "I need a place to stay that has free wifi. I don't need parking though. Thank you.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.417872,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

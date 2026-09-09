@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0966",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_WOZ20263.json",
+  "task": "Hello, I am looking for a restaurant in any area that serves danish food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3111007,
+      "action": "ingest",
+      "input": "Hello, I am looking for a restaurant in any area that serves danish food.",
+      "output": "Hello, I am looking for a restaurant in any area that serves danish food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3111014,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.311102,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3111026,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

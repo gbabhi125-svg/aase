@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0205",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL0089.json",
+  "task": "Im looking for an italian restaurant.  I also need it to be near the center of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3980489,
+      "action": "ingest",
+      "input": "Im looking for an italian restaurant.  I also need it to be near the center of town.",
+      "output": "Im looking for an italian restaurant.  I also need it to be near the center of town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.3980496,
+      "action": "llm_call",
+      "input": "Im looking for an italian restaurant.  I also need it to be near the center of town.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.3980503,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

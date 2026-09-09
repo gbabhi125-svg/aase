@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0671",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL1429.json",
+  "task": "Yes, could you help me with some information on places to go in town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.857616,
+      "action": "tool_selection",
+      "input": "Yes, could you help me with some information on places to go in town?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8576167,
+      "action": "wrong_tool",
+      "input": "Yes, could you help me with some information on places to go in town?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8576171,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8576176,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

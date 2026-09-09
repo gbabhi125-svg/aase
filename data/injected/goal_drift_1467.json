@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1467",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01940.json",
+  "task": "I need to get to michaelhouse cafe by 12:45. Can you help me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8635368,
+      "action": "ingest",
+      "input": "I need to get to michaelhouse cafe by 12:45. Can you help me?",
+      "output": "I need to get to michaelhouse cafe by 12:45. Can you help me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.863538,
+      "action": "subtask_1",
+      "input": "I need to get to michaelhouse cafe by 12:45. Can you help me?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8635383,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8635387,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

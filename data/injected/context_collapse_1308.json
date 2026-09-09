@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1308",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1902.json",
+  "task": "I'd like to visit a college in the centre of town. Could you help me find one?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.35146,
+      "action": "ingest",
+      "input": "I'd like to visit a college in the centre of town. Could you help me find one?",
+      "output": "I'd like to visit a college in the centre of town. Could you help me find one?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3514612,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.351462,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3514624,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

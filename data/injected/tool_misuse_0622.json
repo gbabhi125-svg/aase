@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0622",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL2295.json",
+  "task": "I am planning to visit Cambridge soon and need schedule information.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8514624,
+      "action": "tool_selection",
+      "input": "I am planning to visit Cambridge soon and need schedule information.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.851463,
+      "action": "wrong_tool",
+      "input": "I am planning to visit Cambridge soon and need schedule information.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8514638,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8514643,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

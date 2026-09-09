@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0436",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0925.json",
+  "task": "Hi, can you help me find a moderately priced 3-star accomadation?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.246703,
+      "action": "ingest",
+      "input": "Hi, can you help me find a moderately priced 3-star accomadation?",
+      "output": "Hi, can you help me find a moderately priced 3-star accomadation?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2467039,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2467043,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.246705,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

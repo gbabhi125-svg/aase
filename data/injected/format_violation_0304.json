@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0304",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG0901.json",
+  "task": "I am look for a place to stay that is in the moderate price range and it should include free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.40882,
+      "action": "ingest",
+      "input": "I am look for a place to stay that is in the moderate price range and it should include free parking.",
+      "output": "I am look for a place to stay that is in the moderate price range and it should include free parking.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4088206,
+      "action": "llm_call",
+      "input": "I am look for a place to stay that is in the moderate price range and it should include free parking.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4088213,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

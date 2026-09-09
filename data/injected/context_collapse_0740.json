@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0740",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SSNG0197.json",
+  "task": "I'm looking for a restaurant that serves moroccan food in the centre.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2837987,
+      "action": "ingest",
+      "input": "I'm looking for a restaurant that serves moroccan food in the centre.",
+      "output": "I'm looking for a restaurant that serves moroccan food in the centre.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2837996,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2838004,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2838008,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

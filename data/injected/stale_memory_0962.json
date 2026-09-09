@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0962",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_MUL2387.json",
+  "task": "Hi. I'm looking for a restaurant. I think it's called the Rice Ship or Rice Boat or something like that.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.642472,
+      "action": "memory_fetch",
+      "input": "Hi. I'm looking for a restaurant. I think it's called the Rice Ship or Rice Boat or something like that.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6424727,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6424735,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

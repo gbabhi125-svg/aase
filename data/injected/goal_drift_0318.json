@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0318",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2615.json",
+  "task": "I'm looking for a place to stay in Cambridge.  It should include free wifi and be a 3 star.  Can you help me please?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7346392,
+      "action": "ingest",
+      "input": "I'm looking for a place to stay in Cambridge.  It should include free wifi and be a 3 star.  Can you help me please?",
+      "output": "I'm looking for a place to stay in Cambridge.  It should include free wifi and be a 3 star.  Can you help me please?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7346401,
+      "action": "subtask_1",
+      "input": "I'm looking for a place to stay in Cambridge.  It should include free wifi and be a 3 star.  Can you help me please?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7346406,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.734641,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0373",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL0892.json",
+  "task": "Hi. I'm interested in finding a good restaurant near the center of town. Do you have any listings that fall in the expensive price range?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2389944,
+      "action": "ingest",
+      "input": "Hi. I'm interested in finding a good restaurant near the center of town. Do you have any listings that fall in the expensive price range?",
+      "output": "Hi. I'm interested in finding a good restaurant near the center of town. Do you have any listings that fall in the expensive price range?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2389953,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2389958,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2389963,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

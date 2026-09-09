@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0966",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL4127.json",
+  "task": "Can you please help me find a train out of cambridge that arrives by 19:15?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8088722,
+      "action": "ingest",
+      "input": "Can you please help me find a train out of cambridge that arrives by 19:15?",
+      "output": "Can you please help me find a train out of cambridge that arrives by 19:15?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8088732,
+      "action": "subtask_1",
+      "input": "Can you please help me find a train out of cambridge that arrives by 19:15?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8088737,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8088746,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1297",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL1008.json",
+  "task": "Hi, I want to travel to Cambridge by train.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5212486,
+      "action": "ingest",
+      "input": "Hi, I want to travel to Cambridge by train.",
+      "output": "Hi, I want to travel to Cambridge by train.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5212495,
+      "action": "llm_call",
+      "input": "Hi, I want to travel to Cambridge by train.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.52125,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

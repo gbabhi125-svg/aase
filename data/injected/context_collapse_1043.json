@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1043",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_WOZ20073.json",
+  "task": "I would like an expensive restaurant in the south part of town",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3200347,
+      "action": "ingest",
+      "input": "I would like an expensive restaurant in the south part of town",
+      "output": "I would like an expensive restaurant in the south part of town",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.320036,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3200364,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3200371,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

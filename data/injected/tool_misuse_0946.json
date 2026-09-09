@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0946",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4859.json",
+  "task": "Wow, I cant believe that I got a person this quickly. I need a train to cambridge.  I want to get there buy tuesday at 12:30.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8886883,
+      "action": "tool_selection",
+      "input": "Wow, I cant believe that I got a person this quickly. I need a train to cambridge.  I want to get there buy tuesday at 12:30.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8886895,
+      "action": "wrong_tool",
+      "input": "Wow, I cant believe that I got a person this quickly. I need a train to cambridge.  I want to get there buy tuesday at 12:30.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8886898,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8886902,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

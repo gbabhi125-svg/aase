@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0574",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2380.json",
+  "task": "Hi, could you help me with some information on a particular attraction?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6744077,
+      "action": "ingest",
+      "input": "Hi, could you help me with some information on a particular attraction?",
+      "output": "Hi, could you help me with some information on a particular attraction?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6744087,
+      "action": "tool_call",
+      "input": "Hi, could you help me with some information on a particular attraction?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6744092,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6744099,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

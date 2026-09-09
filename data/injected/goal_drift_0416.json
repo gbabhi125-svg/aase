@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0416",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL2377.json",
+  "task": "I need a place to eat in the south that's expensive.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7450702,
+      "action": "ingest",
+      "input": "I need a place to eat in the south that's expensive.",
+      "output": "I need a place to eat in the south that's expensive.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7450712,
+      "action": "subtask_1",
+      "input": "I need a place to eat in the south that's expensive.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.745072,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7450724,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

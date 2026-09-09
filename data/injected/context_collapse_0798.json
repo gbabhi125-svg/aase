@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0798",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01389.json",
+  "task": "I'm looking for a police station. It has something to do with parkside, although I don't know if that's a name or a location.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2914414,
+      "action": "ingest",
+      "input": "I'm looking for a police station. It has something to do with parkside, although I don't know if that's a name or a location.",
+      "output": "I'm looking for a police station. It has something to do with parkside, although I don't know if that's a name or a location.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2914424,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2914429,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2914433,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

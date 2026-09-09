@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0706",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL1390.json",
+  "task": "Do you have a cheap restaurant that serves indian food. In the mood for curry.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4531462,
+      "action": "ingest",
+      "input": "Do you have a cheap restaurant that serves indian food. In the mood for curry.",
+      "output": "Do you have a cheap restaurant that serves indian food. In the mood for curry.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4531472,
+      "action": "llm_call",
+      "input": "Do you have a cheap restaurant that serves indian food. In the mood for curry.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4531476,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

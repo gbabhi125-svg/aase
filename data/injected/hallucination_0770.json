@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0770",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL2052.json",
+  "task": "I'm looking for a hotel with a star rating of 0.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6968937,
+      "action": "ingest",
+      "input": "I'm looking for a hotel with a star rating of 0.",
+      "output": "I'm looking for a hotel with a star rating of 0.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6968944,
+      "action": "tool_call",
+      "input": "I'm looking for a hotel with a star rating of 0.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.696895,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6968958,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

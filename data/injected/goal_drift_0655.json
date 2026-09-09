@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0655",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2038.json",
+  "task": "Can you help me find somewhere in town to go to for entertainment?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7746232,
+      "action": "ingest",
+      "input": "Can you help me find somewhere in town to go to for entertainment?",
+      "output": "Can you help me find somewhere in town to go to for entertainment?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7746243,
+      "action": "subtask_1",
+      "input": "Can you help me find somewhere in town to go to for entertainment?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7746248,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7746253,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

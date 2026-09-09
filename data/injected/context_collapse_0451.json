@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0451",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL3573.json",
+  "task": "I gotta eat. Find me an expensive modern eclectic place please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2484999,
+      "action": "ingest",
+      "input": "I gotta eat. Find me an expensive modern eclectic place please.",
+      "output": "I gotta eat. Find me an expensive modern eclectic place please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2485008,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2485013,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2485018,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

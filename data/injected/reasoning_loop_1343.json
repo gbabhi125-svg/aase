@@ -1,0 +1,65 @@
+{
+  "id": "reasoning_loop_1343",
+  "injected_failure": "reasoning_loop",
+  "task_id": "mwoz_MUL0331.json",
+  "task": "Do you have any information on a restaurant called the Golden Wok?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.1708066,
+      "action": "search",
+      "input": "Do you have any information on a restaurant called the Golden Wok?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.1708074,
+      "action": "search",
+      "input": "Do you have any information on a restaurant called the Golden Wok?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.1708078,
+      "action": "search",
+      "input": "Do you have any information on a restaurant called the Golden Wok?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.170808,
+      "action": "search",
+      "input": "Do you have any information on a restaurant called the Golden Wok?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 5,
+      "timestamp": 1787208588.1708086,
+      "action": "search",
+      "input": "Do you have any information on a restaurant called the Golden Wok?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 6,
+      "timestamp": 1787208588.170809,
+      "action": "loop_detected",
+      "input": "Do you have any information on a restaurant called the Golden Wok?",
+      "output": "None",
+      "status": "error",
+      "error": "identical action repeated 5x, no progress"
+    }
+  ],
+  "success": false
+}

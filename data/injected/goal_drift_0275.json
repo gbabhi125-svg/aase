@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0275",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2689.json",
+  "task": "Good Evening, I guess I am in charge of the planning the trip to Cambridge.   I am looking for some places to go when we arrive.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7300577,
+      "action": "ingest",
+      "input": "Good Evening, I guess I am in charge of the planning the trip to Cambridge.   I am looking for some places to go when we arrive.",
+      "output": "Good Evening, I guess I am in charge of the planning the trip to Cambridge.   I am looking for some places to go when we arrive.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7300584,
+      "action": "subtask_1",
+      "input": "Good Evening, I guess I am in charge of the planning the trip to Cambridge.   I am looking for some places to go when we arrive.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.730059,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7300596,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0263",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_WOZ20559.json",
+  "task": "Can you recommend a restaurant that serves French food?  Not too expensive, please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.810343,
+      "action": "tool_selection",
+      "input": "Can you recommend a restaurant that serves French food?  Not too expensive, please.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8103437,
+      "action": "wrong_tool",
+      "input": "Can you recommend a restaurant that serves French food?  Not too expensive, please.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8103445,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.810345,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

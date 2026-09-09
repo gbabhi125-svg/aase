@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1139",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0186.json",
+  "task": "What is the address for the Addensbrookes Hospital near me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.827761,
+      "action": "ingest",
+      "input": "What is the address for the Addensbrookes Hospital near me?",
+      "output": "What is the address for the Addensbrookes Hospital near me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.827762,
+      "action": "subtask_1",
+      "input": "What is the address for the Addensbrookes Hospital near me?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8277624,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8277633,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

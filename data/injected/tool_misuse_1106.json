@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1106",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4149.json",
+  "task": "We are visiting cambridge for the first time and looking for a moderately priced place to stay for 5 nights that includes free parking. Any suggestions?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9087076,
+      "action": "tool_selection",
+      "input": "We are visiting cambridge for the first time and looking for a moderately priced place to stay for 5 nights that includes free parking. Any suggestions?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9087083,
+      "action": "wrong_tool",
+      "input": "We are visiting cambridge for the first time and looking for a moderately priced place to stay for 5 nights that includes free parking. Any suggestions?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9087374,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.908739,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

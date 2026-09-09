@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0193",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1113.json",
+  "task": "I need a hotel close to downtown Cambridge please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8029563,
+      "action": "tool_selection",
+      "input": "I need a hotel close to downtown Cambridge please.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.802957,
+      "action": "wrong_tool",
+      "input": "I need a hotel close to downtown Cambridge please.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8029575,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.802958,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

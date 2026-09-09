@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1069",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL3939.json",
+  "task": "How are you doing today? I need to find a hotel on the North side of town that offers internet at no extra charge",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9030054,
+      "action": "tool_selection",
+      "input": "How are you doing today? I need to find a hotel on the North side of town that offers internet at no extra charge",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9030066,
+      "action": "wrong_tool",
+      "input": "How are you doing today? I need to find a hotel on the North side of town that offers internet at no extra charge",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.903007,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9030077,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

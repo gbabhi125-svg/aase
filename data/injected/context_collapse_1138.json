@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1138",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL2633.json",
+  "task": "I am looking for a specific hotel by the name of city centre north b and b. Could you provide me with some additional information about this place?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3310468,
+      "action": "ingest",
+      "input": "I am looking for a specific hotel by the name of city centre north b and b. Could you provide me with some additional information about this place?",
+      "output": "I am looking for a specific hotel by the name of city centre north b and b. Could you provide me with some additional information about this place?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3310478,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3310483,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.331049,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0240",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1883.json",
+  "task": "Hello.  I am looking for train schedules leaving from Bishops Stortford. Can you help me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7263916,
+      "action": "ingest",
+      "input": "Hello.  I am looking for train schedules leaving from Bishops Stortford. Can you help me?",
+      "output": "Hello.  I am looking for train schedules leaving from Bishops Stortford. Can you help me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7263925,
+      "action": "subtask_1",
+      "input": "Hello.  I am looking for train schedules leaving from Bishops Stortford. Can you help me?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.726393,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.726394,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

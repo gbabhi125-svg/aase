@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0171",
+  "injected_failure": "hallucination",
+  "task_id": "toolbench_G2_1",
+  "task": "I'm planning a trip to Istanbul and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Istanbul with plate number 34? Additionally, I would like to track a package with the task ID 987654321.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6360939,
+      "action": "ingest",
+      "input": "I'm planning a trip to Istanbul and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Istanbul with plate number 34? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "I'm planning a trip to Istanbul and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Istanbul with plate number 34? Additionally, I would like to track a package with the task ID 987654321.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6360946,
+      "action": "tool_call",
+      "input": "I'm planning a trip to Istanbul and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Istanbul with plate number 34? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6360948,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6360953,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

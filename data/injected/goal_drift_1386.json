@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1386",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL1642.json",
+  "task": "I want information on a particular hotel called home from home. Can you send me what you have on that?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.855,
+      "action": "ingest",
+      "input": "I want information on a particular hotel called home from home. Can you send me what you have on that?",
+      "output": "I want information on a particular hotel called home from home. Can you send me what you have on that?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.855001,
+      "action": "subtask_1",
+      "input": "I want information on a particular hotel called home from home. Can you send me what you have on that?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8550017,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8550024,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

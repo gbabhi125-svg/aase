@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1398",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SSNG0254.json",
+  "task": "I am looking for a hotel that can offer me both free wifi and free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5328858,
+      "action": "ingest",
+      "input": "I am looking for a hotel that can offer me both free wifi and free parking.",
+      "output": "I am looking for a hotel that can offer me both free wifi and free parking.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5328865,
+      "action": "llm_call",
+      "input": "I am looking for a hotel that can offer me both free wifi and free parking.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5328872,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

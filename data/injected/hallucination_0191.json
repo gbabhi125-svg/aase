@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0191",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2252.json",
+  "task": "Hi, I am so excited to see some local tourist attractions on my upcoming trip.  Can you help me find a place to dine when I am there?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6375442,
+      "action": "ingest",
+      "input": "Hi, I am so excited to see some local tourist attractions on my upcoming trip.  Can you help me find a place to dine when I am there?",
+      "output": "Hi, I am so excited to see some local tourist attractions on my upcoming trip.  Can you help me find a place to dine when I am there?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6375449,
+      "action": "tool_call",
+      "input": "Hi, I am so excited to see some local tourist attractions on my upcoming trip.  Can you help me find a place to dine when I am there?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6375456,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.637546,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0710",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0426.json",
+  "task": "Greetings! Can you help me in locating a train to get me to Cambridge?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2798843,
+      "action": "ingest",
+      "input": "Greetings! Can you help me in locating a train to get me to Cambridge?",
+      "output": "Greetings! Can you help me in locating a train to get me to Cambridge?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2798853,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2798858,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2798862,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

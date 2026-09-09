@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0237",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL2744.json",
+  "task": "I want some entertainment in the centre.  What do you have?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8074868,
+      "action": "tool_selection",
+      "input": "I want some entertainment in the centre.  What do you have?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8074875,
+      "action": "wrong_tool",
+      "input": "I want some entertainment in the centre.  What do you have?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.807488,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8074884,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

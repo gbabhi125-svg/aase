@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1068",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG0435.json",
+  "task": "I'd like to find a train arriving in peterborough by 8:00.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7309945,
+      "action": "ingest",
+      "input": "I'd like to find a train arriving in peterborough by 8:00.",
+      "output": "I'd like to find a train arriving in peterborough by 8:00.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7309954,
+      "action": "tool_call",
+      "input": "I'd like to find a train arriving in peterborough by 8:00.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7309961,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.730997,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

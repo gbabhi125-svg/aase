@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0320",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL1595.json",
+  "task": "I'm looking to book a train that will depart out of Cambridge.  Can you give me information about trains that leave Cambridge and arrive in Norwich?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6466346,
+      "action": "ingest",
+      "input": "I'm looking to book a train that will depart out of Cambridge.  Can you give me information about trains that leave Cambridge and arrive in Norwich?",
+      "output": "I'm looking to book a train that will depart out of Cambridge.  Can you give me information about trains that leave Cambridge and arrive in Norwich?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.646635,
+      "action": "tool_call",
+      "input": "I'm looking to book a train that will depart out of Cambridge.  Can you give me information about trains that leave Cambridge and arrive in Norwich?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6466355,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6466358,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

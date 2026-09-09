@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0201",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_MUL2567.json",
+  "task": "Yeah, I'm visiting Cambridge and was wondering if you could tell me about the All Saints Church?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5661855,
+      "action": "memory_fetch",
+      "input": "Yeah, I'm visiting Cambridge and was wondering if you could tell me about the All Saints Church?",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5661862,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.566187,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

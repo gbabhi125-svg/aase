@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1153",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL3608.json",
+  "task": "I would like to stay at a guesthouse while I'm in cambridge. It doesn't need to have internet.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5049822,
+      "action": "ingest",
+      "input": "I would like to stay at a guesthouse while I'm in cambridge. It doesn't need to have internet.",
+      "output": "I would like to stay at a guesthouse while I'm in cambridge. It doesn't need to have internet.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.504983,
+      "action": "llm_call",
+      "input": "I would like to stay at a guesthouse while I'm in cambridge. It doesn't need to have internet.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.504984,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

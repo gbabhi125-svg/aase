@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0605",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL0051.json",
+  "task": "I need to find a hotel in Cambridge that's moderately priced. I don't need to have free parking included for my stay.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7678607,
+      "action": "ingest",
+      "input": "I need to find a hotel in Cambridge that's moderately priced. I don't need to have free parking included for my stay.",
+      "output": "I need to find a hotel in Cambridge that's moderately priced. I don't need to have free parking included for my stay.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7678616,
+      "action": "subtask_1",
+      "input": "I need to find a hotel in Cambridge that's moderately priced. I don't need to have free parking included for my stay.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7678623,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7678628,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1416",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_WOZ20131.json",
+  "task": "I want an expensive restaurant in the east part of town. I would also like its phone number.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7718418,
+      "action": "ingest",
+      "input": "I want an expensive restaurant in the east part of town. I would also like its phone number.",
+      "output": "I want an expensive restaurant in the east part of town. I would also like its phone number.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7718427,
+      "action": "tool_call",
+      "input": "I want an expensive restaurant in the east part of town. I would also like its phone number.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7718434,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.771844,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

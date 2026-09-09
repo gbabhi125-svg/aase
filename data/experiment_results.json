@@ -1,0 +1,14 @@
+{
+  "baseline": {
+    "total": 30,
+    "repaired": 0
+  },
+  "aase": {
+    "total": 30,
+    "repaired": 30,
+    "ledger_hits": 30,
+    "council_runs": 0
+  },
+  "repair_rate": "100.0%",
+  "traces_tested": 30
+}

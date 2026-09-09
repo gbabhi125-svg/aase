@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0788",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL1531.json",
+  "task": "Looking for a restaurant thats expensive. Needs to be in the centre area.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6994576,
+      "action": "ingest",
+      "input": "Looking for a restaurant thats expensive. Needs to be in the centre area.",
+      "output": "Looking for a restaurant thats expensive. Needs to be in the centre area.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6994584,
+      "action": "tool_call",
+      "input": "Looking for a restaurant thats expensive. Needs to be in the centre area.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6994588,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6994593,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_1272",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_SNG0198.json",
+  "task": "Hello, I'm looking for a nearby hospital that has inpatient occupational therapy. Can you help me with this?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6736882,
+      "action": "memory_fetch",
+      "input": "Hello, I'm looking for a nearby hospital that has inpatient occupational therapy. Can you help me with this?",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.673689,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6736896,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

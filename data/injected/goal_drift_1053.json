@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1053",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_WOZ20439.json",
+  "task": "Are there any eritrean restaurants in town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8185098,
+      "action": "ingest",
+      "input": "Are there any eritrean restaurants in town?",
+      "output": "Are there any eritrean restaurants in town?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8185108,
+      "action": "subtask_1",
+      "input": "Are there any eritrean restaurants in town?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8185112,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.818512,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0697",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL0818.json",
+  "task": "I would like some South African food that is not too expensive.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8606153,
+      "action": "tool_selection",
+      "input": "I would like some South African food that is not too expensive.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8606162,
+      "action": "wrong_tool",
+      "input": "I would like some South African food that is not too expensive.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8606164,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.860617,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

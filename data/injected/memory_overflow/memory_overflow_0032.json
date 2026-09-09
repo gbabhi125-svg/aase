@@ -1,0 +1,56 @@
+{
+  "trace_id": "MEMO_0032",
+  "failure_type": "memory_overflow",
+  "task": "Read all 180 vendor contracts in the compliance folder and extract the renewal dates.",
+  "domain": "bulk_processing",
+  "source_dataset": "aase_synthetic_v2",
+  "trace": [
+    {
+      "step": 1,
+      "action": "ingest",
+      "input": "Read all 180 vendor contracts in the compliance folder and extract the renewal dates.",
+      "output": "Batch started. 180 items queued. No capacity check performed.",
+      "status": "success"
+    },
+    {
+      "step": 2,
+      "action": "process_batch",
+      "input": "Items 1-45",
+      "output": "Processed successfully. Context 26% utilised. No state cleared.",
+      "status": "success"
+    },
+    {
+      "step": 3,
+      "action": "process_batch",
+      "input": "Items 46-90",
+      "output": "Processed successfully. Context 52% utilised. No state cleared.",
+      "status": "success"
+    },
+    {
+      "step": 4,
+      "action": "process_batch",
+      "input": "Items 91-135",
+      "output": "Processed successfully. Context 75% utilised. No state cleared.",
+      "status": "success"
+    },
+    {
+      "step": 5,
+      "action": "process_batch",
+      "input": "Items 136-180",
+      "output": "HARD CRASH: token limit 128000 exceeded. Process terminated by system.",
+      "status": "error",
+      "error": "memory_overflow_detected \u2014 hard token limit exceeded, process killed"
+    },
+    {
+      "step": 6,
+      "action": "system_log",
+      "input": "Post-crash audit",
+      "output": "Agent process terminated. No graceful degradation. No checkpointing. All 135 processed items lost. Restart required.",
+      "status": "error",
+      "error": "unrecoverable_memory_overflow"
+    }
+  ],
+  "num_steps": 6,
+  "failure_detected_at_step": 5,
+  "ground_truth_fix": "Process in batches of 20. Summarize and clear raw items from working context after each batch."
+}

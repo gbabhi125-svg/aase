@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1338",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_WOZ20455.json",
+  "task": "I'm looking for a cheap restaurant in the west part of town. I'd also like the restaurant's phone number.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7631834,
+      "action": "ingest",
+      "input": "I'm looking for a cheap restaurant in the west part of town. I'd also like the restaurant's phone number.",
+      "output": "I'm looking for a cheap restaurant in the west part of town. I'd also like the restaurant's phone number.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7631843,
+      "action": "tool_call",
+      "input": "I'm looking for a cheap restaurant in the west part of town. I'd also like the restaurant's phone number.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7631848,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7631857,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

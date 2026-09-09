@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0985",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1945.json",
+  "task": "I love swimming!  Can you recommend a pool in Cambridge?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8110986,
+      "action": "ingest",
+      "input": "I love swimming!  Can you recommend a pool in Cambridge?",
+      "output": "I love swimming!  Can you recommend a pool in Cambridge?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8110993,
+      "action": "subtask_1",
+      "input": "I love swimming!  Can you recommend a pool in Cambridge?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8111,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8111007,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

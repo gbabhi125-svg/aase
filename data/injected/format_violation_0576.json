@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0576",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_WOZ20597.json",
+  "task": "I need an east restaurant. I want to try some Canapes food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4389026,
+      "action": "ingest",
+      "input": "I need an east restaurant. I want to try some Canapes food.",
+      "output": "I need an east restaurant. I want to try some Canapes food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4389033,
+      "action": "llm_call",
+      "input": "I need an east restaurant. I want to try some Canapes food.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.438904,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0240",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4689.json",
+  "task": "Hi I am looking for the attraction Corpus Christi can you find it for me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8078136,
+      "action": "tool_selection",
+      "input": "Hi I am looking for the attraction Corpus Christi can you find it for me?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8078144,
+      "action": "wrong_tool",
+      "input": "Hi I am looking for the attraction Corpus Christi can you find it for me?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.807815,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.807816,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

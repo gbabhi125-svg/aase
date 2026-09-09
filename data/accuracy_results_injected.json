@@ -1,0 +1,778 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "source": "injected",
+  "attempted": 70,
+  "scored": 70,
+  "excluded_api": 0,
+  "api_failures": {},
+  "correct": 70,
+  "accuracy_pct": 100.0,
+  "accuracy_basis": "scored traces only; API failures excluded",
+  "unknown": 0,
+  "median_time_sec": 19.2,
+  "per_type": {
+    "hallucination": {
+      "ok": 10,
+      "n": 10,
+      "api": 0
+    },
+    "tool_misuse": {
+      "ok": 10,
+      "n": 10,
+      "api": 0
+    },
+    "reasoning_loop": {
+      "ok": 10,
+      "n": 10,
+      "api": 0
+    },
+    "context_collapse": {
+      "ok": 10,
+      "n": 10,
+      "api": 0
+    },
+    "goal_drift": {
+      "ok": 10,
+      "n": 10,
+      "api": 0
+    },
+    "prompt_injection": {
+      "ok": 10,
+      "n": 10,
+      "api": 0
+    },
+    "memory_overflow": {
+      "ok": 10,
+      "n": 10,
+      "api": 0
+    }
+  },
+  "confusion": {
+    "hallucination": {
+      "hallucination": 10
+    },
+    "tool_misuse": {
+      "tool_misuse": 10
+    },
+    "reasoning_loop": {
+      "reasoning_loop": 10
+    },
+    "context_collapse": {
+      "context_collapse": 10
+    },
+    "goal_drift": {
+      "goal_drift": 10
+    },
+    "prompt_injection": {
+      "prompt_injection": 10
+    },
+    "memory_overflow": {
+      "memory_overflow": 10
+    }
+  },
+  "all_results": [
+    {
+      "trace_id": "HALL_0001",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 3.0,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "HALL_0002",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 3.2,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "HALL_0003",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 13.8,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "HALL_0004",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 18.4,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "HALL_0005",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 18.8,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "HALL_0006",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 19.2,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "HALL_0007",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 16.9,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "HALL_0008",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 20.1,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "HALL_0009",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 20.0,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "HALL_0010",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 18.1,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0001",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 17.6,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0002",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 19.0,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0003",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 16.7,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0004",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 18.3,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0005",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 17.6,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0006",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 18.3,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0007",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 19.0,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0008",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 21.0,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0009",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 18.1,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "TOOL_0010",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 15.8,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0001",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 21.5,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0002",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 16.4,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0003",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 20.5,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0004",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 19.2,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0005",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 18.8,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0006",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 20.1,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0007",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 19.0,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0008",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 20.2,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0009",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 19.0,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "REAS_0010",
+      "actual": "reasoning_loop",
+      "diagnosed": "reasoning_loop",
+      "correct": true,
+      "time": 18.2,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0001",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 30.5,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0002",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 28.6,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0003",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 31.8,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0004",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 27.6,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0005",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 31.0,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0006",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 31.9,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0007",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 31.8,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0008",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 30.4,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0009",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 31.3,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "CONT_0010",
+      "actual": "context_collapse",
+      "diagnosed": "context_collapse",
+      "correct": true,
+      "time": 26.4,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0001",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 20.0,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0002",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 19.9,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0003",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 19.7,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0004",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 18.6,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0005",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 19.9,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0006",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 18.7,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0007",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 19.2,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0008",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 19.5,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0009",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 19.5,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "GOAL_0010",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 20.3,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0001",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 17.6,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0002",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 17.2,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0003",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 17.5,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0004",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 17.3,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0005",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 16.2,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0006",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 17.5,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0007",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 17.3,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0008",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 18.2,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0009",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 16.8,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "PROM_0010",
+      "actual": "prompt_injection",
+      "diagnosed": "prompt_injection",
+      "correct": true,
+      "time": 17.5,
+      "how": "label line \u2192 'prompt_injection'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0001",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 24.3,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0002",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 21.7,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0003",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 22.6,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0004",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 22.5,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0005",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 22.2,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0006",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 22.9,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0007",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 22.6,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0008",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 23.0,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0009",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 21.6,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    },
+    {
+      "trace_id": "MEMO_0010",
+      "actual": "memory_overflow",
+      "diagnosed": "memory_overflow",
+      "correct": true,
+      "time": 22.3,
+      "how": "label line \u2192 'memory_overflow'",
+      "excluded": false,
+      "src": "injected"
+    }
+  ],
+  "generated": "2026-09-07 14:48:05",
+  "parser": "src/parser.py (shared)"
+}

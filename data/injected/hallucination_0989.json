@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0989",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG0990.json",
+  "task": "I have heard a lot of good things about the Arbury Lodge Guesthouse. Would you be able to provide any information on them?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.722116,
+      "action": "ingest",
+      "input": "I have heard a lot of good things about the Arbury Lodge Guesthouse. Would you be able to provide any information on them?",
+      "output": "I have heard a lot of good things about the Arbury Lodge Guesthouse. Would you be able to provide any information on them?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.722117,
+      "action": "tool_call",
+      "input": "I have heard a lot of good things about the Arbury Lodge Guesthouse. Would you be able to provide any information on them?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7221174,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.722118,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

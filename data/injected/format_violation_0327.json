@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0327",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL1369.json",
+  "task": "I am looking for interesting places to go in the south part of town. Can you help me with that?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4114573,
+      "action": "ingest",
+      "input": "I am looking for interesting places to go in the south part of town. Can you help me with that?",
+      "output": "I am looking for interesting places to go in the south part of town. Can you help me with that?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.411458,
+      "action": "llm_call",
+      "input": "I am looking for interesting places to go in the south part of town. Can you help me with that?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4114587,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

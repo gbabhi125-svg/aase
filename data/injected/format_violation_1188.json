@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1188",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL2476.json",
+  "task": "I am looking for a Persian restaurant with expensive price range food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5088053,
+      "action": "ingest",
+      "input": "I am looking for a Persian restaurant with expensive price range food.",
+      "output": "I am looking for a Persian restaurant with expensive price range food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5088062,
+      "action": "llm_call",
+      "input": "I am looking for a Persian restaurant with expensive price range food.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.508807,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

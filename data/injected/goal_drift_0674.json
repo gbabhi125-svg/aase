@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0674",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2815.json",
+  "task": "I want see something particular, can you book reservations for anything?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7767065,
+      "action": "ingest",
+      "input": "I want see something particular, can you book reservations for anything?",
+      "output": "I want see something particular, can you book reservations for anything?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7767074,
+      "action": "subtask_1",
+      "input": "I want see something particular, can you book reservations for anything?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7767081,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7767086,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

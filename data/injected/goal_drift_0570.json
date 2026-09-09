@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0570",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2280.json",
+  "task": "Hi there, I need a swimming pool. The kids want to swim!",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7622335,
+      "action": "ingest",
+      "input": "Hi there, I need a swimming pool. The kids want to swim!",
+      "output": "Hi there, I need a swimming pool. The kids want to swim!",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7622347,
+      "action": "subtask_1",
+      "input": "Hi there, I need a swimming pool. The kids want to swim!",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7622354,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7622359,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

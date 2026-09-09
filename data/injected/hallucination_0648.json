@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0648",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0106.json",
+  "task": "I'm interested in finding a hotel that has free parking that I can stay at.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6837947,
+      "action": "ingest",
+      "input": "I'm interested in finding a hotel that has free parking that I can stay at.",
+      "output": "I'm interested in finding a hotel that has free parking that I can stay at.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6837957,
+      "action": "tool_call",
+      "input": "I'm interested in finding a hotel that has free parking that I can stay at.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6837962,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6837966,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

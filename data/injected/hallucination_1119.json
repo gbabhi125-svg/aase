@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1119",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL0720.json",
+  "task": "Can you help me find a place to stay? I am looking for a hotel with a star of 0 and it needs free wifi.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7369895,
+      "action": "ingest",
+      "input": "Can you help me find a place to stay? I am looking for a hotel with a star of 0 and it needs free wifi.",
+      "output": "Can you help me find a place to stay? I am looking for a hotel with a star of 0 and it needs free wifi.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7369902,
+      "action": "tool_call",
+      "input": "Can you help me find a place to stay? I am looking for a hotel with a star of 0 and it needs free wifi.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.736991,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7369914,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

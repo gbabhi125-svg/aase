@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0554",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG1122.json",
+  "task": "Could you help me find a place to go? I'd like to find some architecture.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7604947,
+      "action": "ingest",
+      "input": "Could you help me find a place to go? I'd like to find some architecture.",
+      "output": "Could you help me find a place to go? I'd like to find some architecture.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7604957,
+      "action": "subtask_1",
+      "input": "Could you help me find a place to go? I'd like to find some architecture.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7604961,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7604969,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

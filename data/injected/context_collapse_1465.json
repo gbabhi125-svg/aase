@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1465",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL1611.json",
+  "task": "I need information about trains leaving from Cambridge and going to Bishops Stortford.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3700786,
+      "action": "ingest",
+      "input": "I need information about trains leaving from Cambridge and going to Bishops Stortford.",
+      "output": "I need information about trains leaving from Cambridge and going to Bishops Stortford.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3700795,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.37008,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3700805,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1404",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL4958.json",
+  "task": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7703524,
+      "action": "ingest",
+      "input": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+      "output": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.770353,
+      "action": "tool_call",
+      "input": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7703536,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7703543,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

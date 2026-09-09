@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0784",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0063.json",
+  "task": "I'm heading to Club Salsa, and I need a taxi.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2899327,
+      "action": "ingest",
+      "input": "I'm heading to Club Salsa, and I need a taxi.",
+      "output": "I'm heading to Club Salsa, and I need a taxi.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2899337,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2899344,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2899349,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

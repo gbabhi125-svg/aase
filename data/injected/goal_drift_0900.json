@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0900",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2775.json",
+  "task": "Im in the west side of town, are there any pools on the westside?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8018634,
+      "action": "ingest",
+      "input": "Im in the west side of town, are there any pools on the westside?",
+      "output": "Im in the west side of town, are there any pools on the westside?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8018644,
+      "action": "subtask_1",
+      "input": "Im in the west side of town, are there any pools on the westside?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8018649,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8018658,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

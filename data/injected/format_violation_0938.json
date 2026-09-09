@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0938",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG1374.json",
+  "task": "I am looking for a chinese restaurant in the south.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4787476,
+      "action": "ingest",
+      "input": "I am looking for a chinese restaurant in the south.",
+      "output": "I am looking for a chinese restaurant in the south.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4787486,
+      "action": "llm_call",
+      "input": "I am looking for a chinese restaurant in the south.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4787493,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

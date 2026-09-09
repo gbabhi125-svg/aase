@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0459",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0684.json",
+  "task": "Hi, I'm looking for a restaurant called pizza hut cherry hinton, can you help me find it?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7496433,
+      "action": "ingest",
+      "input": "Hi, I'm looking for a restaurant called pizza hut cherry hinton, can you help me find it?",
+      "output": "Hi, I'm looking for a restaurant called pizza hut cherry hinton, can you help me find it?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.749644,
+      "action": "subtask_1",
+      "input": "Hi, I'm looking for a restaurant called pizza hut cherry hinton, can you help me find it?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.749645,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7496455,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0363",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SSNG0366.json",
+  "task": "Im looking for a hotel with free parking and wifi please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6495895,
+      "action": "ingest",
+      "input": "Im looking for a hotel with free parking and wifi please.",
+      "output": "Im looking for a hotel with free parking and wifi please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6495903,
+      "action": "tool_call",
+      "input": "Im looking for a hotel with free parking and wifi please.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6495905,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.649591,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

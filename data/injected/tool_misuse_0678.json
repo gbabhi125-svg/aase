@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0678",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL2862.json",
+  "task": "Hello!  I am looking for information about a hotel called aylesbray lodge guest house.  Can you help me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.85853,
+      "action": "tool_selection",
+      "input": "Hello!  I am looking for information about a hotel called aylesbray lodge guest house.  Can you help me?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8585312,
+      "action": "wrong_tool",
+      "input": "Hello!  I am looking for information about a hotel called aylesbray lodge guest house.  Can you help me?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.858532,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8585324,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

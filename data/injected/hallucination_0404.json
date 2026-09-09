@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0404",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL2519.json",
+  "task": "Hello i'm looking for places to go in cambridge please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6540391,
+      "action": "ingest",
+      "input": "Hello i'm looking for places to go in cambridge please.",
+      "output": "Hello i'm looking for places to go in cambridge please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.65404,
+      "action": "tool_call",
+      "input": "Hello i'm looking for places to go in cambridge please.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6540406,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.654041,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

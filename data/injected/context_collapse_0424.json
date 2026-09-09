@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0424",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4750.json",
+  "task": "I'm visiting the centre and want to go all out on the experience.   Can you help me find an expensive restaurant?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2451277,
+      "action": "ingest",
+      "input": "I'm visiting the centre and want to go all out on the experience.   Can you help me find an expensive restaurant?",
+      "output": "I'm visiting the centre and want to go all out on the experience.   Can you help me find an expensive restaurant?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2451286,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2451289,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2451298,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

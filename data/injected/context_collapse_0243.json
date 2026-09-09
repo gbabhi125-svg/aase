@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0243",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1012.json",
+  "task": "I'm looking for a hotel named Express by Holiday Inn Cambridge. Do you have any information on that?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2231278,
+      "action": "ingest",
+      "input": "I'm looking for a hotel named Express by Holiday Inn Cambridge. Do you have any information on that?",
+      "output": "I'm looking for a hotel named Express by Holiday Inn Cambridge. Do you have any information on that?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2231286,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.223129,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2231295,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

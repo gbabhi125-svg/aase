@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0691",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL0349.json",
+  "task": "Yes, I'm looking for a steakhouse restaurant in the expensive price range.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7786703,
+      "action": "ingest",
+      "input": "Yes, I'm looking for a steakhouse restaurant in the expensive price range.",
+      "output": "Yes, I'm looking for a steakhouse restaurant in the expensive price range.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.778671,
+      "action": "subtask_1",
+      "input": "Yes, I'm looking for a steakhouse restaurant in the expensive price range.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7786715,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7786725,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

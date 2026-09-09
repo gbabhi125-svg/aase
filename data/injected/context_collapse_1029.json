@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1029",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0563.json",
+  "task": "Hi, I'm looking for restaurants in the area. Could you recommend any moderately-priced establishments that are located near the town centre.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3184257,
+      "action": "ingest",
+      "input": "Hi, I'm looking for restaurants in the area. Could you recommend any moderately-priced establishments that are located near the town centre.",
+      "output": "Hi, I'm looking for restaurants in the area. Could you recommend any moderately-priced establishments that are located near the town centre.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3184264,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.318427,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3184276,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0364",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_MUL2649.json",
+  "task": "Yes, hi, can you help me? I've heard good things about the Vue Cinema. Do you have any particulars about it? I might want to catch a show later.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5830107,
+      "action": "memory_fetch",
+      "input": "Yes, hi, can you help me? I've heard good things about the Vue Cinema. Do you have any particulars about it? I might want to catch a show later.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5830116,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.583012,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

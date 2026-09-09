@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0544",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0081.json",
+  "task": "I need some info on a restaurant called royal spice.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6697612,
+      "action": "ingest",
+      "input": "I need some info on a restaurant called royal spice.",
+      "output": "I need some info on a restaurant called royal spice.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6697624,
+      "action": "tool_call",
+      "input": "I need some info on a restaurant called royal spice.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6697626,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.669763,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

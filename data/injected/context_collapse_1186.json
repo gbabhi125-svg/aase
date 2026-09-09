@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1186",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1429.json",
+  "task": "I need to find a train leaving Cambridge on Wednesday.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3375077,
+      "action": "ingest",
+      "input": "I need to find a train leaving Cambridge on Wednesday.",
+      "output": "I need to find a train leaving Cambridge on Wednesday.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.337509,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3375094,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3375099,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

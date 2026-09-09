@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0627",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1968.json",
+  "task": "Hi, I'm looking for a train that leaves Saturday after 10:15. Can you help?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2702615,
+      "action": "ingest",
+      "input": "Hi, I'm looking for a train that leaves Saturday after 10:15. Can you help?",
+      "output": "Hi, I'm looking for a train that leaves Saturday after 10:15. Can you help?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2702625,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.270263,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2702634,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0820",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL2395.json",
+  "task": "I am planning a trip to town and want to sight see a bit. Can you let me know some attractions I may be interested in?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7931345,
+      "action": "ingest",
+      "input": "I am planning a trip to town and want to sight see a bit. Can you let me know some attractions I may be interested in?",
+      "output": "I am planning a trip to town and want to sight see a bit. Can you let me know some attractions I may be interested in?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7931352,
+      "action": "subtask_1",
+      "input": "I am planning a trip to town and want to sight see a bit. Can you let me know some attractions I may be interested in?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7931356,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7931361,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

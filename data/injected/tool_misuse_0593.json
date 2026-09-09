@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0593",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_WOZ20021.json",
+  "task": "Can you find me a corsica restaurant?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8480089,
+      "action": "tool_selection",
+      "input": "Can you find me a corsica restaurant?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8480098,
+      "action": "wrong_tool",
+      "input": "Can you find me a corsica restaurant?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8480103,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8480108,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

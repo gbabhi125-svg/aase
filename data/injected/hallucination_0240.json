@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0240",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG0857.json",
+  "task": "Hi, I need a 4 star guesthouse hotel please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6408656,
+      "action": "ingest",
+      "input": "Hi, I need a 4 star guesthouse hotel please.",
+      "output": "Hi, I need a 4 star guesthouse hotel please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6408663,
+      "action": "tool_call",
+      "input": "Hi, I need a 4 star guesthouse hotel please.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6408665,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.640867,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0801",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4408.json",
+  "task": "I would like to visit an attraction called the man on the moon.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8723888,
+      "action": "tool_selection",
+      "input": "I would like to visit an attraction called the man on the moon.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8723898,
+      "action": "wrong_tool",
+      "input": "I would like to visit an attraction called the man on the moon.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8723907,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8723912,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

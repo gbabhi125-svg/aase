@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0446",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL2289.json",
+  "task": "Where would I find the Cambridge Belfry hotel?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.658507,
+      "action": "ingest",
+      "input": "Where would I find the Cambridge Belfry hotel?",
+      "output": "Where would I find the Cambridge Belfry hotel?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6585078,
+      "action": "tool_call",
+      "input": "Where would I find the Cambridge Belfry hotel?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6585083,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6585085,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

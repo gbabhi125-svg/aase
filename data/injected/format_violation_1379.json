@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1379",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL1405.json",
+  "task": "Hi! I am planning a trip to Cambridge and am looking to catch a train from leicester. I need to arrive in Cambridge by 14:45. Is there a train that would work for me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5305939,
+      "action": "ingest",
+      "input": "Hi! I am planning a trip to Cambridge and am looking to catch a train from leicester. I need to arrive in Cambridge by 14:45. Is there a train that would work for me?",
+      "output": "Hi! I am planning a trip to Cambridge and am looking to catch a train from leicester. I need to arrive in Cambridge by 14:45. Is there a train that would work for me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5305948,
+      "action": "llm_call",
+      "input": "Hi! I am planning a trip to Cambridge and am looking to catch a train from leicester. I need to arrive in Cambridge by 14:45. Is there a train that would work for me?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5305953,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

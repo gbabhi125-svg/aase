@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0676",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1741.json",
+  "task": "Can you help me find a college located in the centre. I seemed to have misplaced the information on it.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8583317,
+      "action": "tool_selection",
+      "input": "Can you help me find a college located in the centre. I seemed to have misplaced the information on it.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8583326,
+      "action": "wrong_tool",
+      "input": "Can you help me find a college located in the centre. I seemed to have misplaced the information on it.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.858333,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8583336,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

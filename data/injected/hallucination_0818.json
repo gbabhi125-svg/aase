@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0818",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL4615.json",
+  "task": "I'm looking for a cheap place to stay in the east.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7029922,
+      "action": "ingest",
+      "input": "I'm looking for a cheap place to stay in the east.",
+      "output": "I'm looking for a cheap place to stay in the east.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7029932,
+      "action": "tool_call",
+      "input": "I'm looking for a cheap place to stay in the east.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7029934,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.702994,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0168",
+  "injected_failure": "context_collapse",
+  "task_id": "toolbench_G1_3",
+  "task": "My friend and I are passionate about sustainability and want to contribute to projects that promote eco-friendly practices. Can you fetch the list of projects available on the SQUAKE platform using the 'Projects' API? Additionally, I would like to check the health of the SQUAKE API using the 'Checkhealth' API.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.214421,
+      "action": "ingest",
+      "input": "My friend and I are passionate about sustainability and want to contribute to projects that promote eco-friendly practices. Can you fetch the list of projects available on the SQUAKE platform using the 'Projects' API? Additionally, I would like to check the health of the SQUAKE API using the 'Checkh",
+      "output": "My friend and I are passionate about sustainability and want to contribute to projects that promote eco-friendly practices. Can you fetch the list of projects available on the SQUAKE platform using the 'Projects' API? Additionally, I would like to check the health of the SQUAKE API using the 'Checkh",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.214422,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2144225,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.214423,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

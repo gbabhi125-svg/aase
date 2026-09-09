@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1198",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1656.json",
+  "task": "I am looking for a moderately priced restaurant that serves indian food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9206944,
+      "action": "tool_selection",
+      "input": "I am looking for a moderately priced restaurant that serves indian food.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.920695,
+      "action": "wrong_tool",
+      "input": "I am looking for a moderately priced restaurant that serves indian food.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9206958,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9206965,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

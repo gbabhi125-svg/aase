@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0850",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG1116.json",
+  "task": "I am getting ready to go off to college. I thought while I was in town maybe I could visit one.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4689865,
+      "action": "ingest",
+      "input": "I am getting ready to go off to college. I thought while I was in town maybe I could visit one.",
+      "output": "I am getting ready to go off to college. I thought while I was in town maybe I could visit one.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4689875,
+      "action": "llm_call",
+      "input": "I am getting ready to go off to college. I thought while I was in town maybe I could visit one.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.468988,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0835",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL3670.json",
+  "task": "I need to find out if there's a train going to stansted airport that leaves after 12:30.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8763862,
+      "action": "tool_selection",
+      "input": "I need to find out if there's a train going to stansted airport that leaves after 12:30.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8763871,
+      "action": "wrong_tool",
+      "input": "I need to find out if there's a train going to stansted airport that leaves after 12:30.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8763876,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8763878,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1141",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL2098.json",
+  "task": "Hello, we're planning on staying in Cambridge and would like to know if you have a train that departs around 12:00 from Cambridge proper.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7396731,
+      "action": "ingest",
+      "input": "Hello, we're planning on staying in Cambridge and would like to know if you have a train that departs around 12:00 from Cambridge proper.",
+      "output": "Hello, we're planning on staying in Cambridge and would like to know if you have a train that departs around 12:00 from Cambridge proper.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7396739,
+      "action": "tool_call",
+      "input": "Hello, we're planning on staying in Cambridge and would like to know if you have a train that departs around 12:00 from Cambridge proper.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7396743,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7396746,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

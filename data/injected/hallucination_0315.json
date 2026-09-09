@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0315",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_WOZ20255.json",
+  "task": "I would like a restaurant in the centre of town that serves caribbean food",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6463175,
+      "action": "ingest",
+      "input": "I would like a restaurant in the centre of town that serves caribbean food",
+      "output": "I would like a restaurant in the centre of town that serves caribbean food",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6463184,
+      "action": "tool_call",
+      "input": "I would like a restaurant in the centre of town that serves caribbean food",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.646319,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6463194,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

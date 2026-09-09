@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_1080",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_MUL0634.json",
+  "task": "I'm looking for a train that will be leaving on Sunday going to Peterborough.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6543403,
+      "action": "memory_fetch",
+      "input": "I'm looking for a train that will be leaving on Sunday going to Peterborough.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6543415,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6543422,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

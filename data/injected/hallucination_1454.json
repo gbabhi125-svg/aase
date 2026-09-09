@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1454",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2531.json",
+  "task": "I want to check out a theater in the south area of cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7759786,
+      "action": "ingest",
+      "input": "I want to check out a theater in the south area of cambridge.",
+      "output": "I want to check out a theater in the south area of cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7759795,
+      "action": "tool_call",
+      "input": "I want to check out a theater in the south area of cambridge.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.77598,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7759802,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

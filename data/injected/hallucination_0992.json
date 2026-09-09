@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0992",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG01306.json",
+  "task": "I'm involved in a bit of an argument related to an automobile accident. Can you help me out?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7226691,
+      "action": "ingest",
+      "input": "I'm involved in a bit of an argument related to an automobile accident. Can you help me out?",
+      "output": "I'm involved in a bit of an argument related to an automobile accident. Can you help me out?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.72267,
+      "action": "tool_call",
+      "input": "I'm involved in a bit of an argument related to an automobile accident. Can you help me out?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.722671,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7226715,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

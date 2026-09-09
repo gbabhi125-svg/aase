@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1494",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0464.json",
+  "task": "I need a cheap restaurant that serves creative food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.866468,
+      "action": "ingest",
+      "input": "I need a cheap restaurant that serves creative food.",
+      "output": "I need a cheap restaurant that serves creative food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.866469,
+      "action": "subtask_1",
+      "input": "I need a cheap restaurant that serves creative food.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8664694,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8664699,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

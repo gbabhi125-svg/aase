@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1231",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG1387.json",
+  "task": "i want to book a taxi. The taxi should leave after 21:15 and should depart from backstreet bistro.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3426259,
+      "action": "ingest",
+      "input": "i want to book a taxi. The taxi should leave after 21:15 and should depart from backstreet bistro.",
+      "output": "i want to book a taxi. The taxi should leave after 21:15 and should depart from backstreet bistro.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3426268,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3426273,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3426278,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0850",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SSNG0255.json",
+  "task": "Howdy! Is the Hamilton Lodge still open?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7063756,
+      "action": "ingest",
+      "input": "Howdy! Is the Hamilton Lodge still open?",
+      "output": "Howdy! Is the Hamilton Lodge still open?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7063768,
+      "action": "tool_call",
+      "input": "Howdy! Is the Hamilton Lodge still open?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7063773,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.706378,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

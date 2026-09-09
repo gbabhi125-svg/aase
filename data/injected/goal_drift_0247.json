@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0247",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01593.json",
+  "task": "i want to find a hospital in town",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.727109,
+      "action": "ingest",
+      "input": "i want to find a hospital in town",
+      "output": "i want to find a hospital in town",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.72711,
+      "action": "subtask_1",
+      "input": "i want to find a hospital in town",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7271104,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7271109,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

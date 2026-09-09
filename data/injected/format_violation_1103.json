@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1103",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG0686.json",
+  "task": "Are you able to help me find an expensive British restaurant in Cambridge please?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.498396,
+      "action": "ingest",
+      "input": "Are you able to help me find an expensive British restaurant in Cambridge please?",
+      "output": "Are you able to help me find an expensive British restaurant in Cambridge please?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4983969,
+      "action": "llm_call",
+      "input": "Are you able to help me find an expensive British restaurant in Cambridge please?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4983974,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

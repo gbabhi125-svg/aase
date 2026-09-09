@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1353",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL2079.json",
+  "task": "Hi, I'd like information for the restaurant called Travellers Rest please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9430811,
+      "action": "tool_selection",
+      "input": "Hi, I'd like information for the restaurant called Travellers Rest please.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9430823,
+      "action": "wrong_tool",
+      "input": "Hi, I'd like information for the restaurant called Travellers Rest please.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9430828,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9430833,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

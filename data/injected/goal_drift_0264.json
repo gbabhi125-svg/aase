@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0264",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1680.json",
+  "task": "Is there a restaurant called Cocum?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.728914,
+      "action": "ingest",
+      "input": "Is there a restaurant called Cocum?",
+      "output": "Is there a restaurant called Cocum?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7289147,
+      "action": "subtask_1",
+      "input": "Is there a restaurant called Cocum?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7289152,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.728916,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

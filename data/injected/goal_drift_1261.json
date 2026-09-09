@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1261",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL0991.json",
+  "task": "Hello. I am looking for information about Saint Barnabas Press Gallery.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.841461,
+      "action": "ingest",
+      "input": "Hello. I am looking for information about Saint Barnabas Press Gallery.",
+      "output": "Hello. I am looking for information about Saint Barnabas Press Gallery.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8414617,
+      "action": "subtask_1",
+      "input": "Hello. I am looking for information about Saint Barnabas Press Gallery.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8414624,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8414629,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

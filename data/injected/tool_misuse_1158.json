@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1158",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL2633.json",
+  "task": "I am looking for a specific hotel by the name of city centre north b and b. Could you provide me with some additional information about this place?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9157689,
+      "action": "tool_selection",
+      "input": "I am looking for a specific hotel by the name of city centre north b and b. Could you provide me with some additional information about this place?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9157696,
+      "action": "wrong_tool",
+      "input": "I am looking for a specific hotel by the name of city centre north b and b. Could you provide me with some additional information about this place?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.91577,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9157705,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

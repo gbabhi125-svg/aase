@@ -1,0 +1,204 @@
+{
+  "runs": {
+    "real_run2.json": {
+      "scored": 37,
+      "correct": 16,
+      "accuracy_pct": 43.2,
+      "excluded_api": 0,
+      "generated": "2026-09-09 10:53:04"
+    },
+    "accuracy_results_real.json": {
+      "scored": 12,
+      "correct": 6,
+      "accuracy_pct": 50.0,
+      "excluded_api": 5,
+      "generated": "2026-09-09 10:59:55"
+    }
+  },
+  "traces_judged_multiple_times": 12,
+  "unstable_traces": 7,
+  "instability_rate_pct": 58.3,
+  "unstable_detail": [
+    {
+      "trace_id": "REAL_ALGO_1",
+      "ground_truth": "hallucination",
+      "verdicts": [
+        "goal_drift",
+        "hallucination"
+      ],
+      "annotation": "The code failed to handle edge cases in the 'Street Address' data, leading to an incomplete and inaccurate count of even-numbered addresses."
+    },
+    {
+      "trace_id": "REAL_ALGO_10",
+      "ground_truth": "hallucination",
+      "verdicts": [
+        "hallucination",
+        "tool_misuse"
+      ],
+      "annotation": "The agent fabricated the population figures for Seattle and Colville, resulting in an incorrect calculation of the population difference."
+    },
+    {
+      "trace_id": "REAL_ALGO_100",
+      "ground_truth": "hallucination",
+      "verdicts": [
+        "goal_drift",
+        "hallucination"
+      ],
+      "annotation": "The Movie_Expert provides an incorrect list of Daniel Craig movies with a duration of less than 150 minutes. The expert should take the necessary steps to obtain accurate information. These inaccuracies result in the failure of subsequent processes and exhaust the step limit."
+    },
+    {
+      "trace_id": "REAL_ALGO_101",
+      "ground_truth": "hallucination",
+      "verdicts": [
+        "hallucination",
+        "tool_misuse"
+      ],
+      "annotation": "The Tickets_Pricing_Expert provides incorrect ticket prices. The expert should take the necessary steps to obtain accurate information. These inaccuracies result in the failure of subsequent processes."
+    },
+    {
+      "trace_id": "REAL_ALGO_103",
+      "ground_truth": "tool_misuse",
+      "verdicts": [
+        "tool_misuse",
+        "hallucination"
+      ],
+      "annotation": "The Python code is incorrect."
+    },
+    {
+      "trace_id": "REAL_ALGO_105",
+      "ground_truth": "hallucination",
+      "verdicts": [
+        "tool_misuse",
+        "hallucination"
+      ],
+      "annotation": "The Verification_Expert fails to identify issues with other agents, namely the Fitness_Expert and Local_Knowledge_Expert, who are not providing accurate information. These agents should utilize tools such as Python to obtain the correct data."
+    },
+    {
+      "trace_id": "REAL_ALGO_109",
+      "ground_truth": "hallucination",
+      "verdicts": [
+        "hallucination",
+        "memory_overflow"
+      ],
+      "annotation": "The agent incorrectly assumes that there are 20 blocks per mile. According to available sources, in Chicago, one mile consists of 16 east-west blocks or 8 north-south blocks."
+    }
+  ],
+  "systematic_confusions": [
+    {
+      "from": "memory_overflow",
+      "to": "tool_misuse",
+      "count": 6
+    },
+    {
+      "from": "hallucination",
+      "to": "tool_misuse",
+      "count": 5
+    },
+    {
+      "from": "hallucination",
+      "to": "goal_drift",
+      "count": 4
+    },
+    {
+      "from": "tool_misuse",
+      "to": "hallucination",
+      "count": 3
+    },
+    {
+      "from": "goal_drift",
+      "to": "tool_misuse",
+      "count": 2
+    },
+    {
+      "from": "hallucination",
+      "to": "memory_overflow",
+      "count": 1
+    },
+    {
+      "from": "tool_misuse",
+      "to": "context_collapse",
+      "count": 1
+    },
+    {
+      "from": "tool_misuse",
+      "to": "goal_drift",
+      "count": 1
+    },
+    {
+      "from": "reasoning_loop",
+      "to": "hallucination",
+      "count": 1
+    },
+    {
+      "from": "goal_drift",
+      "to": "context_collapse",
+      "count": 1
+    },
+    {
+      "from": "goal_drift",
+      "to": "reasoning_loop",
+      "count": 1
+    },
+    {
+      "from": "goal_drift",
+      "to": "hallucination",
+      "count": 1
+    }
+  ],
+  "memory_overflow_cases": [
+    {
+      "trace_id": "REAL_ALGO_11",
+      "keyword_label": "hallucination",
+      "relabelled_to": "memory_overflow",
+      "coroner_verdicts": [
+        "tool_misuse"
+      ],
+      "annotation": "The agent wrote incorrect code twice, exhausting the interaction limits."
+    },
+    {
+      "trace_id": "REAL_ALGO_59",
+      "keyword_label": "hallucination",
+      "relabelled_to": "memory_overflow",
+      "coroner_verdicts": [
+        "tool_misuse"
+      ],
+      "annotation": "The expert wrote code with bugs multiple times, leading to the exhaustion of the step limits."
+    },
+    {
+      "trace_id": "REAL_ALGO_76",
+      "keyword_label": "hallucination",
+      "relabelled_to": "memory_overflow",
+      "coroner_verdicts": [
+        "tool_misuse"
+      ],
+      "annotation": "The expert wrote code with bugs multiple times, leading to the exhaustion of the step limits."
+    },
+    {
+      "trace_id": "REAL_ALGO_77",
+      "keyword_label": "hallucination",
+      "relabelled_to": "memory_overflow",
+      "coroner_verdicts": [
+        "tool_misuse"
+      ],
+      "annotation": "The agent assumes that the video is available for download, exhausting the step limit."
+    },
+    {
+      "trace_id": "REAL_HAND_45",
+      "keyword_label": "hallucination",
+      "relabelled_to": "memory_overflow",
+      "coroner_verdicts": [
+        "tool_misuse"
+      ],
+      "annotation": "The Orchestrator encountered an error while processing the data."
+    },
+    {
+      "trace_id": "REAL_HAND_57",
+      "keyword_label": "hallucination",
+      "relabelled_to": "memory_overflow",
+      "coroner_verdicts": [
+        "tool_misuse"
+      ],
+      "annotation": "WebSurfer's query is not concise enough to retrieve complete information to answer the original question, which leads to reaching the maximum time limit."
+    }
+  ]
+}

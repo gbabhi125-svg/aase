@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0856",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2627.json",
+  "task": "Hello. I'm looking for a moderately priced four star hotel in Cambridge. Can you make some recommendations?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7070768,
+      "action": "ingest",
+      "input": "Hello. I'm looking for a moderately priced four star hotel in Cambridge. Can you make some recommendations?",
+      "output": "Hello. I'm looking for a moderately priced four star hotel in Cambridge. Can you make some recommendations?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.707078,
+      "action": "tool_call",
+      "input": "Hello. I'm looking for a moderately priced four star hotel in Cambridge. Can you make some recommendations?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7070785,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.707079,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

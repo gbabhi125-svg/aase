@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0529",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4295.json",
+  "task": "I'm looking for information on a placed called riverboat georgina.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2581952,
+      "action": "ingest",
+      "input": "I'm looking for information on a placed called riverboat georgina.",
+      "output": "I'm looking for information on a placed called riverboat georgina.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.258196,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2581968,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2581975,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

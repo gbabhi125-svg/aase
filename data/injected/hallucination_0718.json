@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0718",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG02038.json",
+  "task": "I was just robbed and am looking for help. Can you give me the phone number for the police?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6913095,
+      "action": "ingest",
+      "input": "I was just robbed and am looking for help. Can you give me the phone number for the police?",
+      "output": "I was just robbed and am looking for help. Can you give me the phone number for the police?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.691311,
+      "action": "tool_call",
+      "input": "I was just robbed and am looking for help. Can you give me the phone number for the police?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6913114,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.691312,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

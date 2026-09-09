@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0746",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1607.json",
+  "task": "I need to find a spot on a train on Wednesday, can you help me find one?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.866116,
+      "action": "tool_selection",
+      "input": "I need to find a spot on a train on Wednesday, can you help me find one?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8661172,
+      "action": "wrong_tool",
+      "input": "I need to find a spot on a train on Wednesday, can you help me find one?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8661177,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8661184,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

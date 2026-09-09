@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0598",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0183.json",
+  "task": "I need to find a hotel to stay at that has a 4 star rating and includes free wifi.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7671232,
+      "action": "ingest",
+      "input": "I need to find a hotel to stay at that has a 4 star rating and includes free wifi.",
+      "output": "I need to find a hotel to stay at that has a 4 star rating and includes free wifi.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.767124,
+      "action": "subtask_1",
+      "input": "I need to find a hotel to stay at that has a 4 star rating and includes free wifi.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7671244,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.767125,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

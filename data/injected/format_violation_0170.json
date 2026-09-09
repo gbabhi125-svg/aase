@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0170",
+  "injected_failure": "format_violation",
+  "task_id": "toolbench_G2_0",
+  "task": "I'm starting an e-commerce business and I need to integrate a package tracking feature. Can you provide me with the tracking data for the shipment with ID 6045e2f44e1b233199a5e77a? Also, I would like to check the health status of the SQUAKE authentication system.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3942814,
+      "action": "ingest",
+      "input": "I'm starting an e-commerce business and I need to integrate a package tracking feature. Can you provide me with the tracking data for the shipment with ID 6045e2f44e1b233199a5e77a? Also, I would like to check the health status of the SQUAKE authentication system.",
+      "output": "I'm starting an e-commerce business and I need to integrate a package tracking feature. Can you provide me with the tracking data for the shipment with ID 6045e2f44e1b233199a5e77a? Also, I would like to check the health status of the SQUAKE authentication system.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.3942826,
+      "action": "llm_call",
+      "input": "I'm starting an e-commerce business and I need to integrate a package tracking feature. Can you provide me with the tracking data for the shipment with ID 6045e2f44e1b233199a5e77a? Also, I would like to check the health status of the SQUAKE authentication system.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.394283,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

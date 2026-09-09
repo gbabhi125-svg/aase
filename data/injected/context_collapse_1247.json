@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1247",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG02161.json",
+  "task": "I got into a fender-bender with my rental car, and now I need help resolving the dispute with the owner of the other car.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.344553,
+      "action": "ingest",
+      "input": "I got into a fender-bender with my rental car, and now I need help resolving the dispute with the owner of the other car.",
+      "output": "I got into a fender-bender with my rental car, and now I need help resolving the dispute with the owner of the other car.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.344554,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3445542,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3445547,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

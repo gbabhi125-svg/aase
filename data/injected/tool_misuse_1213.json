@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1213",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4862.json",
+  "task": "I AM LOOKING FOR A PLACE TO GO and it should be in the south.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9227319,
+      "action": "tool_selection",
+      "input": "I AM LOOKING FOR A PLACE TO GO and it should be in the south.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9227328,
+      "action": "wrong_tool",
+      "input": "I AM LOOKING FOR A PLACE TO GO and it should be in the south.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9227333,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.922734,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

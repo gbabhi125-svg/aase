@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1207",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG02040.json",
+  "task": "I was robbed and i don't know what i should do, any ideas?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3399026,
+      "action": "ingest",
+      "input": "I was robbed and i don't know what i should do, any ideas?",
+      "output": "I was robbed and i don't know what i should do, any ideas?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3399038,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3399045,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.339905,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

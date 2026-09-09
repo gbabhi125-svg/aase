@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0896",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_WOZ20597.json",
+  "task": "I need an east restaurant. I want to try some Canapes food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8014138,
+      "action": "ingest",
+      "input": "I need an east restaurant. I want to try some Canapes food.",
+      "output": "I need an east restaurant. I want to try some Canapes food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8014147,
+      "action": "subtask_1",
+      "input": "I need an east restaurant. I want to try some Canapes food.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8014152,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8014157,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

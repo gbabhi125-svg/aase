@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1444",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL2630.json",
+  "task": "I am looking for a play to stay that has 4 stars and is located in the centre of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.367546,
+      "action": "ingest",
+      "input": "I am looking for a play to stay that has 4 stars and is located in the centre of town.",
+      "output": "I am looking for a play to stay that has 4 stars and is located in the centre of town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.367547,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3675478,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3675482,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

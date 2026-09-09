@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0463",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SSNG0315.json",
+  "task": "I am looking for a place to stay with free wifi and a 0 star rating.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7500696,
+      "action": "ingest",
+      "input": "I am looking for a place to stay with free wifi and a 0 star rating.",
+      "output": "I am looking for a place to stay with free wifi and a 0 star rating.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7500706,
+      "action": "subtask_1",
+      "input": "I am looking for a place to stay with free wifi and a 0 star rating.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.750071,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7500718,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

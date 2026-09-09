@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1134",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1208.json",
+  "task": "Hello. I'd like to find a hotel to stay in for the weekend. I'd like one with restaurants and entertainment within walking distance.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3306513,
+      "action": "ingest",
+      "input": "Hello. I'd like to find a hotel to stay in for the weekend. I'd like one with restaurants and entertainment within walking distance.",
+      "output": "Hello. I'd like to find a hotel to stay in for the weekend. I'd like one with restaurants and entertainment within walking distance.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3306525,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3306527,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3306532,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

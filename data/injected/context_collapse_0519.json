@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0519",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01192.json",
+  "task": "I need the location of Addenbrookes Hospital, if you don't mind.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.256958,
+      "action": "ingest",
+      "input": "I need the location of Addenbrookes Hospital, if you don't mind.",
+      "output": "I need the location of Addenbrookes Hospital, if you don't mind.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2569587,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2569592,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2569597,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

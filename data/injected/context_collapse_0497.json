@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0497",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SSNG0081.json",
+  "task": "Hello, I'm trying to find an expensive asian oriental restaurant. Can you help me find one?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.254141,
+      "action": "ingest",
+      "input": "Hello, I'm trying to find an expensive asian oriental restaurant. Can you help me find one?",
+      "output": "Hello, I'm trying to find an expensive asian oriental restaurant. Can you help me find one?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2541423,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2541425,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.254143,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

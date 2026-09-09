@@ -1,0 +1,65 @@
+{
+  "id": "reasoning_loop_1000",
+  "injected_failure": "reasoning_loop",
+  "task_id": "mwoz_MUL1218.json",
+  "task": "I'm looking for a guesthouse to stay in that is cheap.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.118875,
+      "action": "search",
+      "input": "I'm looking for a guesthouse to stay in that is cheap.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.1188762,
+      "action": "search",
+      "input": "I'm looking for a guesthouse to stay in that is cheap.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.1188767,
+      "action": "search",
+      "input": "I'm looking for a guesthouse to stay in that is cheap.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.1188772,
+      "action": "search",
+      "input": "I'm looking for a guesthouse to stay in that is cheap.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 5,
+      "timestamp": 1787208588.1188774,
+      "action": "search",
+      "input": "I'm looking for a guesthouse to stay in that is cheap.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 6,
+      "timestamp": 1787208588.118878,
+      "action": "loop_detected",
+      "input": "I'm looking for a guesthouse to stay in that is cheap.",
+      "output": "None",
+      "status": "error",
+      "error": "identical action repeated 5x, no progress"
+    }
+  ],
+  "success": false
+}

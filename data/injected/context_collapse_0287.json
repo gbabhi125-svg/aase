@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0287",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1322.json",
+  "task": "I'm looking for a hotel in the east, and I'd like free wifi please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2283962,
+      "action": "ingest",
+      "input": "I'm looking for a hotel in the east, and I'd like free wifi please.",
+      "output": "I'm looking for a hotel in the east, and I'd like free wifi please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2283971,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2283976,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.228398,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

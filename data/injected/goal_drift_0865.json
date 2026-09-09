@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0865",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL3835.json",
+  "task": "Hi there, please find me a restaurant on the East side that serves russian  food",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7980304,
+      "action": "ingest",
+      "input": "Hi there, please find me a restaurant on the East side that serves russian  food",
+      "output": "Hi there, please find me a restaurant on the East side that serves russian  food",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.798031,
+      "action": "subtask_1",
+      "input": "Hi there, please find me a restaurant on the East side that serves russian  food",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7980316,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7980323,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

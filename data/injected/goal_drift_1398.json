@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1398",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0345.json",
+  "task": "Let's go with the train first. I'm looking for one that leaves after 16:30 on saturday.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8562639,
+      "action": "ingest",
+      "input": "Let's go with the train first. I'm looking for one that leaves after 16:30 on saturday.",
+      "output": "Let's go with the train first. I'm looking for one that leaves after 16:30 on saturday.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8562646,
+      "action": "subtask_1",
+      "input": "Let's go with the train first. I'm looking for one that leaves after 16:30 on saturday.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8562653,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.856266,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

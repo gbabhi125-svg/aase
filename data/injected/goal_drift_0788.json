@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0788",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2752.json",
+  "task": "Can you book a hotel room for me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7896366,
+      "action": "ingest",
+      "input": "Can you book a hotel room for me?",
+      "output": "Can you book a hotel room for me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7896376,
+      "action": "subtask_1",
+      "input": "Can you book a hotel room for me?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.789638,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.789639,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

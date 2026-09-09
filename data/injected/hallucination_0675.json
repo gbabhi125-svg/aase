@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0675",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG1268.json",
+  "task": "AM looking for a place to dine. The restaurant should be in the south and should serve gastropod food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6867754,
+      "action": "ingest",
+      "input": "AM looking for a place to dine. The restaurant should be in the south and should serve gastropod food.",
+      "output": "AM looking for a place to dine. The restaurant should be in the south and should serve gastropod food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6867764,
+      "action": "tool_call",
+      "input": "AM looking for a place to dine. The restaurant should be in the south and should serve gastropod food.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6867769,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6867776,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

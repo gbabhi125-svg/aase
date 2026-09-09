@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1125",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL2360.json",
+  "task": "Hi, I'm looking for an indian restaurant.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5017936,
+      "action": "ingest",
+      "input": "Hi, I'm looking for an indian restaurant.",
+      "output": "Hi, I'm looking for an indian restaurant.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5017943,
+      "action": "llm_call",
+      "input": "Hi, I'm looking for an indian restaurant.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5017948,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

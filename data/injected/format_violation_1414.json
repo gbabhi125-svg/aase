@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1414",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL1798.json",
+  "task": "I'm looking for attractions that are in the centre, could you help me find some?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5347612,
+      "action": "ingest",
+      "input": "I'm looking for attractions that are in the centre, could you help me find some?",
+      "output": "I'm looking for attractions that are in the centre, could you help me find some?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5347621,
+      "action": "llm_call",
+      "input": "I'm looking for attractions that are in the centre, could you help me find some?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5347629,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

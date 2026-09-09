@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1197",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL2689.json",
+  "task": "Good Evening, I guess I am in charge of the planning the trip to Cambridge.   I am looking for some places to go when we arrive.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5098584,
+      "action": "ingest",
+      "input": "Good Evening, I guess I am in charge of the planning the trip to Cambridge.   I am looking for some places to go when we arrive.",
+      "output": "Good Evening, I guess I am in charge of the planning the trip to Cambridge.   I am looking for some places to go when we arrive.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.509859,
+      "action": "llm_call",
+      "input": "Good Evening, I guess I am in charge of the planning the trip to Cambridge.   I am looking for some places to go when we arrive.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5098596,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

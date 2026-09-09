@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0794",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1461.json",
+  "task": "I'm looking for a train. I want it to go to Stevenage and leave from Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2909694,
+      "action": "ingest",
+      "input": "I'm looking for a train. I want it to go to Stevenage and leave from Cambridge.",
+      "output": "I'm looking for a train. I want it to go to Stevenage and leave from Cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.29097,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2909706,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2909713,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

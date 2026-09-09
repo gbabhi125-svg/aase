@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1313",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0496.json",
+  "task": "I want to find a moderately-priced restaurant in the centre.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3521144,
+      "action": "ingest",
+      "input": "I want to find a moderately-priced restaurant in the centre.",
+      "output": "I want to find a moderately-priced restaurant in the centre.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3521154,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3521159,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3521168,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

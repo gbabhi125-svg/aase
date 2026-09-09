@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1484",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG02350.json",
+  "task": "I am at Club Salsa and I need to book a taxi to leave after 06:15.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.86543,
+      "action": "ingest",
+      "input": "I am at Club Salsa and I need to book a taxi to leave after 06:15.",
+      "output": "I am at Club Salsa and I need to book a taxi to leave after 06:15.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8654308,
+      "action": "subtask_1",
+      "input": "I am at Club Salsa and I need to book a taxi to leave after 06:15.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8654313,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8654318,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

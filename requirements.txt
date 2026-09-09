@@ -1,0 +1,11 @@
+anthropic>=0.25.0
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+langgraph>=0.1.0
+langchain>=0.2.0
+fastapi>=0.110.0
+uvicorn>=0.29.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+human-eval>=1.0.0
+rich>=13.0.0

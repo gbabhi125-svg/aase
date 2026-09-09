@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0435",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL1145.json",
+  "task": "I'm visiting Cambridge as a tourist!  I'm looking for an expensive place to stay that includes free parking!",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4231355,
+      "action": "ingest",
+      "input": "I'm visiting Cambridge as a tourist!  I'm looking for an expensive place to stay that includes free parking!",
+      "output": "I'm visiting Cambridge as a tourist!  I'm looking for an expensive place to stay that includes free parking!",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4231362,
+      "action": "llm_call",
+      "input": "I'm visiting Cambridge as a tourist!  I'm looking for an expensive place to stay that includes free parking!",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4231367,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

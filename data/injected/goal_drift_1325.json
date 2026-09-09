@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1325",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL2271.json",
+  "task": "Is there somewhere inexpensive to stay in town? I'll be driving in, so I'll need somewhere that I can park for free, as well.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8483646,
+      "action": "ingest",
+      "input": "Is there somewhere inexpensive to stay in town? I'll be driving in, so I'll need somewhere that I can park for free, as well.",
+      "output": "Is there somewhere inexpensive to stay in town? I'll be driving in, so I'll need somewhere that I can park for free, as well.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8483655,
+      "action": "subtask_1",
+      "input": "Is there somewhere inexpensive to stay in town? I'll be driving in, so I'll need somewhere that I can park for free, as well.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.848366,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8483665,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

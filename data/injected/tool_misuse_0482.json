@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0482",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL1716.json",
+  "task": "I need to come to Cambridge on Sunday and I'd like to take a train. Do you have anything leaving out of Birmingham New Street on that day?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8354547,
+      "action": "tool_selection",
+      "input": "I need to come to Cambridge on Sunday and I'd like to take a train. Do you have anything leaving out of Birmingham New Street on that day?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8354557,
+      "action": "wrong_tool",
+      "input": "I need to come to Cambridge on Sunday and I'd like to take a train. Do you have anything leaving out of Birmingham New Street on that day?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8354564,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8354566,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

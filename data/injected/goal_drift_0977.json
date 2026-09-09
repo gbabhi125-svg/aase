@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0977",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2361.json",
+  "task": "I would like to visit some parks while I  am in town. Can you please suggest me some to visit?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8102677,
+      "action": "ingest",
+      "input": "I would like to visit some parks while I  am in town. Can you please suggest me some to visit?",
+      "output": "I would like to visit some parks while I  am in town. Can you please suggest me some to visit?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8102686,
+      "action": "subtask_1",
+      "input": "I would like to visit some parks while I  am in town. Can you please suggest me some to visit?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8102694,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8102703,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

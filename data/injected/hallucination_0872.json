@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0872",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SSNG0307.json",
+  "task": "Hello, I'm looking for a guesthouse on the westside to stay.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7088854,
+      "action": "ingest",
+      "input": "Hello, I'm looking for a guesthouse on the westside to stay.",
+      "output": "Hello, I'm looking for a guesthouse on the westside to stay.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7088864,
+      "action": "tool_call",
+      "input": "Hello, I'm looking for a guesthouse on the westside to stay.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7088869,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7088873,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

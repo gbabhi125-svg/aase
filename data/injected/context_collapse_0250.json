@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0250",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL0186.json",
+  "task": "Hi! I am looking for a place to stay that has free wifi. The hotel doesn't have to have free parking but that would be nice.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2240553,
+      "action": "ingest",
+      "input": "Hi! I am looking for a place to stay that has free wifi. The hotel doesn't have to have free parking but that would be nice.",
+      "output": "Hi! I am looking for a place to stay that has free wifi. The hotel doesn't have to have free parking but that would be nice.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.224056,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2240565,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2240572,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1498",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1679.json",
+  "task": "I need some information. on a train to london liverpool street arriving by 13:00.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.373947,
+      "action": "ingest",
+      "input": "I need some information. on a train to london liverpool street arriving by 13:00.",
+      "output": "I need some information. on a train to london liverpool street arriving by 13:00.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3739479,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3739483,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3739488,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

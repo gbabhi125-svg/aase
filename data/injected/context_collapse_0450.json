@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0450",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4396.json",
+  "task": "I am  traveling to Cambridge and looking forward to try local restaurants.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.248393,
+      "action": "ingest",
+      "input": "I am  traveling to Cambridge and looking forward to try local restaurants.",
+      "output": "I am  traveling to Cambridge and looking forward to try local restaurants.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.248394,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2483947,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2483952,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

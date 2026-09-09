@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0896",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL4669.json",
+  "task": "Please find a place to go in the north.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7113647,
+      "action": "ingest",
+      "input": "Please find a place to go in the north.",
+      "output": "Please find a place to go in the north.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.711366,
+      "action": "tool_call",
+      "input": "Please find a place to go in the north.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7113667,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7113671,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0353",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL4548.json",
+  "task": "i am looking for a train. The train should go to broxbourne and should leave on sunday",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7383735,
+      "action": "ingest",
+      "input": "i am looking for a train. The train should go to broxbourne and should leave on sunday",
+      "output": "i am looking for a train. The train should go to broxbourne and should leave on sunday",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7383745,
+      "action": "subtask_1",
+      "input": "i am looking for a train. The train should go to broxbourne and should leave on sunday",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7383752,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7383757,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

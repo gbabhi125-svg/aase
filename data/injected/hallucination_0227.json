@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0227",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL4036.json",
+  "task": "I will be visiting family in the south part of cambridge and we would liek to get one last boating excursion in.  Any boating places in the south area?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6399064,
+      "action": "ingest",
+      "input": "I will be visiting family in the south part of cambridge and we would liek to get one last boating excursion in.  Any boating places in the south area?",
+      "output": "I will be visiting family in the south part of cambridge and we would liek to get one last boating excursion in.  Any boating places in the south area?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.639907,
+      "action": "tool_call",
+      "input": "I will be visiting family in the south part of cambridge and we would liek to get one last boating excursion in.  Any boating places in the south area?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6399074,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6399078,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

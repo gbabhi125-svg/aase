@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0883",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0655.json",
+  "task": "Hi.  Have you heard of Pizza Hut City Centre by chance? I may want to eat there soon.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.799959,
+      "action": "ingest",
+      "input": "Hi.  Have you heard of Pizza Hut City Centre by chance? I may want to eat there soon.",
+      "output": "Hi.  Have you heard of Pizza Hut City Centre by chance? I may want to eat there soon.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7999601,
+      "action": "subtask_1",
+      "input": "Hi.  Have you heard of Pizza Hut City Centre by chance? I may want to eat there soon.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7999606,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.799961,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

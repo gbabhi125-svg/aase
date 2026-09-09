@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1274",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL3510.json",
+  "task": "have you heard of saint barnabas press gallery?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.930743,
+      "action": "tool_selection",
+      "input": "have you heard of saint barnabas press gallery?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9307437,
+      "action": "wrong_tool",
+      "input": "have you heard of saint barnabas press gallery?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9307444,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.930745,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

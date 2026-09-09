@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1399",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG01340.json",
+  "task": "I am looking for a place to stay. The hotel should have a star of 4 and should include free parking",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7698584,
+      "action": "ingest",
+      "input": "I am looking for a place to stay. The hotel should have a star of 4 and should include free parking",
+      "output": "I am looking for a place to stay. The hotel should have a star of 4 and should include free parking",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7698593,
+      "action": "tool_call",
+      "input": "I am looking for a place to stay. The hotel should have a star of 4 and should include free parking",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.76986,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.769861,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

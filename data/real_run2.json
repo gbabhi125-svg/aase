@@ -1,0 +1,451 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "source": "real",
+  "attempted": 37,
+  "scored": 37,
+  "excluded_api": 0,
+  "api_failures": {},
+  "correct": 16,
+  "accuracy_pct": 43.2,
+  "accuracy_basis": "scored traces only; API failures excluded",
+  "unknown": 0,
+  "median_time_sec": 32.1,
+  "per_type": {
+    "hallucination": {
+      "ok": 5,
+      "n": 10,
+      "api": 0
+    },
+    "tool_misuse": {
+      "ok": 6,
+      "n": 10,
+      "api": 0
+    },
+    "reasoning_loop": {
+      "ok": 0,
+      "n": 1,
+      "api": 0
+    },
+    "goal_drift": {
+      "ok": 5,
+      "n": 10,
+      "api": 0
+    },
+    "memory_overflow": {
+      "ok": 0,
+      "n": 6,
+      "api": 0
+    },
+    "context_collapse": {
+      "ok": 0,
+      "n": 0,
+      "api": 0
+    },
+    "prompt_injection": {
+      "ok": 0,
+      "n": 0,
+      "api": 0
+    }
+  },
+  "confusion": {
+    "hallucination": {
+      "goal_drift": 3,
+      "hallucination": 5,
+      "tool_misuse": 2
+    },
+    "tool_misuse": {
+      "tool_misuse": 6,
+      "hallucination": 2,
+      "context_collapse": 1,
+      "goal_drift": 1
+    },
+    "reasoning_loop": {
+      "hallucination": 1
+    },
+    "goal_drift": {
+      "goal_drift": 5,
+      "tool_misuse": 2,
+      "context_collapse": 1,
+      "reasoning_loop": 1,
+      "hallucination": 1
+    },
+    "memory_overflow": {
+      "tool_misuse": 6
+    }
+  },
+  "all_results": [
+    {
+      "trace_id": "REAL_ALGO_1",
+      "actual": "hallucination",
+      "diagnosed": "goal_drift",
+      "correct": false,
+      "time": 3.3,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_10",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 3.2,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_100",
+      "actual": "hallucination",
+      "diagnosed": "goal_drift",
+      "correct": false,
+      "time": 31.8,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_101",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 33.5,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_102",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 34.5,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_105",
+      "actual": "hallucination",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 31.2,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_106",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 32.4,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_109",
+      "actual": "hallucination",
+      "diagnosed": "hallucination",
+      "correct": true,
+      "time": 30.0,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_110",
+      "actual": "hallucination",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 32.1,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_113",
+      "actual": "hallucination",
+      "diagnosed": "goal_drift",
+      "correct": false,
+      "time": 32.3,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_103",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 30.5,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_111",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 32.9,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_112",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 33.1,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_119",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 32.5,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_121",
+      "actual": "tool_misuse",
+      "diagnosed": "hallucination",
+      "correct": false,
+      "time": 31.5,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_122",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 31.7,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_124",
+      "actual": "tool_misuse",
+      "diagnosed": "context_collapse",
+      "correct": false,
+      "time": 32.1,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_14",
+      "actual": "tool_misuse",
+      "diagnosed": "hallucination",
+      "correct": false,
+      "time": 29.5,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_23",
+      "actual": "tool_misuse",
+      "diagnosed": "tool_misuse",
+      "correct": true,
+      "time": 31.8,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_27",
+      "actual": "tool_misuse",
+      "diagnosed": "goal_drift",
+      "correct": false,
+      "time": 34.7,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_34",
+      "actual": "reasoning_loop",
+      "diagnosed": "hallucination",
+      "correct": false,
+      "time": 38.6,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_104",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 29.7,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_107",
+      "actual": "goal_drift",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 32.6,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_108",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 31.0,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_117",
+      "actual": "goal_drift",
+      "diagnosed": "context_collapse",
+      "correct": false,
+      "time": 30.9,
+      "how": "label line \u2192 'context_collapse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_19",
+      "actual": "goal_drift",
+      "diagnosed": "reasoning_loop",
+      "correct": false,
+      "time": 31.3,
+      "how": "label line \u2192 'reasoning_loop'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_20",
+      "actual": "goal_drift",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 31.6,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_22",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 32.4,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_36",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 32.5,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_46",
+      "actual": "goal_drift",
+      "diagnosed": "hallucination",
+      "correct": false,
+      "time": 31.7,
+      "how": "label line \u2192 'hallucination'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_51",
+      "actual": "goal_drift",
+      "diagnosed": "goal_drift",
+      "correct": true,
+      "time": 32.3,
+      "how": "label line \u2192 'goal_drift'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_11",
+      "actual": "memory_overflow",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 32.5,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_59",
+      "actual": "memory_overflow",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 32.1,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_76",
+      "actual": "memory_overflow",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 34.2,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_ALGO_77",
+      "actual": "memory_overflow",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 35.6,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_HAND_45",
+      "actual": "memory_overflow",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 30.6,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    },
+    {
+      "trace_id": "REAL_HAND_57",
+      "actual": "memory_overflow",
+      "diagnosed": "tool_misuse",
+      "correct": false,
+      "time": 33.9,
+      "how": "label line \u2192 'tool_misuse'",
+      "excluded": false,
+      "src": "real"
+    }
+  ],
+  "generated": "2026-09-09 10:53:04",
+  "parser": "src/parser.py (shared)"
+}

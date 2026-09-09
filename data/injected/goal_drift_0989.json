@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0989",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01698.json",
+  "task": "I am looking for a restaurant that is in the centre of town and serves light bites food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8115442,
+      "action": "ingest",
+      "input": "I am looking for a restaurant that is in the centre of town and serves light bites food.",
+      "output": "I am looking for a restaurant that is in the centre of town and serves light bites food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8115451,
+      "action": "subtask_1",
+      "input": "I am looking for a restaurant that is in the centre of town and serves light bites food.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8115456,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.811546,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

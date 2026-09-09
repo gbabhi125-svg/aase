@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0476",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL2681.json",
+  "task": "I am looking for places to visit in downtown Cambridge. What are some popular attractions?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8347852,
+      "action": "tool_selection",
+      "input": "I am looking for places to visit in downtown Cambridge. What are some popular attractions?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.834786,
+      "action": "wrong_tool",
+      "input": "I am looking for places to visit in downtown Cambridge. What are some popular attractions?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.834787,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8347874,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

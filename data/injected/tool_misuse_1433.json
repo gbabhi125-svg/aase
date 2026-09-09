@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1433",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL2061.json",
+  "task": "I need to find an expensive restaurant in Cambridge located somewhere in the north.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.955332,
+      "action": "tool_selection",
+      "input": "I need to find an expensive restaurant in Cambridge located somewhere in the north.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9553335,
+      "action": "wrong_tool",
+      "input": "I need to find an expensive restaurant in Cambridge located somewhere in the north.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9553342,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9553351,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

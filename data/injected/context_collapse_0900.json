@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0900",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL1788.json",
+  "task": "Please help me find a hotel called Flinches Bed and Breakfast. Thanks.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.303418,
+      "action": "ingest",
+      "input": "Please help me find a hotel called Flinches Bed and Breakfast. Thanks.",
+      "output": "Please help me find a hotel called Flinches Bed and Breakfast. Thanks.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3034189,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3034194,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3034198,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0688",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0048.json",
+  "task": "I need a place to eat that serves chinese food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.688011,
+      "action": "ingest",
+      "input": "I need a place to eat that serves chinese food.",
+      "output": "I need a place to eat that serves chinese food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6880121,
+      "action": "tool_call",
+      "input": "I need a place to eat that serves chinese food.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6880128,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6880133,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

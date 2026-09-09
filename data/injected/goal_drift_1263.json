@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1263",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SSNG0321.json",
+  "task": "I'm needing a 4 star guest house today.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.841651,
+      "action": "ingest",
+      "input": "I'm needing a 4 star guest house today.",
+      "output": "I'm needing a 4 star guest house today.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.841652,
+      "action": "subtask_1",
+      "input": "I'm needing a 4 star guest house today.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8416524,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8416533,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

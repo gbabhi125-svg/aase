@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0433",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL2463.json",
+  "task": "I need help finding a chinese restaurant in the centre of cambridge any suggestions?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6570687,
+      "action": "ingest",
+      "input": "I need help finding a chinese restaurant in the centre of cambridge any suggestions?",
+      "output": "I need help finding a chinese restaurant in the centre of cambridge any suggestions?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6570697,
+      "action": "tool_call",
+      "input": "I need help finding a chinese restaurant in the centre of cambridge any suggestions?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6570704,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6570709,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

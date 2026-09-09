@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0732",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL0025.json",
+  "task": "While in Cambridge I need to find a restaurant called the rice boat.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.783385,
+      "action": "ingest",
+      "input": "While in Cambridge I need to find a restaurant called the rice boat.",
+      "output": "While in Cambridge I need to find a restaurant called the rice boat.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7833862,
+      "action": "subtask_1",
+      "input": "While in Cambridge I need to find a restaurant called the rice boat.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7833867,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7833872,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

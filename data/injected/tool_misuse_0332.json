@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0332",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4641.json",
+  "task": "i'm looking for a place called kambar",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8178864,
+      "action": "tool_selection",
+      "input": "i'm looking for a place called kambar",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8178878,
+      "action": "wrong_tool",
+      "input": "i'm looking for a place called kambar",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.817888,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8178885,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

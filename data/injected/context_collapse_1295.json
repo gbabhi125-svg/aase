@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1295",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL0792.json",
+  "task": "I'm trying to find a restaurant by the name of ali baba. Can you help me out?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3500204,
+      "action": "ingest",
+      "input": "I'm trying to find a restaurant by the name of ali baba. Can you help me out?",
+      "output": "I'm trying to find a restaurant by the name of ali baba. Can you help me out?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3500214,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3500216,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.350022,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

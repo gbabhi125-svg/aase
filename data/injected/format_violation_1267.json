@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1267",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL1364.json",
+  "task": "Hi, I'd like a 3 star hotel please. And also internet!",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5179062,
+      "action": "ingest",
+      "input": "Hi, I'd like a 3 star hotel please. And also internet!",
+      "output": "Hi, I'd like a 3 star hotel please. And also internet!",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5179071,
+      "action": "llm_call",
+      "input": "Hi, I'd like a 3 star hotel please. And also internet!",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5179076,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

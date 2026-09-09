@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1110",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL3366.json",
+  "task": "African food in the cetre of town /",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8245945,
+      "action": "ingest",
+      "input": "African food in the cetre of town /",
+      "output": "African food in the cetre of town /",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8245955,
+      "action": "subtask_1",
+      "input": "African food in the cetre of town /",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.824596,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8245964,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

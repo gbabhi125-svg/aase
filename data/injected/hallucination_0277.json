@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0277",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0946.json",
+  "task": "I need some help arranging a train that meets our schedule.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6435106,
+      "action": "ingest",
+      "input": "I need some help arranging a train that meets our schedule.",
+      "output": "I need some help arranging a train that meets our schedule.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6435113,
+      "action": "tool_call",
+      "input": "I need some help arranging a train that meets our schedule.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6435118,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6435122,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0860",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL2732.json",
+  "task": "There is a place I want to see, can you help me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4700997,
+      "action": "ingest",
+      "input": "There is a place I want to see, can you help me?",
+      "output": "There is a place I want to see, can you help me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4701006,
+      "action": "llm_call",
+      "input": "There is a place I want to see, can you help me?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4701014,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0517",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_WOZ20178.json",
+  "task": "I'd like to dine at a restaurant in the west part of town. Can you help me find one?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.256621,
+      "action": "ingest",
+      "input": "I'd like to dine at a restaurant in the west part of town. Can you help me find one?",
+      "output": "I'd like to dine at a restaurant in the west part of town. Can you help me find one?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.256622,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2566226,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.256623,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

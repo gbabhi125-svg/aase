@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0441",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL2690.json",
+  "task": "I would like the address to the Carolina Bed and Breakfast hotel in Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2472646,
+      "action": "ingest",
+      "input": "I would like the address to the Carolina Bed and Breakfast hotel in Cambridge.",
+      "output": "I would like the address to the Carolina Bed and Breakfast hotel in Cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2472656,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.247266,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2472663,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

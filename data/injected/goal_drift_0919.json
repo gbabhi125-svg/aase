@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0919",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL0384.json",
+  "task": "I'm looking for a particular restaurant. It's called hotel du vin and bistro.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8037899,
+      "action": "ingest",
+      "input": "I'm looking for a particular restaurant. It's called hotel du vin and bistro.",
+      "output": "I'm looking for a particular restaurant. It's called hotel du vin and bistro.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8037906,
+      "action": "subtask_1",
+      "input": "I'm looking for a particular restaurant. It's called hotel du vin and bistro.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8037913,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8037922,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

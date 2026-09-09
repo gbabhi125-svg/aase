@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0204",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL0968.json",
+  "task": "I am looking for a place to go in town. Preferably a park that is in the east.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6384616,
+      "action": "ingest",
+      "input": "I am looking for a place to go in town. Preferably a park that is in the east.",
+      "output": "I am looking for a place to go in town. Preferably a park that is in the east.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6384623,
+      "action": "tool_call",
+      "input": "I am looking for a place to go in town. Preferably a park that is in the east.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6384628,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6384633,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

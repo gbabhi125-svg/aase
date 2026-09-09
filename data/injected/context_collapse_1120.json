@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1120",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL2631.json",
+  "task": "I am traveling to Cambridge and I'm excited about seeing the local tourist attractions.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3290062,
+      "action": "ingest",
+      "input": "I am traveling to Cambridge and I'm excited about seeing the local tourist attractions.",
+      "output": "I am traveling to Cambridge and I'm excited about seeing the local tourist attractions.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.329007,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3290074,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3290079,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

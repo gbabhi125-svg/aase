@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1368",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4440.json",
+  "task": "I'm looking for this restaurant called pizza hut fen ditton",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.358678,
+      "action": "ingest",
+      "input": "I'm looking for this restaurant called pizza hut fen ditton",
+      "output": "I'm looking for this restaurant called pizza hut fen ditton",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.358679,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3586795,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.35868,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

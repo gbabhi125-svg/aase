@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1255",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL0328.json",
+  "task": "I am looking for an Indian Restaurant with high ratings in the moderate price range please?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5164616,
+      "action": "ingest",
+      "input": "I am looking for an Indian Restaurant with high ratings in the moderate price range please?",
+      "output": "I am looking for an Indian Restaurant with high ratings in the moderate price range please?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5164626,
+      "action": "llm_call",
+      "input": "I am looking for an Indian Restaurant with high ratings in the moderate price range please?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.516463,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

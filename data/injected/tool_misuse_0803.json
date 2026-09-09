@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0803",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL1468.json",
+  "task": "Hello, a friend recommend I try out Camboats while I'm in town. Can you tell me more about it?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8726904,
+      "action": "tool_selection",
+      "input": "Hello, a friend recommend I try out Camboats while I'm in town. Can you tell me more about it?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8726912,
+      "action": "wrong_tool",
+      "input": "Hello, a friend recommend I try out Camboats while I'm in town. Can you tell me more about it?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8726916,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8726926,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

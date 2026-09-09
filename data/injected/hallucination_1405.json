@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1405",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL1302.json",
+  "task": "I'm looking for a hotel in the south, and I'd like cheaper options please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7704458,
+      "action": "ingest",
+      "input": "I'm looking for a hotel in the south, and I'd like cheaper options please.",
+      "output": "I'm looking for a hotel in the south, and I'd like cheaper options please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7704468,
+      "action": "tool_call",
+      "input": "I'm looking for a hotel in the south, and I'd like cheaper options please.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7704473,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.770448,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

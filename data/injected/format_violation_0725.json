@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0725",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL0660.json",
+  "task": "I need a train that is leaving on wednesday.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4551868,
+      "action": "ingest",
+      "input": "I need a train that is leaving on wednesday.",
+      "output": "I need a train that is leaving on wednesday.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.455188,
+      "action": "llm_call",
+      "input": "I need a train that is leaving on wednesday.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4551885,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

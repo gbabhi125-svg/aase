@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1001",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL0989.json",
+  "task": "I'm visiting Cambridge soon and would like to visit a museum in the centre. Can you help me with that?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.723626,
+      "action": "ingest",
+      "input": "I'm visiting Cambridge soon and would like to visit a museum in the centre. Can you help me with that?",
+      "output": "I'm visiting Cambridge soon and would like to visit a museum in the centre. Can you help me with that?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.723627,
+      "action": "tool_call",
+      "input": "I'm visiting Cambridge soon and would like to visit a museum in the centre. Can you help me with that?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7236276,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.723628,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

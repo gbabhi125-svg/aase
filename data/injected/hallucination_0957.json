@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0957",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG0189.json",
+  "task": "Please find for me the location of Addenbrookes Hospital.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.718601,
+      "action": "ingest",
+      "input": "Please find for me the location of Addenbrookes Hospital.",
+      "output": "Please find for me the location of Addenbrookes Hospital.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7186017,
+      "action": "tool_call",
+      "input": "Please find for me the location of Addenbrookes Hospital.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7186024,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.718603,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

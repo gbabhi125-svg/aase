@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1453",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG1346.json",
+  "task": "I want to make a booking at the alexander bed and breakfast.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.958973,
+      "action": "tool_selection",
+      "input": "I want to make a booking at the alexander bed and breakfast.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9589741,
+      "action": "wrong_tool",
+      "input": "I want to make a booking at the alexander bed and breakfast.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.958975,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9589758,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

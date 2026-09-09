@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0245",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_SSNG0253.json",
+  "task": "Hi, I'm looking for a place to stay in the east with free wifi.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5711527,
+      "action": "memory_fetch",
+      "input": "Hi, I'm looking for a place to stay in the east with free wifi.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5711536,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.571154,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

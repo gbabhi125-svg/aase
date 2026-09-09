@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1248",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL2379.json",
+  "task": "I am looking for a restaurant in the expensive price range that serves thai food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7517056,
+      "action": "ingest",
+      "input": "I am looking for a restaurant in the expensive price range that serves thai food.",
+      "output": "I am looking for a restaurant in the expensive price range that serves thai food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7517066,
+      "action": "tool_call",
+      "input": "I am looking for a restaurant in the expensive price range that serves thai food.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.751707,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7517076,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

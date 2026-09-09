@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1083",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG1335.json",
+  "task": "I need to book a train for Monday from Ely to Cambridge to arrive by 14:00 for 6 people.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.821693,
+      "action": "ingest",
+      "input": "I need to book a train for Monday from Ely to Cambridge to arrive by 14:00 for 6 people.",
+      "output": "I need to book a train for Monday from Ely to Cambridge to arrive by 14:00 for 6 people.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.821694,
+      "action": "subtask_1",
+      "input": "I need to book a train for Monday from Ely to Cambridge to arrive by 14:00 for 6 people.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8216944,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.821695,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

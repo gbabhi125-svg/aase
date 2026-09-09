@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0714",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4172.json",
+  "task": "Can you help me find an expensive hotel in the south to stay at? Thanks.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.862459,
+      "action": "tool_selection",
+      "input": "Can you help me find an expensive hotel in the south to stay at? Thanks.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.86246,
+      "action": "wrong_tool",
+      "input": "Can you help me find an expensive hotel in the south to stay at? Thanks.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8624604,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8624609,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

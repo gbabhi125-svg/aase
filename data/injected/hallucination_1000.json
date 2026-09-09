@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1000",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL1315.json",
+  "task": "Yes, I am planning a trip and could use some information on attractions.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7235348,
+      "action": "ingest",
+      "input": "Yes, I am planning a trip and could use some information on attractions.",
+      "output": "Yes, I am planning a trip and could use some information on attractions.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7235355,
+      "action": "tool_call",
+      "input": "Yes, I am planning a trip and could use some information on attractions.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.723536,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7235367,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

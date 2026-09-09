@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0521",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01891.json",
+  "task": "I need to contact the police please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7563744,
+      "action": "ingest",
+      "input": "I need to contact the police please.",
+      "output": "I need to contact the police please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.756375,
+      "action": "subtask_1",
+      "input": "I need to contact the police please.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7563756,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.756376,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0640",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4966.json",
+  "task": "can i find a place to eat in the centre which is expensive?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8538232,
+      "action": "tool_selection",
+      "input": "can i find a place to eat in the centre which is expensive?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.853824,
+      "action": "wrong_tool",
+      "input": "can i find a place to eat in the centre which is expensive?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8538246,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.853825,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

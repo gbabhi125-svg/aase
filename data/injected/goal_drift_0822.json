@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0822",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1173.json",
+  "task": "Can you help me find the a and b guest house hotel?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.79334,
+      "action": "ingest",
+      "input": "Can you help me find the a and b guest house hotel?",
+      "output": "Can you help me find the a and b guest house hotel?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.793341,
+      "action": "subtask_1",
+      "input": "Can you help me find the a and b guest house hotel?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7933414,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7933419,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

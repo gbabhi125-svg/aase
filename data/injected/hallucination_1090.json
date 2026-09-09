@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1090",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL0214.json",
+  "task": "What trains leave Friday from Bishops Stortford?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7334266,
+      "action": "ingest",
+      "input": "What trains leave Friday from Bishops Stortford?",
+      "output": "What trains leave Friday from Bishops Stortford?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7334275,
+      "action": "tool_call",
+      "input": "What trains leave Friday from Bishops Stortford?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.733428,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7334285,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

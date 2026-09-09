@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1205",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4058.json",
+  "task": "I'm looking for a train, but I don't want to have to get up too early. There's something that leaves after 8:15, right?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.339696,
+      "action": "ingest",
+      "input": "I'm looking for a train, but I don't want to have to get up too early. There's something that leaves after 8:15, right?",
+      "output": "I'm looking for a train, but I don't want to have to get up too early. There's something that leaves after 8:15, right?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3396966,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3396971,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3396976,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

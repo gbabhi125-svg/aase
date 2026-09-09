@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0902",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL2097.json",
+  "task": "Hi, I'd like a hotel with a star of 4 on the east side of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.303636,
+      "action": "ingest",
+      "input": "Hi, I'd like a hotel with a star of 4 on the east side of town.",
+      "output": "Hi, I'd like a hotel with a star of 4 on the east side of town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.303637,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3036375,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3036377,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

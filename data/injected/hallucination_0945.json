@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0945",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG01947.json",
+  "task": "I am looking for a particular restaurant. Its name is called restaurant one seven",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7174656,
+      "action": "ingest",
+      "input": "I am looking for a particular restaurant. Its name is called restaurant one seven",
+      "output": "I am looking for a particular restaurant. Its name is called restaurant one seven",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7174666,
+      "action": "tool_call",
+      "input": "I am looking for a particular restaurant. Its name is called restaurant one seven",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7174668,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7174673,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

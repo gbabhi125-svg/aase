@@ -1,0 +1,65 @@
+{
+  "id": "reasoning_loop_0321",
+  "injected_failure": "reasoning_loop",
+  "task_id": "mwoz_SNG0459.json",
+  "task": "I'm looking for a restaurant in the centre of town with a modest price range.  Can you recommend one?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.016216,
+      "action": "search",
+      "input": "I'm looking for a restaurant in the centre of town with a modest price range.  Can you recommend one?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.016217,
+      "action": "search",
+      "input": "I'm looking for a restaurant in the centre of town with a modest price range.  Can you recommend one?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.0162177,
+      "action": "search",
+      "input": "I'm looking for a restaurant in the centre of town with a modest price range.  Can you recommend one?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.016218,
+      "action": "search",
+      "input": "I'm looking for a restaurant in the centre of town with a modest price range.  Can you recommend one?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 5,
+      "timestamp": 1787208588.0162184,
+      "action": "search",
+      "input": "I'm looking for a restaurant in the centre of town with a modest price range.  Can you recommend one?",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 6,
+      "timestamp": 1787208588.016219,
+      "action": "loop_detected",
+      "input": "I'm looking for a restaurant in the centre of town with a modest price range.  Can you recommend one?",
+      "output": "None",
+      "status": "error",
+      "error": "identical action repeated 5x, no progress"
+    }
+  ],
+  "success": false
+}

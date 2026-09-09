@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0740",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL1779.json",
+  "task": "I need you to find a hotel so I have a place to stay. It doesn't need to include internet, but it should include free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8654861,
+      "action": "tool_selection",
+      "input": "I need you to find a hotel so I have a place to stay. It doesn't need to include internet, but it should include free parking.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.865487,
+      "action": "wrong_tool",
+      "input": "I need you to find a hotel so I have a place to stay. It doesn't need to include internet, but it should include free parking.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8654876,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.865488,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1327",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2483.json",
+  "task": "Hi, can you please give me information on a restaurant called Midsummer House Restaurant located in Cambridge?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7606661,
+      "action": "ingest",
+      "input": "Hi, can you please give me information on a restaurant called Midsummer House Restaurant located in Cambridge?",
+      "output": "Hi, can you please give me information on a restaurant called Midsummer House Restaurant located in Cambridge?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.760667,
+      "action": "tool_call",
+      "input": "Hi, can you please give me information on a restaurant called Midsummer House Restaurant located in Cambridge?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7606676,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7606683,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

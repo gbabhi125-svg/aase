@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0821",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2981.json",
+  "task": "What kind of entertainment is located in town in the south area of Cambridge?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.70336,
+      "action": "ingest",
+      "input": "What kind of entertainment is located in town in the south area of Cambridge?",
+      "output": "What kind of entertainment is located in town in the south area of Cambridge?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7033608,
+      "action": "tool_call",
+      "input": "What kind of entertainment is located in town in the south area of Cambridge?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7033613,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7033617,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

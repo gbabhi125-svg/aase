@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0360",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0648.json",
+  "task": "Yes can you tell me something about the Cow Pizza Kitchen and Bar?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7390897,
+      "action": "ingest",
+      "input": "Yes can you tell me something about the Cow Pizza Kitchen and Bar?",
+      "output": "Yes can you tell me something about the Cow Pizza Kitchen and Bar?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7390904,
+      "action": "subtask_1",
+      "input": "Yes can you tell me something about the Cow Pizza Kitchen and Bar?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.739091,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7390914,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

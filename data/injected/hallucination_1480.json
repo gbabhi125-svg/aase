@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1480",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG0286.json",
+  "task": "Hi, I'm looking for a train from Stevenage to Cambridge",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7787313,
+      "action": "ingest",
+      "input": "Hi, I'm looking for a train from Stevenage to Cambridge",
+      "output": "Hi, I'm looking for a train from Stevenage to Cambridge",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.778732,
+      "action": "tool_call",
+      "input": "Hi, I'm looking for a train from Stevenage to Cambridge",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7787328,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7787333,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

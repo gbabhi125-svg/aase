@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0511",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG02146.json",
+  "task": "Hi, I just had a fight with someone regarding an automobile accident we had and I need to contact the police!",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7552671,
+      "action": "ingest",
+      "input": "Hi, I just had a fight with someone regarding an automobile accident we had and I need to contact the police!",
+      "output": "Hi, I just had a fight with someone regarding an automobile accident we had and I need to contact the police!",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.755268,
+      "action": "subtask_1",
+      "input": "Hi, I just had a fight with someone regarding an automobile accident we had and I need to contact the police!",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7552686,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.755269,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0492",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4633.json",
+  "task": "Can you find a place in town that serves Polynesian food?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.253492,
+      "action": "ingest",
+      "input": "Can you find a place in town that serves Polynesian food?",
+      "output": "Can you find a place in town that serves Polynesian food?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.253493,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2534935,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.253494,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

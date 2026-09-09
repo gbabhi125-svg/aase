@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1219",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL0803.json",
+  "task": "Good eve! I'm looking for a nice place to have a spot of afternoon tea.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9234855,
+      "action": "tool_selection",
+      "input": "Good eve! I'm looking for a nice place to have a spot of afternoon tea.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9234865,
+      "action": "wrong_tool",
+      "input": "Good eve! I'm looking for a nice place to have a spot of afternoon tea.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.923487,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9234874,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

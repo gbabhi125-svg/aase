@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0759",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL1630.json",
+  "task": "Hi, I'm looking to try Eritrean food. Do you have a restaurant listing?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.695759,
+      "action": "ingest",
+      "input": "Hi, I'm looking to try Eritrean food. Do you have a restaurant listing?",
+      "output": "Hi, I'm looking to try Eritrean food. Do you have a restaurant listing?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6957598,
+      "action": "tool_call",
+      "input": "Hi, I'm looking to try Eritrean food. Do you have a restaurant listing?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6957605,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.695761,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

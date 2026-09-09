@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1300",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL2123.json",
+  "task": "Hi, I would like to purchase a train ticket.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9343011,
+      "action": "tool_selection",
+      "input": "Hi, I would like to purchase a train ticket.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.934302,
+      "action": "wrong_tool",
+      "input": "Hi, I would like to purchase a train ticket.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9343028,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9343033,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0565",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL0173.json",
+  "task": "Hi, I am looking for an expensive restaurant to dine at in the south.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.262734,
+      "action": "ingest",
+      "input": "Hi, I am looking for an expensive restaurant to dine at in the south.",
+      "output": "Hi, I am looking for an expensive restaurant to dine at in the south.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.262735,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2627354,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2627358,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

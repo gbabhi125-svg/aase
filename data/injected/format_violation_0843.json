@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0843",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL1828.json",
+  "task": "Well, I am planning a trip and need some help with a train.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4682753,
+      "action": "ingest",
+      "input": "Well, I am planning a trip and need some help with a train.",
+      "output": "Well, I am planning a trip and need some help with a train.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4682763,
+      "action": "llm_call",
+      "input": "Well, I am planning a trip and need some help with a train.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4682767,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

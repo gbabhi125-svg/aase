@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0194",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG1257.json",
+  "task": "Thanks.  I'm looking for a place to go on the south.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7214205,
+      "action": "ingest",
+      "input": "Thanks.  I'm looking for a place to go on the south.",
+      "output": "Thanks.  I'm looking for a place to go on the south.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7214215,
+      "action": "subtask_1",
+      "input": "Thanks.  I'm looking for a place to go on the south.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7214222,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7214227,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

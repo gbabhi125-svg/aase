@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0344",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2768.json",
+  "task": "I'm looking for a hotel to stay at during my trip to Cambridge. I'd like it to be in the centre.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6482878,
+      "action": "ingest",
+      "input": "I'm looking for a hotel to stay at during my trip to Cambridge. I'd like it to be in the centre.",
+      "output": "I'm looking for a hotel to stay at during my trip to Cambridge. I'd like it to be in the centre.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6482885,
+      "action": "tool_call",
+      "input": "I'm looking for a hotel to stay at during my trip to Cambridge. I'd like it to be in the centre.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.648289,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6482894,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

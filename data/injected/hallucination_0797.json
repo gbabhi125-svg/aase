@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0797",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG0690.json",
+  "task": "I'm looking for a place to dine on the south side of town. Please find a place that's in the expensive price range.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7005568,
+      "action": "ingest",
+      "input": "I'm looking for a place to dine on the south side of town. Please find a place that's in the expensive price range.",
+      "output": "I'm looking for a place to dine on the south side of town. Please find a place that's in the expensive price range.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7005577,
+      "action": "tool_call",
+      "input": "I'm looking for a place to dine on the south side of town. Please find a place that's in the expensive price range.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7005584,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.700559,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

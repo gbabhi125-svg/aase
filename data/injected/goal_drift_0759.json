@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0759",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG02148.json",
+  "task": "I'm looking for a restaurant that serves indian food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7863886,
+      "action": "ingest",
+      "input": "I'm looking for a restaurant that serves indian food.",
+      "output": "I'm looking for a restaurant that serves indian food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.78639,
+      "action": "subtask_1",
+      "input": "I'm looking for a restaurant that serves indian food.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7863908,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7863917,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0507",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL2762.json",
+  "task": "Can you tell me if there are any cinemas in the west part of town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7548575,
+      "action": "ingest",
+      "input": "Can you tell me if there are any cinemas in the west part of town?",
+      "output": "Can you tell me if there are any cinemas in the west part of town?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7548585,
+      "action": "subtask_1",
+      "input": "Can you tell me if there are any cinemas in the west part of town?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.754859,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7548594,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

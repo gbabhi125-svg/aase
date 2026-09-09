@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0880",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG02215.json",
+  "task": "i am looking for the Addenbrookes",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.70973,
+      "action": "ingest",
+      "input": "i am looking for the Addenbrookes",
+      "output": "i am looking for the Addenbrookes",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.709731,
+      "action": "tool_call",
+      "input": "i am looking for the Addenbrookes",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7097316,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7097323,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0327",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG01935.json",
+  "task": "I really need to find a taxi, if you can help. I can't leave until after 7:00, though. I need to get to carolina bed and breakfast.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7355838,
+      "action": "ingest",
+      "input": "I really need to find a taxi, if you can help. I can't leave until after 7:00, though. I need to get to carolina bed and breakfast.",
+      "output": "I really need to find a taxi, if you can help. I can't leave until after 7:00, though. I need to get to carolina bed and breakfast.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7355845,
+      "action": "subtask_1",
+      "input": "I really need to find a taxi, if you can help. I can't leave until after 7:00, though. I need to get to carolina bed and breakfast.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7355852,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7355857,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

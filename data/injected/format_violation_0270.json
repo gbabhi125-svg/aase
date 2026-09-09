@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0270",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL0032.json",
+  "task": "I'd like to find high-end restaurant in the center of Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4050288,
+      "action": "ingest",
+      "input": "I'd like to find high-end restaurant in the center of Cambridge.",
+      "output": "I'd like to find high-end restaurant in the center of Cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4050295,
+      "action": "llm_call",
+      "input": "I'd like to find high-end restaurant in the center of Cambridge.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4050305,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

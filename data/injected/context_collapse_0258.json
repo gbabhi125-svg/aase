@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0258",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL1733.json",
+  "task": "Could you help me choose a train running from Stansted Airport to Cambridge?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2249558,
+      "action": "ingest",
+      "input": "Could you help me choose a train running from Stansted Airport to Cambridge?",
+      "output": "Could you help me choose a train running from Stansted Airport to Cambridge?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2249568,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2249572,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2249577,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

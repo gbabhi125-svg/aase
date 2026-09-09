@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0172",
+  "injected_failure": "tool_misuse",
+  "task_id": "toolbench_G2_2",
+  "task": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.800651,
+      "action": "tool_selection",
+      "input": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.800652,
+      "action": "wrong_tool",
+      "input": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8006525,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.800653,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

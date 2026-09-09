@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0187",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG1002.json",
+  "task": "Yes, can you give me the information on the Huntingdon Marriott Hotel?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8023987,
+      "action": "tool_selection",
+      "input": "Yes, can you give me the information on the Huntingdon Marriott Hotel?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8023996,
+      "action": "wrong_tool",
+      "input": "Yes, can you give me the information on the Huntingdon Marriott Hotel?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8024004,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8024008,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

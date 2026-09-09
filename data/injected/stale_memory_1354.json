@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_1354",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_MUL0340.json",
+  "task": "I am going to Cambridge and need a place to eat that serves lebanese food and is cheaply priced.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6833794,
+      "action": "memory_fetch",
+      "input": "I am going to Cambridge and need a place to eat that serves lebanese food and is cheaply priced.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6833801,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6833808,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

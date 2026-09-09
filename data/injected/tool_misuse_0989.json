@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0989",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL2127.json",
+  "task": "I'd like a train leaving on Tuesday from Kings Lynn, please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8936765,
+      "action": "tool_selection",
+      "input": "I'd like a train leaving on Tuesday from Kings Lynn, please.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8936772,
+      "action": "wrong_tool",
+      "input": "I'd like a train leaving on Tuesday from Kings Lynn, please.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8936782,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8936787,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

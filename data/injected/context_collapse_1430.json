@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1430",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL1086.json",
+  "task": "I'd like to find a swimmingpool on the east side, if possible.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3659592,
+      "action": "ingest",
+      "input": "I'd like to find a swimmingpool on the east side, if possible.",
+      "output": "I'd like to find a swimmingpool on the east side, if possible.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3659601,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3659606,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3659613,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0914",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL4811.json",
+  "task": "Can you help me find a museum?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8032622,
+      "action": "ingest",
+      "input": "Can you help me find a museum?",
+      "output": "Can you help me find a museum?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.803263,
+      "action": "subtask_1",
+      "input": "Can you help me find a museum?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8032637,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8032641,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

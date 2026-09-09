@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0172",
+  "injected_failure": "format_violation",
+  "task_id": "toolbench_G2_2",
+  "task": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.394493,
+      "action": "ingest",
+      "input": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.394494,
+      "action": "llm_call",
+      "input": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.3944948,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

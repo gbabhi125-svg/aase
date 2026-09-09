@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1289",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_WOZ20385.json",
+  "task": "Hey, I'm up south can you give me a place to eat?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7560296,
+      "action": "ingest",
+      "input": "Hey, I'm up south can you give me a place to eat?",
+      "output": "Hey, I'm up south can you give me a place to eat?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7560306,
+      "action": "tool_call",
+      "input": "Hey, I'm up south can you give me a place to eat?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.756031,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7560315,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

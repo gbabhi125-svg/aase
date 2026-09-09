@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1070",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL2604.json",
+  "task": "I'm looking for any type of architectural attractions in town. Do you have any recommendations?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7312682,
+      "action": "ingest",
+      "input": "I'm looking for any type of architectural attractions in town. Do you have any recommendations?",
+      "output": "I'm looking for any type of architectural attractions in town. Do you have any recommendations?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.731269,
+      "action": "tool_call",
+      "input": "I'm looking for any type of architectural attractions in town. Do you have any recommendations?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7312694,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7312698,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0728",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL1643.json",
+  "task": "I am planning your trip in Cambridge. I need a train,The train should depart from birmingham new street and should leave on sunday",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7829576,
+      "action": "ingest",
+      "input": "I am planning your trip in Cambridge. I need a train,The train should depart from birmingham new street and should leave on sunday",
+      "output": "I am planning your trip in Cambridge. I need a train,The train should depart from birmingham new street and should leave on sunday",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7829583,
+      "action": "subtask_1",
+      "input": "I am planning your trip in Cambridge. I need a train,The train should depart from birmingham new street and should leave on sunday",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7829587,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7829597,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

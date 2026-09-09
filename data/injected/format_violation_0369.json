@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0369",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL3454.json",
+  "task": "I wanted to find out about local restaurants in Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.416022,
+      "action": "ingest",
+      "input": "I wanted to find out about local restaurants in Cambridge.",
+      "output": "I wanted to find out about local restaurants in Cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4160228,
+      "action": "llm_call",
+      "input": "I wanted to find out about local restaurants in Cambridge.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4160235,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

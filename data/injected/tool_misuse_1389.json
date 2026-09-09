@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1389",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG01802.json",
+  "task": "Another driver bumped into my rental car, but he's saying it's my fault. I need help resolving this.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9482355,
+      "action": "tool_selection",
+      "input": "Another driver bumped into my rental car, but he's saying it's my fault. I need help resolving this.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9482362,
+      "action": "wrong_tool",
+      "input": "Another driver bumped into my rental car, but he's saying it's my fault. I need help resolving this.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9482367,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9482377,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

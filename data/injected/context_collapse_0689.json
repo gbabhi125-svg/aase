@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0689",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL3750.json",
+  "task": "I want a hotel that doesn't include internet, but it needs to be a place to stay in the east.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2775314,
+      "action": "ingest",
+      "input": "I want a hotel that doesn't include internet, but it needs to be a place to stay in the east.",
+      "output": "I want a hotel that doesn't include internet, but it needs to be a place to stay in the east.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.277532,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2775326,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2775333,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

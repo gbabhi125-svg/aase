@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0166",
+  "injected_failure": "format_violation",
+  "task_id": "toolbench_G1_1",
+  "task": "As a sustainability enthusiast, I'm interested in exploring the projects available on the SQUAKE platform. Could you fetch the list of projects using the 'Projects' API? Additionally, I would like to check the health of the SQUAKE API using the 'Checkhealth' API.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3938591,
+      "action": "ingest",
+      "input": "As a sustainability enthusiast, I'm interested in exploring the projects available on the SQUAKE platform. Could you fetch the list of projects using the 'Projects' API? Additionally, I would like to check the health of the SQUAKE API using the 'Checkhealth' API.",
+      "output": "As a sustainability enthusiast, I'm interested in exploring the projects available on the SQUAKE platform. Could you fetch the list of projects using the 'Projects' API? Additionally, I would like to check the health of the SQUAKE API using the 'Checkhealth' API.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.39386,
+      "action": "llm_call",
+      "input": "As a sustainability enthusiast, I'm interested in exploring the projects available on the SQUAKE platform. Could you fetch the list of projects using the 'Projects' API? Additionally, I would like to check the health of the SQUAKE API using the 'Checkhealth' API.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.3938606,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

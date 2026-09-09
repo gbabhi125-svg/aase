@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1391",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG1080.json",
+  "task": "Hi! Can you help me find an attraction to visit in the centre of town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8555017,
+      "action": "ingest",
+      "input": "Hi! Can you help me find an attraction to visit in the centre of town?",
+      "output": "Hi! Can you help me find an attraction to visit in the centre of town?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8555024,
+      "action": "subtask_1",
+      "input": "Hi! Can you help me find an attraction to visit in the centre of town?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8555028,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8555033,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

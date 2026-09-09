@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0716",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1162.json",
+  "task": "I'm visiting Cambridge and looking to do the tourist thing!  I'm interested in information about potential nightclubs in the centre of town!",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.86266,
+      "action": "tool_selection",
+      "input": "I'm visiting Cambridge and looking to do the tourist thing!  I'm interested in information about potential nightclubs in the centre of town!",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.862661,
+      "action": "wrong_tool",
+      "input": "I'm visiting Cambridge and looking to do the tourist thing!  I'm interested in information about potential nightclubs in the centre of town!",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8626614,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8626618,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

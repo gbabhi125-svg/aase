@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0925",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1678.json",
+  "task": "I'll be flying into Stansted Airport and need to find a train to Cambridge. Can you help me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8862796,
+      "action": "tool_selection",
+      "input": "I'll be flying into Stansted Airport and need to find a train to Cambridge. Can you help me?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8862808,
+      "action": "wrong_tool",
+      "input": "I'll be flying into Stansted Airport and need to find a train to Cambridge. Can you help me?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8862813,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8862817,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0776",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL0386.json",
+  "task": "Hi, I am trying to find out the address, business hours and basic price range of the restaurant Golden Wok in Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2878947,
+      "action": "ingest",
+      "input": "Hi, I am trying to find out the address, business hours and basic price range of the restaurant Golden Wok in Cambridge.",
+      "output": "Hi, I am trying to find out the address, business hours and basic price range of the restaurant Golden Wok in Cambridge.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.287896,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2878964,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.287897,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

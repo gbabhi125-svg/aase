@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1484",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL0293.json",
+  "task": "Hi, I'm looking for the Bridge Guest House.  Can you give the information about it please?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3722782,
+      "action": "ingest",
+      "input": "Hi, I'm looking for the Bridge Guest House.  Can you give the information about it please?",
+      "output": "Hi, I'm looking for the Bridge Guest House.  Can you give the information about it please?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3722794,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.37228,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3722804,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

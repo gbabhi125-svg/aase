@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0752",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL0893.json",
+  "task": "What sort of restaurants do you have in the centre of town? Anything expensive?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7857134,
+      "action": "ingest",
+      "input": "What sort of restaurants do you have in the centre of town? Anything expensive?",
+      "output": "What sort of restaurants do you have in the centre of town? Anything expensive?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7857144,
+      "action": "subtask_1",
+      "input": "What sort of restaurants do you have in the centre of town? Anything expensive?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7857149,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7857153,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

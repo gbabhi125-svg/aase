@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1312",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL1209.json",
+  "task": "Hello! I'm looking for a moderately priced place to stay in Cambridge. I'll need free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7590797,
+      "action": "ingest",
+      "input": "Hello! I'm looking for a moderately priced place to stay in Cambridge. I'll need free parking.",
+      "output": "Hello! I'm looking for a moderately priced place to stay in Cambridge. I'll need free parking.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7590804,
+      "action": "tool_call",
+      "input": "Hello! I'm looking for a moderately priced place to stay in Cambridge. I'll need free parking.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7590811,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7590818,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

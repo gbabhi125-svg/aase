@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1361",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL0593.json",
+  "task": "Hello, I will be in Cambridge later on this week and I can't seem to find King's college. I am not sure how to find it, can you help?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.944196,
+      "action": "tool_selection",
+      "input": "Hello, I will be in Cambridge later on this week and I can't seem to find King's college. I am not sure how to find it, can you help?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9441972,
+      "action": "wrong_tool",
+      "input": "Hello, I will be in Cambridge later on this week and I can't seem to find King's college. I am not sure how to find it, can you help?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9441974,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.944198,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1030",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL0499.json",
+  "task": "I am hoping to book a 5 star hotel in cambridge that is expensive. What ones are available to book for next Thursday through Sunday?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7266963,
+      "action": "ingest",
+      "input": "I am hoping to book a 5 star hotel in cambridge that is expensive. What ones are available to book for next Thursday through Sunday?",
+      "output": "I am hoping to book a 5 star hotel in cambridge that is expensive. What ones are available to book for next Thursday through Sunday?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7266972,
+      "action": "tool_call",
+      "input": "I am hoping to book a 5 star hotel in cambridge that is expensive. What ones are available to book for next Thursday through Sunday?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.726698,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7266984,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

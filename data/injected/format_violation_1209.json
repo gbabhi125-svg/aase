@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1209",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL1016.json",
+  "task": "Hello, I am going to nee a place to go in the centre of town. Multiple sports would be best.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.511237,
+      "action": "ingest",
+      "input": "Hello, I am going to nee a place to go in the centre of town. Multiple sports would be best.",
+      "output": "Hello, I am going to nee a place to go in the centre of town. Multiple sports would be best.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5112379,
+      "action": "llm_call",
+      "input": "Hello, I am going to nee a place to go in the centre of town. Multiple sports would be best.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5112386,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1463",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL0034.json",
+  "task": "I'm looking for an expensive restaurant that serves Thai food, please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3698575,
+      "action": "ingest",
+      "input": "I'm looking for an expensive restaurant that serves Thai food, please.",
+      "output": "I'm looking for an expensive restaurant that serves Thai food, please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3698585,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.369859,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.36986,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

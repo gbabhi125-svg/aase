@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0676",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_PMUL1606.json",
+  "task": "Hello, could you tell me if there are any 1 star lodging establishments that offer free wifi?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6139154,
+      "action": "memory_fetch",
+      "input": "Hello, could you tell me if there are any 1 star lodging establishments that offer free wifi?",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6139164,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6139169,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

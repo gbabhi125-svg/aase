@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1253",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_MUL2116.json",
+  "task": "Yes, can you tell me information on Cambridge lodgings?  We are looking for free wifi and a nice guesthouse.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7522397,
+      "action": "ingest",
+      "input": "Yes, can you tell me information on Cambridge lodgings?  We are looking for free wifi and a nice guesthouse.",
+      "output": "Yes, can you tell me information on Cambridge lodgings?  We are looking for free wifi and a nice guesthouse.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7522407,
+      "action": "tool_call",
+      "input": "Yes, can you tell me information on Cambridge lodgings?  We are looking for free wifi and a nice guesthouse.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7522411,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7522416,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1262",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL3632.json",
+  "task": "I need to take a train to Cambridge by 17:45.  If its is after that I will be late for dinner, mother gets angry when that happens.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9290664,
+      "action": "tool_selection",
+      "input": "I need to take a train to Cambridge by 17:45.  If its is after that I will be late for dinner, mother gets angry when that happens.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9290676,
+      "action": "wrong_tool",
+      "input": "I need to take a train to Cambridge by 17:45.  If its is after that I will be late for dinner, mother gets angry when that happens.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.929068,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9290686,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

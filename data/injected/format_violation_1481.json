@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1481",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL4102.json",
+  "task": "Hi, I'd like to book a train that leaves after 21:30 on Friday.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5419698,
+      "action": "ingest",
+      "input": "Hi, I'd like to book a train that leaves after 21:30 on Friday.",
+      "output": "Hi, I'd like to book a train that leaves after 21:30 on Friday.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5419705,
+      "action": "llm_call",
+      "input": "Hi, I'd like to book a train that leaves after 21:30 on Friday.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.541971,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

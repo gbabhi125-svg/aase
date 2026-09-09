@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1047",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01908.json",
+  "task": "Can you set up a taxi to loch fyne from hakka for me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3204606,
+      "action": "ingest",
+      "input": "Can you set up a taxi to loch fyne from hakka for me?",
+      "output": "Can you set up a taxi to loch fyne from hakka for me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3204613,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3204618,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3204627,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

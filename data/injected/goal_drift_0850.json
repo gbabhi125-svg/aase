@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0850",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0799.json",
+  "task": "Hi, I'm looking for information on booking a train. I would like to leave on Wednesday and arrive at the destination at 17:00.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7964206,
+      "action": "ingest",
+      "input": "Hi, I'm looking for information on booking a train. I would like to leave on Wednesday and arrive at the destination at 17:00.",
+      "output": "Hi, I'm looking for information on booking a train. I would like to leave on Wednesday and arrive at the destination at 17:00.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7964213,
+      "action": "subtask_1",
+      "input": "Hi, I'm looking for information on booking a train. I would like to leave on Wednesday and arrive at the destination at 17:00.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7964222,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7964227,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

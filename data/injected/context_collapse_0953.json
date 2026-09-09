@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0953",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL1618.json",
+  "task": "Hello, can you please help me find a train that leaves on sunday. I would also like the train to go to peterborough.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3095245,
+      "action": "ingest",
+      "input": "Hello, can you please help me find a train that leaves on sunday. I would also like the train to go to peterborough.",
+      "output": "Hello, can you please help me find a train that leaves on sunday. I would also like the train to go to peterborough.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3095255,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3095257,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3095262,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

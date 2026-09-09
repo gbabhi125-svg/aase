@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0593",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1415.json",
+  "task": "Hello, I'm look for information about restaurants in Cambridge. I would like them to be fine dining and serve Catalan food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7664826,
+      "action": "ingest",
+      "input": "Hello, I'm look for information about restaurants in Cambridge. I would like them to be fine dining and serve Catalan food.",
+      "output": "Hello, I'm look for information about restaurants in Cambridge. I would like them to be fine dining and serve Catalan food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7664838,
+      "action": "subtask_1",
+      "input": "Hello, I'm look for information about restaurants in Cambridge. I would like them to be fine dining and serve Catalan food.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7664843,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7664847,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

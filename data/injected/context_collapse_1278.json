@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1278",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG1059.json",
+  "task": "Hello, I am looking for something to do in the west part of town. It sould involve multiple sports.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.348054,
+      "action": "ingest",
+      "input": "Hello, I am looking for something to do in the west part of town. It sould involve multiple sports.",
+      "output": "Hello, I am looking for something to do in the west part of town. It sould involve multiple sports.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3480551,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3480556,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.348056,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

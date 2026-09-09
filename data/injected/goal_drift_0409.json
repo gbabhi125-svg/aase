@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0409",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0816.json",
+  "task": "Good morning. Would you be able to tell me if you have any info on a certain hotel?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.744256,
+      "action": "ingest",
+      "input": "Good morning. Would you be able to tell me if you have any info on a certain hotel?",
+      "output": "Good morning. Would you be able to tell me if you have any info on a certain hotel?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7442567,
+      "action": "subtask_1",
+      "input": "Good morning. Would you be able to tell me if you have any info on a certain hotel?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7442572,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7442577,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

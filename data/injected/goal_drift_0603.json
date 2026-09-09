@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0603",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL2679.json",
+  "task": "I will be in Cambridge and need a place to go for entertainment in the centre of town. Can you help me find something?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7676308,
+      "action": "ingest",
+      "input": "I will be in Cambridge and need a place to go for entertainment in the centre of town. Can you help me find something?",
+      "output": "I will be in Cambridge and need a place to go for entertainment in the centre of town. Can you help me find something?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7676318,
+      "action": "subtask_1",
+      "input": "I will be in Cambridge and need a place to go for entertainment in the centre of town. Can you help me find something?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7676325,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.767633,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

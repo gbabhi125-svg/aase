@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0713",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL4086.json",
+  "task": "Hello! I'm needing a place to stay in the center of town. Parking is not important to me. What do you have?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.453954,
+      "action": "ingest",
+      "input": "Hello! I'm needing a place to stay in the center of town. Parking is not important to me. What do you have?",
+      "output": "Hello! I'm needing a place to stay in the center of town. Parking is not important to me. What do you have?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.453955,
+      "action": "llm_call",
+      "input": "Hello! I'm needing a place to stay in the center of town. Parking is not important to me. What do you have?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4539554,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

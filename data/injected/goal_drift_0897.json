@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0897",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0029.json",
+  "task": "Hi.  Can you book me a taxi to the Ugly Duckling from Dojo Noodle Bar?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.801523,
+      "action": "ingest",
+      "input": "Hi.  Can you book me a taxi to the Ugly Duckling from Dojo Noodle Bar?",
+      "output": "Hi.  Can you book me a taxi to the Ugly Duckling from Dojo Noodle Bar?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8015237,
+      "action": "subtask_1",
+      "input": "Hi.  Can you book me a taxi to the Ugly Duckling from Dojo Noodle Bar?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8015244,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8015249,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

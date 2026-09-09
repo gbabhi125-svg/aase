@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_1055",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_MUL1511.json",
+  "task": "Hello! Are there any cheap restaurants in the centre?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6518044,
+      "action": "memory_fetch",
+      "input": "Hello! Are there any cheap restaurants in the centre?",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6518052,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6518059,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

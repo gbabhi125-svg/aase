@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0523",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG0962.json",
+  "task": "Konnichiwa, I am coming to town and will be staying a few days. I need a place in town centre that offers free parking. Can you help me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2574182,
+      "action": "ingest",
+      "input": "Konnichiwa, I am coming to town and will be staying a few days. I need a place in town centre that offers free parking. Can you help me?",
+      "output": "Konnichiwa, I am coming to town and will be staying a few days. I need a place in town centre that offers free parking. Can you help me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2574193,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2574198,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2574203,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0886",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1695.json",
+  "task": "Hi there, I'm looking for a restaurant that serves Swedish food. It can be anywhere, I'm willing to pay a moderate amount of money. Do you have any recommendations?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8819642,
+      "action": "tool_selection",
+      "input": "Hi there, I'm looking for a restaurant that serves Swedish food. It can be anywhere, I'm willing to pay a moderate amount of money. Do you have any recommendations?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8819652,
+      "action": "wrong_tool",
+      "input": "Hi there, I'm looking for a restaurant that serves Swedish food. It can be anywhere, I'm willing to pay a moderate amount of money. Do you have any recommendations?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8819656,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.881966,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

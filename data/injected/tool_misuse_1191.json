@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1191",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG0250.json",
+  "task": "Can you tell me where the Addenbrookes Hospital is?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9198241,
+      "action": "tool_selection",
+      "input": "Can you tell me where the Addenbrookes Hospital is?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.919825,
+      "action": "wrong_tool",
+      "input": "Can you tell me where the Addenbrookes Hospital is?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9198256,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9198263,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

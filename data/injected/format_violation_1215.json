@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1215",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG02046.json",
+  "task": "I'm looking for a train that will be going to london kings cross on Wednesday.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5118775,
+      "action": "ingest",
+      "input": "I'm looking for a train that will be going to london kings cross on Wednesday.",
+      "output": "I'm looking for a train that will be going to london kings cross on Wednesday.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5118787,
+      "action": "llm_call",
+      "input": "I'm looking for a train that will be going to london kings cross on Wednesday.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5118792,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

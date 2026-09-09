@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1276",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1183.json",
+  "task": "Hi. I'm looking for information on a hotel called the Limehouse.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3478265,
+      "action": "ingest",
+      "input": "Hi. I'm looking for information on a hotel called the Limehouse.",
+      "output": "Hi. I'm looking for information on a hotel called the Limehouse.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3478272,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3478277,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3478281,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

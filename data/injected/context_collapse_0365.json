@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0365",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL3157.json",
+  "task": "Hello, can you recommend a moderately-priced 4-star hotel, please?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.238091,
+      "action": "ingest",
+      "input": "Hello, can you recommend a moderately-priced 4-star hotel, please?",
+      "output": "Hello, can you recommend a moderately-priced 4-star hotel, please?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.238092,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2380927,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2380931,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

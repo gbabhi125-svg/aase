@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0907",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL1567.json",
+  "task": "Hi, I'm looking for a restaurant that serves expensive new zealand food and is in the center area.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8025844,
+      "action": "ingest",
+      "input": "Hi, I'm looking for a restaurant that serves expensive new zealand food and is in the center area.",
+      "output": "Hi, I'm looking for a restaurant that serves expensive new zealand food and is in the center area.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8025854,
+      "action": "subtask_1",
+      "input": "Hi, I'm looking for a restaurant that serves expensive new zealand food and is in the center area.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.802586,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8025866,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

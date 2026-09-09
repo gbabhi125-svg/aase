@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0388",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG0505.json",
+  "task": "Are there any Australian food places in the south part of town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7420797,
+      "action": "ingest",
+      "input": "Are there any Australian food places in the south part of town?",
+      "output": "Are there any Australian food places in the south part of town?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7420805,
+      "action": "subtask_1",
+      "input": "Are there any Australian food places in the south part of town?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7420812,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7420819,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

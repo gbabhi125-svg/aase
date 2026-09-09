@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0535",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL0934.json",
+  "task": "I'm looking for a cinema in the south part of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7582023,
+      "action": "ingest",
+      "input": "I'm looking for a cinema in the south part of town.",
+      "output": "I'm looking for a cinema in the south part of town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7582035,
+      "action": "subtask_1",
+      "input": "I'm looking for a cinema in the south part of town.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.758204,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7582045,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

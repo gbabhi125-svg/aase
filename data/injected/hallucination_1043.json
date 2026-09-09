@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1043",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_WOZ20071.json",
+  "task": "I don't care about price range, find me an european food restaurant, please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.728349,
+      "action": "ingest",
+      "input": "I don't care about price range, find me an european food restaurant, please.",
+      "output": "I don't care about price range, find me an european food restaurant, please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7283497,
+      "action": "tool_call",
+      "input": "I don't care about price range, find me an european food restaurant, please.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7283502,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7283509,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

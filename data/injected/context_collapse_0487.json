@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0487",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01428.json",
+  "task": "I am getting into birmingham new street train station and will be needing a taxi to take me to my hotel",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2528906,
+      "action": "ingest",
+      "input": "I am getting into birmingham new street train station and will be needing a taxi to take me to my hotel",
+      "output": "I am getting into birmingham new street train station and will be needing a taxi to take me to my hotel",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2528915,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2528923,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2528927,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

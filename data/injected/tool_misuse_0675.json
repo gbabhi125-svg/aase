@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0675",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL4489.json",
+  "task": "We are planning to be in cambridge. We would like to go to a swimmingpool in the east. Are there any available in the east?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8580897,
+      "action": "tool_selection",
+      "input": "We are planning to be in cambridge. We would like to go to a swimmingpool in the east. Are there any available in the east?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.858091,
+      "action": "wrong_tool",
+      "input": "We are planning to be in cambridge. We would like to go to a swimmingpool in the east. Are there any available in the east?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8580916,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.858092,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

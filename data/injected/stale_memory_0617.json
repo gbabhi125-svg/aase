@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0617",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_PMUL3465.json",
+  "task": "I will be in the south this week and know I will want to catch a movie, what cinema's are in that area?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6080148,
+      "action": "memory_fetch",
+      "input": "I will be in the south this week and know I will want to catch a movie, what cinema's are in that area?",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6080158,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6080165,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

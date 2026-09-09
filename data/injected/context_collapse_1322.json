@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1322",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01871.json",
+  "task": "Am looking for the Addenbrookes Hospital it should have the respiratory medicine department",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3532438,
+      "action": "ingest",
+      "input": "Am looking for the Addenbrookes Hospital it should have the respiratory medicine department",
+      "output": "Am looking for the Addenbrookes Hospital it should have the respiratory medicine department",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3532448,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3532453,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3532457,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

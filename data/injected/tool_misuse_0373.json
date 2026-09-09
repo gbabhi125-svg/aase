@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0373",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SSNG0257.json",
+  "task": "Hello, I'm looking for a 4 star place on the westside to stay at.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.822613,
+      "action": "tool_selection",
+      "input": "Hello, I'm looking for a 4 star place on the westside to stay at.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8226137,
+      "action": "wrong_tool",
+      "input": "Hello, I'm looking for a 4 star place on the westside to stay at.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8226142,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8226147,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

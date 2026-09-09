@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1049",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_WOZ20160.json",
+  "task": "I want something in the north part of town. Moderately priced.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8181186,
+      "action": "ingest",
+      "input": "I want something in the north part of town. Moderately priced.",
+      "output": "I want something in the north part of town. Moderately priced.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8181195,
+      "action": "subtask_1",
+      "input": "I want something in the north part of town. Moderately priced.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.81812,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8181205,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

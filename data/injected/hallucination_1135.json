@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1135",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0494.json",
+  "task": "I need a place in the north with free wifi, please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7390277,
+      "action": "ingest",
+      "input": "I need a place in the north with free wifi, please.",
+      "output": "I need a place in the north with free wifi, please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7390287,
+      "action": "tool_call",
+      "input": "I need a place in the north with free wifi, please.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7390292,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7390296,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0216",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_SNG02324.json",
+  "task": "Yes, i would like you to book a taxi for arrival by 10:45 from the maharajah tandoori restaurant.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5681212,
+      "action": "memory_fetch",
+      "input": "Yes, i would like you to book a taxi for arrival by 10:45 from the maharajah tandoori restaurant.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5681226,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5681236,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_1119",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_SNG0126.json",
+  "task": "Please help me, I've just been robbed and I need to report this to the police.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6582668,
+      "action": "memory_fetch",
+      "input": "Please help me, I've just been robbed and I need to report this to the police.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6582677,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6582682,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

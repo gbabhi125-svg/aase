@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0421",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SSNG0376.json",
+  "task": "I want to find a place to stay in the north that doesn't need to have free internet.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7455475,
+      "action": "ingest",
+      "input": "I want to find a place to stay in the north that doesn't need to have free internet.",
+      "output": "I want to find a place to stay in the north that doesn't need to have free internet.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7455482,
+      "action": "subtask_1",
+      "input": "I want to find a place to stay in the north that doesn't need to have free internet.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7455487,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7455492,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

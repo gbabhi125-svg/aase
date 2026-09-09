@@ -1,0 +1,62 @@
+{
+  "trace_id": "REAS_0013",
+  "failure_type": "reasoning_loop",
+  "task": "Look up the shipment status for order ORD-8823 in the logistics system.",
+  "domain": "enterprise_lookup",
+  "source_dataset": "aase_synthetic_v2",
+  "trace": [
+    {
+      "step": 1,
+      "action": "ingest",
+      "input": "Look up the shipment status for order ORD-8823 in the logistics system.",
+      "output": "Task received.",
+      "status": "success"
+    },
+    {
+      "step": 2,
+      "action": "search",
+      "input": "system",
+      "output": "Multiple records found \u2014 ambiguous.",
+      "status": "success"
+    },
+    {
+      "step": 3,
+      "action": "search",
+      "input": "system",
+      "output": "Multiple records found \u2014 ambiguous.",
+      "status": "success"
+    },
+    {
+      "step": 4,
+      "action": "search",
+      "input": "system",
+      "output": "Multiple records found \u2014 ambiguous.",
+      "status": "success"
+    },
+    {
+      "step": 5,
+      "action": "search",
+      "input": "system",
+      "output": "Multiple records found \u2014 ambiguous.",
+      "status": "success"
+    },
+    {
+      "step": 6,
+      "action": "search",
+      "input": "system",
+      "output": "Multiple records found \u2014 ambiguous.",
+      "status": "success"
+    },
+    {
+      "step": 7,
+      "action": "loop_detected",
+      "input": "Identical query executed 5 times",
+      "output": "No refinement between attempts. No progress made.",
+      "status": "error",
+      "error": "reasoning_loop_detected"
+    }
+  ],
+  "num_steps": 7,
+  "failure_detected_at_step": 7,
+  "ground_truth_fix": "If the same action returns the same result twice, do not repeat it. Refine the query or stop and report."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0430",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL0679.json",
+  "task": "What are my options for pricier hotels that include wifi free?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4225824,
+      "action": "ingest",
+      "input": "What are my options for pricier hotels that include wifi free?",
+      "output": "What are my options for pricier hotels that include wifi free?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.422583,
+      "action": "llm_call",
+      "input": "What are my options for pricier hotels that include wifi free?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4225838,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

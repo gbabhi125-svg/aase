@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0581",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG0875.json",
+  "task": "Have you ever heard of a hotel called the Ashley Hotel?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.675318,
+      "action": "ingest",
+      "input": "Have you ever heard of a hotel called the Ashley Hotel?",
+      "output": "Have you ever heard of a hotel called the Ashley Hotel?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6753187,
+      "action": "tool_call",
+      "input": "Have you ever heard of a hotel called the Ashley Hotel?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6753192,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.67532,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

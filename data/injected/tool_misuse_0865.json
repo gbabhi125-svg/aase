@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0865",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG0022.json",
+  "task": "Hi, I'd like to book a taxi from London Liverpool Street to Club Salsa.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.879623,
+      "action": "tool_selection",
+      "input": "Hi, I'd like to book a taxi from London Liverpool Street to Club Salsa.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.879624,
+      "action": "wrong_tool",
+      "input": "Hi, I'd like to book a taxi from London Liverpool Street to Club Salsa.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8796244,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8796248,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

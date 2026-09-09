@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0670",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG01576.json",
+  "task": "I'm looking for a guesthouse. But I won't have a car with me, so I don't need any rigamarole with \"free\" parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.68628,
+      "action": "ingest",
+      "input": "I'm looking for a guesthouse. But I won't have a car with me, so I don't need any rigamarole with \"free\" parking.",
+      "output": "I'm looking for a guesthouse. But I won't have a car with me, so I don't need any rigamarole with \"free\" parking.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6862807,
+      "action": "tool_call",
+      "input": "I'm looking for a guesthouse. But I won't have a car with me, so I don't need any rigamarole with \"free\" parking.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6862812,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6862817,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

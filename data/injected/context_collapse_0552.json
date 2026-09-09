@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0552",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1874.json",
+  "task": "I need something in the realm of entertainment in the centre of town. What do you have?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2611606,
+      "action": "ingest",
+      "input": "I need something in the realm of entertainment in the centre of town. What do you have?",
+      "output": "I need something in the realm of entertainment in the centre of town. What do you have?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2611616,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.261162,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2611625,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

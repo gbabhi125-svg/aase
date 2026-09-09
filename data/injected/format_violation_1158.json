@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1158",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL4453.json",
+  "task": "i am looking for a restaurant in the expensive price range and should be in the centre part of town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.5055134,
+      "action": "ingest",
+      "input": "i am looking for a restaurant in the expensive price range and should be in the centre part of town.",
+      "output": "i am looking for a restaurant in the expensive price range and should be in the centre part of town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5055144,
+      "action": "llm_call",
+      "input": "i am looking for a restaurant in the expensive price range and should be in the centre part of town.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.505515,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

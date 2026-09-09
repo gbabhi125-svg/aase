@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0488",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SSNG0386.json",
+  "task": "Hi, I'm looking for a hotel that was recommended. It's called the Cambridge Belfry?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6631062,
+      "action": "ingest",
+      "input": "Hi, I'm looking for a hotel that was recommended. It's called the Cambridge Belfry?",
+      "output": "Hi, I'm looking for a hotel that was recommended. It's called the Cambridge Belfry?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6631072,
+      "action": "tool_call",
+      "input": "Hi, I'm looking for a hotel that was recommended. It's called the Cambridge Belfry?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6631076,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.663108,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

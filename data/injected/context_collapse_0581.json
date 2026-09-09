@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0581",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01497.json",
+  "task": "I need a train leaving Cambridge sometime after 13:15 please.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.264643,
+      "action": "ingest",
+      "input": "I need a train leaving Cambridge sometime after 13:15 please.",
+      "output": "I need a train leaving Cambridge sometime after 13:15 please.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2646441,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2646446,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.264645,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

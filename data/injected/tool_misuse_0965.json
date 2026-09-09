@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0965",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG01513.json",
+  "task": "Hello. I am looking for a recommendation for a place to eat.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8907075,
+      "action": "tool_selection",
+      "input": "Hello. I am looking for a recommendation for a place to eat.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8907082,
+      "action": "wrong_tool",
+      "input": "Hello. I am looking for a recommendation for a place to eat.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8907087,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8907092,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

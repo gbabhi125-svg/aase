@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0251",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL0295.json",
+  "task": "Hi, can you help me locate a hotel named City Centre B and B.  Really looking forward to trying different restaurants.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.809021,
+      "action": "tool_selection",
+      "input": "Hi, can you help me locate a hotel named City Centre B and B.  Really looking forward to trying different restaurants.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8090222,
+      "action": "wrong_tool",
+      "input": "Hi, can you help me locate a hotel named City Centre B and B.  Really looking forward to trying different restaurants.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8090227,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8090231,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

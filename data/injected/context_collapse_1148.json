@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1148",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1160.json",
+  "task": "I am interested in seeing the whipple museum of the history of science in Cambridge. Where is it located?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3322008,
+      "action": "ingest",
+      "input": "I am interested in seeing the whipple museum of the history of science in Cambridge. Where is it located?",
+      "output": "I am interested in seeing the whipple museum of the history of science in Cambridge. Where is it located?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3322015,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.332202,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3322024,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

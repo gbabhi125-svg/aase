@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1068",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1060.json",
+  "task": "Hello, I would like to find a hotel that includes free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9028866,
+      "action": "tool_selection",
+      "input": "Hello, I would like to find a hotel that includes free parking.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9028876,
+      "action": "wrong_tool",
+      "input": "Hello, I would like to find a hotel that includes free parking.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9028883,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9028885,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

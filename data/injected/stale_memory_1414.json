@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_1414",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_SSNG0071.json",
+  "task": "I am looking to dine out in the centre part of town and I would like to find a place that serves north american food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6897793,
+      "action": "memory_fetch",
+      "input": "I am looking to dine out in the centre part of town and I would like to find a place that serves north american food.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6897802,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6897807,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

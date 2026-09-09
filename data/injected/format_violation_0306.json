@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0306",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG0181.json",
+  "task": "I have been hurt in an accident, can you provide the nearest hospital?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4090664,
+      "action": "ingest",
+      "input": "I have been hurt in an accident, can you provide the nearest hospital?",
+      "output": "I have been hurt in an accident, can you provide the nearest hospital?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4090676,
+      "action": "llm_call",
+      "input": "I have been hurt in an accident, can you provide the nearest hospital?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.409068,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

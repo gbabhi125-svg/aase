@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0946",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL3899.json",
+  "task": "i am looking for a place to stay. The hotel should be in the type of guesthouse and should have a star of 4.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7175555,
+      "action": "ingest",
+      "input": "i am looking for a place to stay. The hotel should be in the type of guesthouse and should have a star of 4.",
+      "output": "i am looking for a place to stay. The hotel should be in the type of guesthouse and should have a star of 4.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7175565,
+      "action": "tool_call",
+      "input": "i am looking for a place to stay. The hotel should be in the type of guesthouse and should have a star of 4.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7175572,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7175577,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0182",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4654.json",
+  "task": "Hello, can you help me find information about Finches Bed and Breakfast in Cambridge?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2160125,
+      "action": "ingest",
+      "input": "Hello, can you help me find information about Finches Bed and Breakfast in Cambridge?",
+      "output": "Hello, can you help me find information about Finches Bed and Breakfast in Cambridge?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2160137,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2160144,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2160149,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

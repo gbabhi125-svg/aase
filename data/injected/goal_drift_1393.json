@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1393",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL4964.json",
+  "task": "Are there any parks in town, by chance?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8556948,
+      "action": "ingest",
+      "input": "Are there any parks in town, by chance?",
+      "output": "Are there any parks in town, by chance?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.855696,
+      "action": "subtask_1",
+      "input": "Are there any parks in town, by chance?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8556964,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.855697,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0419",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL3670.json",
+  "task": "I need to find out if there's a train going to stansted airport that leaves after 12:30.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7453666,
+      "action": "ingest",
+      "input": "I need to find out if there's a train going to stansted airport that leaves after 12:30.",
+      "output": "I need to find out if there's a train going to stansted airport that leaves after 12:30.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7453673,
+      "action": "subtask_1",
+      "input": "I need to find out if there's a train going to stansted airport that leaves after 12:30.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7453678,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7453682,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

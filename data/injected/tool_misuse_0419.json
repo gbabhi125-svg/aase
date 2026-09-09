@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0419",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG0138.json",
+  "task": "I was in a car accident dispute and need help regarding it",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.827774,
+      "action": "tool_selection",
+      "input": "I was in a car accident dispute and need help regarding it",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.827775,
+      "action": "wrong_tool",
+      "input": "I was in a car accident dispute and need help regarding it",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8277755,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.827776,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

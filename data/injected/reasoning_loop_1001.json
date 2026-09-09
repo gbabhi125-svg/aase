@@ -1,0 +1,65 @@
+{
+  "id": "reasoning_loop_1001",
+  "injected_failure": "reasoning_loop",
+  "task_id": "mwoz_MUL1037.json",
+  "task": "I'm looking for a hotel in East Cambridge.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.1190333,
+      "action": "search",
+      "input": "I'm looking for a hotel in East Cambridge.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.1190343,
+      "action": "search",
+      "input": "I'm looking for a hotel in East Cambridge.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.1190348,
+      "action": "search",
+      "input": "I'm looking for a hotel in East Cambridge.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.1190355,
+      "action": "search",
+      "input": "I'm looking for a hotel in East Cambridge.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 5,
+      "timestamp": 1787208588.1190357,
+      "action": "search",
+      "input": "I'm looking for a hotel in East Cambridge.",
+      "output": "no results",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 6,
+      "timestamp": 1787208588.1190362,
+      "action": "loop_detected",
+      "input": "I'm looking for a hotel in East Cambridge.",
+      "output": "None",
+      "status": "error",
+      "error": "identical action repeated 5x, no progress"
+    }
+  ],
+  "success": false
+}

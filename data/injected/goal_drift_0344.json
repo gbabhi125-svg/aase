@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0344",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG1075.json",
+  "task": "I'm hoping to find a nightclub in town.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.737424,
+      "action": "ingest",
+      "input": "I'm hoping to find a nightclub in town.",
+      "output": "I'm hoping to find a nightclub in town.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7374249,
+      "action": "subtask_1",
+      "input": "I'm hoping to find a nightclub in town.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7374253,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7374258,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

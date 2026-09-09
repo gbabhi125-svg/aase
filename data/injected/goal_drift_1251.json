@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1251",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0466.json",
+  "task": "I'm looking for an expensive place to get some British food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8403502,
+      "action": "ingest",
+      "input": "I'm looking for an expensive place to get some British food.",
+      "output": "I'm looking for an expensive place to get some British food.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8403509,
+      "action": "subtask_1",
+      "input": "I'm looking for an expensive place to get some British food.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8403518,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8403523,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1069",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG02223.json",
+  "task": "I am looking for a place to stay. The hotel should be in the expensive price range and should be in the type of guesthouse",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.323039,
+      "action": "ingest",
+      "input": "I am looking for a place to stay. The hotel should be in the expensive price range and should be in the type of guesthouse",
+      "output": "I am looking for a place to stay. The hotel should be in the expensive price range and should be in the type of guesthouse",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3230398,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3230402,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3230407,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

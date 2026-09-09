@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0973",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG0566.json",
+  "task": "I feel like having Italian for dinner.  Are there any cheap restaurants with good Italian in town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7205238,
+      "action": "ingest",
+      "input": "I feel like having Italian for dinner.  Are there any cheap restaurants with good Italian in town?",
+      "output": "I feel like having Italian for dinner.  Are there any cheap restaurants with good Italian in town?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7205248,
+      "action": "tool_call",
+      "input": "I feel like having Italian for dinner.  Are there any cheap restaurants with good Italian in town?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7205253,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7205255,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

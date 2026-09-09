@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1411",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_SNG01294.json",
+  "task": "I need to book a taxi to take me from Mumford Theatre to go to Darry's Cookhouse and Wine Shop.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3636823,
+      "action": "ingest",
+      "input": "I need to book a taxi to take me from Mumford Theatre to go to Darry's Cookhouse and Wine Shop.",
+      "output": "I need to book a taxi to take me from Mumford Theatre to go to Darry's Cookhouse and Wine Shop.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3636832,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.363684,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3636847,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

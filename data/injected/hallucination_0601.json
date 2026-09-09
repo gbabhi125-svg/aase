@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0601",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0756.json",
+  "task": "I'm looking for a local restaurant to dine at that serves english food and is moderately priced.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6782644,
+      "action": "ingest",
+      "input": "I'm looking for a local restaurant to dine at that serves english food and is moderately priced.",
+      "output": "I'm looking for a local restaurant to dine at that serves english food and is moderately priced.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.678265,
+      "action": "tool_call",
+      "input": "I'm looking for a local restaurant to dine at that serves english food and is moderately priced.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6782656,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.678266,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

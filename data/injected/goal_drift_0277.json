@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0277",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL4036.json",
+  "task": "I will be visiting family in the south part of cambridge and we would liek to get one last boating excursion in.  Any boating places in the south area?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.730273,
+      "action": "ingest",
+      "input": "I will be visiting family in the south part of cambridge and we would liek to get one last boating excursion in.  Any boating places in the south area?",
+      "output": "I will be visiting family in the south part of cambridge and we would liek to get one last boating excursion in.  Any boating places in the south area?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.730274,
+      "action": "subtask_1",
+      "input": "I will be visiting family in the south part of cambridge and we would liek to get one last boating excursion in.  Any boating places in the south area?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7302747,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7302754,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

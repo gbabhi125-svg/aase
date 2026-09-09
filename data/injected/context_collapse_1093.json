@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1093",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL2009.json",
+  "task": "I need to catch a train going to broxbourne.  Can you help me?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.325895,
+      "action": "ingest",
+      "input": "I need to catch a train going to broxbourne.  Can you help me?",
+      "output": "I need to catch a train going to broxbourne.  Can you help me?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.325896,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3258967,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3258972,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

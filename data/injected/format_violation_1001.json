@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_1001",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL3908.json",
+  "task": "I am looking for information in Cambridge",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4862633,
+      "action": "ingest",
+      "input": "I am looking for information in Cambridge",
+      "output": "I am looking for information in Cambridge",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.486264,
+      "action": "llm_call",
+      "input": "I am looking for information in Cambridge",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.486265,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

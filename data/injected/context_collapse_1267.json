@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1267",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL2072.json",
+  "task": "Hi there. Can you help me find a train to Cambridge on Thursday?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3468332,
+      "action": "ingest",
+      "input": "Hi there. Can you help me find a train to Cambridge on Thursday?",
+      "output": "Hi there. Can you help me find a train to Cambridge on Thursday?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.346834,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3468344,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.346835,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

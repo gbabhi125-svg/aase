@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1010",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG01892.json",
+  "task": "Do you know of the Parkside Police Station?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8959098,
+      "action": "tool_selection",
+      "input": "Do you know of the Parkside Police Station?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.895911,
+      "action": "wrong_tool",
+      "input": "Do you know of the Parkside Police Station?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8959112,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8959117,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

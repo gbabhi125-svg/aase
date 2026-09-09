@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0498",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_SNG01564.json",
+  "task": "I need a taxi to the good luck chinese food takeaway.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4298701,
+      "action": "ingest",
+      "input": "I need a taxi to the good luck chinese food takeaway.",
+      "output": "I need a taxi to the good luck chinese food takeaway.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.429871,
+      "action": "llm_call",
+      "input": "I need a taxi to the good luck chinese food takeaway.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4298716,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

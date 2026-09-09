@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0836",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG0301.json",
+  "task": "I need a train from Cambridge that can arrive by 16:15.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8764849,
+      "action": "tool_selection",
+      "input": "I need a train from Cambridge that can arrive by 16:15.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8764856,
+      "action": "wrong_tool",
+      "input": "I need a train from Cambridge that can arrive by 16:15.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.876486,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8764865,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

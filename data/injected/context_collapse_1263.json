@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1263",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL1139.json",
+  "task": "I want to go somewhere in the east part of town. Can you give me information on places to go and attractions there?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3463488,
+      "action": "ingest",
+      "input": "I want to go somewhere in the east part of town. Can you give me information on places to go and attractions there?",
+      "output": "I want to go somewhere in the east part of town. Can you give me information on places to go and attractions there?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3463497,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3463504,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.346351,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

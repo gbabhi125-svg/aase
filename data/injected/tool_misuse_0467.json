@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0467",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL0082.json",
+  "task": "Hello, I looking for a restaurant called Golden House",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8338451,
+      "action": "tool_selection",
+      "input": "Hello, I looking for a restaurant called Golden House",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8338463,
+      "action": "wrong_tool",
+      "input": "Hello, I looking for a restaurant called Golden House",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8338468,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.833847,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0172",
+  "injected_failure": "hallucination",
+  "task_id": "toolbench_G2_2",
+  "task": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+  "domain": "tool_use",
+  "source": "toolbench",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6361513,
+      "action": "ingest",
+      "input": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6361518,
+      "action": "tool_call",
+      "input": "I'm planning a trip to Buenos Aires and I need to know the postal codes for different districts. Can you provide me with the postal codes for the districts in Buenos Aires with plate number 1? Additionally, I would like to track a package with the task ID 987654321.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6361523,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6361527,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

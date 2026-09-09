@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0438",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_WOZ20237.json",
+  "task": "What is the address and phone number of a cheap restaurant in the north part of town?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7473354,
+      "action": "ingest",
+      "input": "What is the address and phone number of a cheap restaurant in the north part of town?",
+      "output": "What is the address and phone number of a cheap restaurant in the north part of town?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7473364,
+      "action": "subtask_1",
+      "input": "What is the address and phone number of a cheap restaurant in the north part of town?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7473369,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7473376,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

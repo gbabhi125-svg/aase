@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0580",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1029.json",
+  "task": "Yes I am looking for a place to stay that includes free wifi. I would prefer a guesthouse.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2645183,
+      "action": "ingest",
+      "input": "Yes I am looking for a place to stay that includes free wifi. I would prefer a guesthouse.",
+      "output": "Yes I am looking for a place to stay that includes free wifi. I would prefer a guesthouse.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2645192,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2645197,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2645202,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

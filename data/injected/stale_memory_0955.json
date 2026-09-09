@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0955",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_WOZ20184.json",
+  "task": "Hello, I am looking for a restaurant that serves Mexican food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.641747,
+      "action": "memory_fetch",
+      "input": "Hello, I am looking for a restaurant that serves Mexican food.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.641748,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.6417484,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

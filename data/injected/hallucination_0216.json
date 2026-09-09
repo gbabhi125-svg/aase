@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0216",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_SNG01353.json",
+  "task": "I'm interested in rooms for the night where you can get free wifi.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6392276,
+      "action": "ingest",
+      "input": "I'm interested in rooms for the night where you can get free wifi.",
+      "output": "I'm interested in rooms for the night where you can get free wifi.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6392283,
+      "action": "tool_call",
+      "input": "I'm interested in rooms for the night where you can get free wifi.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6392288,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6392295,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

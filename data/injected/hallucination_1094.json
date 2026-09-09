@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_1094",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL4294.json",
+  "task": "Get me an expensive place to eat in the centre please",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7338424,
+      "action": "ingest",
+      "input": "Get me an expensive place to eat in the centre please",
+      "output": "Get me an expensive place to eat in the centre please",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.733843,
+      "action": "tool_call",
+      "input": "Get me an expensive place to eat in the centre please",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.7338438,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7338445,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

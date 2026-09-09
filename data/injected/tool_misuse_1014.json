@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1014",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL0753.json",
+  "task": "I'm needing to find a train that goes to Cambridge. I want to arrive by 13:15.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.89649,
+      "action": "tool_selection",
+      "input": "I'm needing to find a train that goes to Cambridge. I want to arrive by 13:15.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.896491,
+      "action": "wrong_tool",
+      "input": "I'm needing to find a train that goes to Cambridge. I want to arrive by 13:15.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8964915,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.896492,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

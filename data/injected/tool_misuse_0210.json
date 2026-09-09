@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0210",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_SNG0169.json",
+  "task": "I got injured and need directions for the clinical decisions unit department",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8046827,
+      "action": "tool_selection",
+      "input": "I got injured and need directions for the clinical decisions unit department",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8046834,
+      "action": "wrong_tool",
+      "input": "I got injured and need directions for the clinical decisions unit department",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.804684,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8046846,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

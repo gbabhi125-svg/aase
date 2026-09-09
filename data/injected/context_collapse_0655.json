@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0655",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_MUL1564.json",
+  "task": "I am going to Cambridge and would like to find a place to eat locally.  Can you suggest a good place?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2735107,
+      "action": "ingest",
+      "input": "I am going to Cambridge and would like to find a place to eat locally.  Can you suggest a good place?",
+      "output": "I am going to Cambridge and would like to find a place to eat locally.  Can you suggest a good place?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2735116,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.2735121,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2735126,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

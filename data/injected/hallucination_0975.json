@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0975",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL0732.json",
+  "task": "It's my wife's birthday and I promised I'd take her out. Are there any restaurants that serve mediterranean food?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.7207065,
+      "action": "ingest",
+      "input": "It's my wife's birthday and I promised I'd take her out. Are there any restaurants that serve mediterranean food?",
+      "output": "It's my wife's birthday and I promised I'd take her out. Are there any restaurants that serve mediterranean food?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.7207074,
+      "action": "tool_call",
+      "input": "It's my wife's birthday and I promised I'd take her out. Are there any restaurants that serve mediterranean food?",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.720708,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.7207084,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

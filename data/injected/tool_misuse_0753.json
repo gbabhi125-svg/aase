@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0753",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_PMUL0726.json",
+  "task": "He, I am looking forward to trying some local restaurants in Cambridge.  Can you tell me about some train schedules?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8669302,
+      "action": "tool_selection",
+      "input": "He, I am looking forward to trying some local restaurants in Cambridge.  Can you tell me about some train schedules?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8669312,
+      "action": "wrong_tool",
+      "input": "He, I am looking forward to trying some local restaurants in Cambridge.  Can you tell me about some train schedules?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8669317,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.866932,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

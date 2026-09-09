@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0974",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL2301.json",
+  "task": "Hi I'm looking to find a restaurant named Sitar Tandoori.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.311995,
+      "action": "ingest",
+      "input": "Hi I'm looking to find a restaurant named Sitar Tandoori.",
+      "output": "Hi I'm looking to find a restaurant named Sitar Tandoori.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3119962,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3119967,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3119972,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

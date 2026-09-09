@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0440",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4958.json",
+  "task": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.2471392,
+      "action": "ingest",
+      "input": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+      "output": "I need a  hotel that is in the expensive price range. That has a 3 star rating.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.2471404,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.247141,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.2471414,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

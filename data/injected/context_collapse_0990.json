@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_0990",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL4517.json",
+  "task": "Hello, I am going to be visiting Cambridge and am looking for a particular hotel called the Warkworth House.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3138802,
+      "action": "ingest",
+      "input": "Hello, I am going to be visiting Cambridge and am looking for a particular hotel called the Warkworth House.",
+      "output": "Hello, I am going to be visiting Cambridge and am looking for a particular hotel called the Warkworth House.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3138812,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3138816,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.313882,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

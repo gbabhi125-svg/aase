@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0333",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_PMUL3896.json",
+  "task": "I am traveling to Cambridge and looking forward to try local restaurants.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.580019,
+      "action": "memory_fetch",
+      "input": "I am traveling to Cambridge and looking forward to try local restaurants.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.5800197,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.5800204,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

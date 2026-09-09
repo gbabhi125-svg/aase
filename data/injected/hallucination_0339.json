@@ -1,0 +1,47 @@
+{
+  "id": "hallucination_0339",
+  "injected_failure": "hallucination",
+  "task_id": "mwoz_PMUL2028.json",
+  "task": "Hi there, I'm looking for information on Darry's Cookhouse and Wine Shop.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.6478992,
+      "action": "ingest",
+      "input": "Hi there, I'm looking for information on Darry's Cookhouse and Wine Shop.",
+      "output": "Hi there, I'm looking for information on Darry's Cookhouse and Wine Shop.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.6478996,
+      "action": "tool_call",
+      "input": "Hi there, I'm looking for information on Darry's Cookhouse and Wine Shop.",
+      "output": "TOOL_RESULT: empty",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.6478999,
+      "action": "llm_call",
+      "input": "empty tool result",
+      "output": "Fabricated a specific figure/fact not present in tool output",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.6479003,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'unsupported_claim'}",
+      "status": "error",
+      "error": "Agent stated a fact with no supporting tool evidence"
+    }
+  ],
+  "success": false
+}

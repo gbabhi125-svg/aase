@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1216",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL3373.json",
+  "task": "i am looking for a place to stay. The hotel should have a star of 4 and should include free parking.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3408883,
+      "action": "ingest",
+      "input": "i am looking for a place to stay. The hotel should have a star of 4 and should include free parking.",
+      "output": "i am looking for a place to stay. The hotel should have a star of 4 and should include free parking.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.340889,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.3408897,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3408902,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}

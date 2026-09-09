@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_0473",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1714.json",
+  "task": "Good morning! I'm trying to buy a train ticket that goes from Peterborough to Cambridge. Can you help me do this?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.8344686,
+      "action": "tool_selection",
+      "input": "Good morning! I'm trying to buy a train ticket that goes from Peterborough to Cambridge. Can you help me do this?",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.8344698,
+      "action": "wrong_tool",
+      "input": "Good morning! I'm trying to buy a train ticket that goes from Peterborough to Cambridge. Can you help me do this?",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.8344705,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.8344712,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

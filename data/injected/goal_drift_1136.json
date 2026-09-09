@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1136",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_MUL2124.json",
+  "task": "Hello, we're planning on staying in Cambridge and need lodging.  We're looking for a guesthouse which has all amenities etc.  Price is no problem.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8274467,
+      "action": "ingest",
+      "input": "Hello, we're planning on staying in Cambridge and need lodging.  We're looking for a guesthouse which has all amenities etc.  Price is no problem.",
+      "output": "Hello, we're planning on staying in Cambridge and need lodging.  We're looking for a guesthouse which has all amenities etc.  Price is no problem.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.827448,
+      "action": "subtask_1",
+      "input": "Hello, we're planning on staying in Cambridge and need lodging.  We're looking for a guesthouse which has all amenities etc.  Price is no problem.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8274486,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.827449,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_0232",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL3734.json",
+  "task": "Where is the University Arms Hotel?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.7256277,
+      "action": "ingest",
+      "input": "Where is the University Arms Hotel?",
+      "output": "Where is the University Arms Hotel?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.7256284,
+      "action": "subtask_1",
+      "input": "Where is the University Arms Hotel?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.7256289,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.7256293,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

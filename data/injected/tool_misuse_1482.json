@@ -1,0 +1,47 @@
+{
+  "id": "tool_misuse_1482",
+  "injected_failure": "tool_misuse",
+  "task_id": "mwoz_MUL1430.json",
+  "task": "I am traveling to Cambridge and looking for a restaurant in the cheap price range in the cente.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208587.9643564,
+      "action": "tool_selection",
+      "input": "I am traveling to Cambridge and looking for a restaurant in the cheap price range in the cente.",
+      "output": "selected: wrong_tool",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208587.9643576,
+      "action": "wrong_tool",
+      "input": "I am traveling to Cambridge and looking for a restaurant in the cheap price range in the cente.",
+      "output": "irrelevant/empty result",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208587.9643583,
+      "action": "llm_call",
+      "input": "irrelevant result",
+      "output": "produced an answer anyway",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208587.9643588,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'wrong_tool_used'}",
+      "status": "error",
+      "error": "Correct tool existed but was not selected"
+    }
+  ],
+  "success": false
+}

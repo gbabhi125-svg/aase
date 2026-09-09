@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0447",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_MUL2612.json",
+  "task": "Hi. I will be coming to Cambridge soon and I want to do a little planning first. I have read about different things to do and places to see.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4244368,
+      "action": "ingest",
+      "input": "Hi. I will be coming to Cambridge soon and I want to do a little planning first. I have read about different things to do and places to see.",
+      "output": "Hi. I will be coming to Cambridge soon and I want to do a little planning first. I have read about different things to do and places to see.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4244375,
+      "action": "llm_call",
+      "input": "Hi. I will be coming to Cambridge soon and I want to do a little planning first. I have read about different things to do and places to see.",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.424438,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

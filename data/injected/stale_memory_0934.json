@@ -1,0 +1,38 @@
+{
+  "id": "stale_memory_0934",
+  "injected_failure": "stale_memory",
+  "task_id": "mwoz_WOZ20243.json",
+  "task": "Hello there! I am looking for a restaurant that specializes in Swedish food.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.6396885,
+      "action": "memory_fetch",
+      "input": "Hello there! I am looking for a restaurant that specializes in Swedish food.",
+      "output": "cached fact from 3 sessions ago",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.6396892,
+      "action": "llm_call",
+      "input": "stale cached fact",
+      "output": "answered using outdated cached value",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.63969,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'stale_data_used'}",
+      "status": "error",
+      "error": "Underlying source had since changed; cache was never invalidated"
+    }
+  ],
+  "success": false
+}

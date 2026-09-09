@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1397",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_SNG1373.json",
+  "task": "I need a taxi from finches bed and breakfast to Ian hong house.  Please be here at 13:45.  What is your phone number?  What type of car?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.8561378,
+      "action": "ingest",
+      "input": "I need a taxi from finches bed and breakfast to Ian hong house.  Please be here at 13:45.  What is your phone number?  What type of car?",
+      "output": "I need a taxi from finches bed and breakfast to Ian hong house.  Please be here at 13:45.  What is your phone number?  What type of car?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.8561387,
+      "action": "subtask_1",
+      "input": "I need a taxi from finches bed and breakfast to Ian hong house.  Please be here at 13:45.  What is your phone number?  What type of car?",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8561392,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.8561401,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

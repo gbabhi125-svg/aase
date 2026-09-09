@@ -1,0 +1,47 @@
+{
+  "id": "goal_drift_1182",
+  "injected_failure": "goal_drift",
+  "task_id": "mwoz_PMUL0995.json",
+  "task": "I need a place to dine for my upcoming trip.  I can't wait to try some of your local restaurants.",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.83267,
+      "action": "ingest",
+      "input": "I need a place to dine for my upcoming trip.  I can't wait to try some of your local restaurants.",
+      "output": "I need a place to dine for my upcoming trip.  I can't wait to try some of your local restaurants.",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.832671,
+      "action": "subtask_1",
+      "input": "I need a place to dine for my upcoming trip.  I can't wait to try some of your local restaurants.",
+      "output": "completed",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.8326714,
+      "action": "subtask_2",
+      "input": "unrelated tangent introduced by agent",
+      "output": "pursued tangent",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 4,
+      "timestamp": 1787208588.832672,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'original_goal_abandoned'}",
+      "status": "error",
+      "error": "Agent optimized a sub-step and lost the original task objective"
+    }
+  ],
+  "success": false
+}

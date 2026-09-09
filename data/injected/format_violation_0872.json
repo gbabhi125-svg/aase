@@ -1,0 +1,38 @@
+{
+  "id": "format_violation_0872",
+  "injected_failure": "format_violation",
+  "task_id": "mwoz_PMUL0151.json",
+  "task": "Hi, I am currently planning to come to Cambridge, and I was looking for a relatively inexpensive place to eat in the centre.  What would you suggest?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.4713857,
+      "action": "ingest",
+      "input": "Hi, I am currently planning to come to Cambridge, and I was looking for a relatively inexpensive place to eat in the centre.  What would you suggest?",
+      "output": "Hi, I am currently planning to come to Cambridge, and I was looking for a relatively inexpensive place to eat in the centre.  What would you suggest?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 2,
+      "timestamp": 1787208588.4713864,
+      "action": "llm_call",
+      "input": "Hi, I am currently planning to come to Cambridge, and I was looking for a relatively inexpensive place to eat in the centre.  What would you suggest?",
+      "output": "free-text answer instead of required JSON schema",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 3,
+      "timestamp": 1787208588.4713871,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'schema_mismatch'}",
+      "status": "error",
+      "error": "Downstream parser expected structured output"
+    }
+  ],
+  "success": false
+}

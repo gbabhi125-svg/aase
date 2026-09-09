@@ -1,0 +1,47 @@
+{
+  "id": "context_collapse_1431",
+  "injected_failure": "context_collapse",
+  "task_id": "mwoz_PMUL0597.json",
+  "task": "I need to catch a train into Cambridge. Could you help me find one?",
+  "domain": "dialogue",
+  "source": "multiwoz_2.1",
+  "trace": [
+    {
+      "step": 1,
+      "timestamp": 1787208588.3660605,
+      "action": "ingest",
+      "input": "I need to catch a train into Cambridge. Could you help me find one?",
+      "output": "I need to catch a train into Cambridge. Could you help me find one?",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 30,
+      "timestamp": 1787208588.3660612,
+      "action": "context_warning",
+      "input": "70% full",
+      "output": "core instructions may be truncated",
+      "status": "warning",
+      "error": null
+    },
+    {
+      "step": 60,
+      "timestamp": 1787208588.366062,
+      "action": "llm_call",
+      "input": "late step",
+      "output": "tone/format drifted from system prompt",
+      "status": "success",
+      "error": null
+    },
+    {
+      "step": 61,
+      "timestamp": 1787208588.3660624,
+      "action": "validate",
+      "input": "None",
+      "output": "{'valid': False, 'reason': 'instruction_forgotten'}",
+      "status": "error",
+      "error": null
+    }
+  ],
+  "success": false
+}
