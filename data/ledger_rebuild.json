@@ -1,0 +1,10 @@
+{
+  "rebuilt": "2026-09-12 02:23:16",
+  "embedder": "minilm",
+  "records": 323,
+  "skipped_no_text": 0,
+  "self_distance_median": 0.0,
+  "self_distance_max": 0.0,
+  "unrelated_median": 1.5389353036880493,
+  "backup": "memory_store.backup-20260912-022314"
+}

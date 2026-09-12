@@ -85,6 +85,8 @@ def normalise(value):
     v = value.strip().lower().strip('.,;:*`"\'[]() ')
     v = v.replace("-", "_")
 
+    if v in ("none", "n/a", "na", "null", "-", "unknown"):
+        return None
     if v in FAILURE_TYPES:
         return v
     if v in ALIASES:
@@ -107,11 +109,16 @@ def parse_failure_type(verdict):
     """Returns (failure_type, how). failure_type is one of FAILURE_TYPES or 'unknown'."""
     if not verdict:
         return "unknown", "empty verdict"
-
     if is_api_failure(verdict):
-        return "unknown", f"api failure: {is_api_failure(verdict)}"
+        return "unknown", "api failure: {}".format(is_api_failure(verdict))
 
     low = verdict.lower()
+
+    # a ranked verdict leads with PRIMARY
+    if "primary:" in low:
+        p = normalise(parse_field(verdict, "PRIMARY"))
+        if p:
+            return p, "ranked primary"
 
     if "failure_type" in low:
         for line in verdict.split("\n"):
@@ -119,22 +126,75 @@ def parse_failure_type(verdict):
                 raw = line.split(":", 1)[-1] if ":" in line else line
                 ft = normalise(raw)
                 if ft:
-                    return ft, f"label line → '{raw.strip()}'"
+                    return ft, "label line -> '{}'".format(raw.strip())
                 break
 
     for ft, words in KEYWORDS:
         for w in words:
             if w in low:
-                return ft, f"keyword '{w}'"
+                return ft, "keyword '{}'".format(w)
 
     return "unknown", "no label match and no keyword match"
+
+
+def parse_ranked_verdict(verdict):
+    """
+    Parse a ranked verdict.
+
+    Returns a dict:
+        primary      one of FAILURE_TYPES, or 'unknown'
+        alternative  the runner-up, or None
+        confidence   'high' | 'medium' | 'low' | 'unknown'
+        ambiguous    bool — did the Coroner flag the trace as underdetermined
+        how          which rule produced the primary label
+
+    Degrades cleanly: a legacy FAILURE_TYPE verdict, or bare prose, still
+    yields a primary label with alternative=None.
+    """
+    out = {"primary": "unknown", "alternative": None,
+           "confidence": "unknown", "ambiguous": False, "how": "none"}
+
+    if not verdict:
+        out["how"] = "empty verdict"
+        return out
+    tag = is_api_failure(verdict)
+    if tag:
+        out["how"] = "api failure: {}".format(tag)
+        return out
+
+    p = normalise(parse_field(verdict, "PRIMARY"))
+    if p:
+        out["primary"] = p
+        out["how"] = "ranked primary"
+
+    a = normalise(parse_field(verdict, "ALTERNATIVE"))
+    if a and a != out["primary"]:
+        out["alternative"] = a
+
+    conf = parse_field(verdict, "CONFIDENCE").lower()
+    for lv in ("high", "medium", "low"):
+        if lv in conf:
+            out["confidence"] = lv
+            break
+
+    amb = parse_field(verdict, "AMBIGUOUS").lower().strip()
+    out["ambiguous"] = amb.startswith("y") or amb.startswith("true")
+
+    if out["primary"] == "unknown":
+        ft, how = parse_failure_type(verdict)
+        out["primary"] = ft
+        out["how"] = how
+
+    return out
 
 
 def parse_field(verdict, key):
     """Pull a single labelled line, e.g. parse_field(v, 'EVIDENCE')."""
     for line in (verdict or "").split("\n"):
-        if line.strip().lower().startswith(key.lower() + ":"):
-            return line.split(":", 1)[-1].strip()
+        s = line.strip().lstrip("*#- ").strip()
+        if s.lower().startswith(key.lower()):
+            rest = s[len(key):]
+            return rest.lstrip(": \t").strip()
     return ""
 
 

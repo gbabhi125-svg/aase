@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aase"
+version = "0.1.0"
+description = "Adaptive Agent Self-healing Engine"
+requires-python = ">=3.9"
+dependencies = [
+    "groq",
+    "python-dotenv",
+    "chromadb",
+    "sentence-transformers",
+]
+
+[tool.setuptools]
+packages = ["aase", "src", "src.council", "src.surgeon", "src.ledger"]

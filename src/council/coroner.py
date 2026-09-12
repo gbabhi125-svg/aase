@@ -1,6 +1,16 @@
 """
-Coroner Agent — neutral forensic investigator.
-Enforces the closed 7-type label set. API failures are marked, never disguised.
+Coroner Agent — neutral forensic investigator. Casts the final verdict.
+
+Two output modes over the SAME decision procedure:
+
+  decide()         one label. The production path, used by the console.
+  decide_ranked()  a primary label, a runner-up, a confidence level and an
+                   ambiguity flag. Used by the evaluation harness.
+
+The decision procedure is byte-identical between the two. Only the output
+block differs. The ranked mode does not make the Coroner more likely to
+agree with a ground-truth label — it asks the model to surface a runner-up
+it has already considered internally.
 """
 
 import os, sys
@@ -10,13 +20,10 @@ from src.llm import complete, safe_complete, LLMError
 
 VALID = ", ".join(FAILURE_TYPES)
 
-CORONER_PROMPT = f"""You are the Coroner in AASE. You are NEUTRAL — you take no side.
+DEFINITIONS = f"""You are the Coroner in AASE. You are NEUTRAL — you take no side.
 
-You MUST classify the failure as EXACTLY ONE of these seven labels, spelled exactly:
+You classify using ONLY these seven labels, spelled exactly:
 {VALID}
-
-Inventing any other label is an invalid response. If evidence is thin, choose the
-closest of the seven — never write "ghost", "unknown", "other", or "none".
 
 DEFINITIONS:
 1. hallucination — agent stated facts/numbers NO tool returned, or claims it did
@@ -36,8 +43,6 @@ DEFINITIONS:
 
 CRITICAL DISAMBIGUATION:
 - If execution CRASHED or was KILLED by a limit → memory_overflow, NOT goal_drift.
-  Bulk processing ending in a hard limit error is memory_overflow even if the task
-  text looks unrelated to the processing steps.
 - context_collapse = degraded but still running. memory_overflow = stopped dead.
 
 DECISION ORDER — stop at the first match:
@@ -47,12 +52,47 @@ DECISION ORDER — stop at the first match:
 4 behaviour degraded after a context warning → context_collapse
 5 final output violates an explicit task constraint → goal_drift
 6 wrong tool or invalid action format → tool_misuse
-7 stated values no tool returned → hallucination
+7 stated values no tool returned → hallucination"""
+
+SINGLE_PROMPT = DEFINITIONS + """
+
+Inventing any other label is invalid. If evidence is thin, choose the closest
+of the seven — never write "ghost", "unknown", "other" or "none".
 
 BE CONCISE. Four short lines.
 
-OUTPUT — line 1 must be exactly this, using one of the seven labels above:
+OUTPUT — line 1 must be exactly this format:
 FAILURE_TYPE: <label>
+EVIDENCE: [one sentence, cite a step number]
+ROOT_CAUSE: [one sentence]
+FIX: [one clause to add to the agent's system prompt]"""
+
+RANKED_PROMPT = DEFINITIONS + """
+
+Apply the decision order exactly as above to choose PRIMARY. Do not change
+your primary judgement to hedge.
+
+Then, separately, report what you would have chosen had your primary reading
+been wrong. Many real traces describe a mistake AND its consequence in the
+same sentence — for example code that failed repeatedly until a step limit
+was hit. The decision order forces one choice; ALTERNATIVE records the other
+defensible reading.
+
+CONFIDENCE reflects how cleanly the decision order resolved:
+  high    one rule fired unambiguously, no serious competing reading
+  medium  one rule fired but another was arguable
+  low     two rules could each be defended on this evidence
+
+AMBIGUOUS is yes only when the trace genuinely supports two different root
+causes, not merely when you are uncertain.
+
+BE CONCISE.
+
+OUTPUT — exactly this format, in this order:
+PRIMARY: <label>
+ALTERNATIVE: <label, or none>
+CONFIDENCE: <high|medium|low>
+AMBIGUOUS: <yes|no>
 EVIDENCE: [one sentence, cite a step number]
 ROOT_CAUSE: [one sentence]
 FIX: [one clause to add to the agent's system prompt]"""
@@ -70,15 +110,14 @@ FALLBACK = {
 
 class CoronerAgent:
 
+    # ── production path — unchanged ───────────────────────────────────
     def decide(self, trace_str, prosecutor_arg, defender_arg, failure_type):
-        # Abort if either upstream agent failed — do not fabricate a verdict.
         for arg, who in ((prosecutor_arg, "prosecutor"), (defender_arg, "defender")):
             if isinstance(arg, str) and arg.startswith("__"):
                 tag = arg[2:].split("__")[0] if "__" in arg[2:] else "API_ERROR"
                 return (f"FAILURE_TYPE: __{tag}__\n"
                         f"EVIDENCE: council aborted — {who} did not run\n"
-                        f"ROOT_CAUSE: {tag}\n"
-                        f"FIX: none\n{arg[:300]}")
+                        f"ROOT_CAUSE: {tag}\nFIX: none\n{arg[:300]}")
 
         user = (f"TRACE:\n{trace_str}\n\n"
                 f"PROSECUTOR: {prosecutor_arg[:600]}\n\n"
@@ -87,14 +126,12 @@ class CoronerAgent:
                 f"followed by one of: {VALID}. Be brief.")
 
         try:
-            out = complete(CORONER_PROMPT, user, 500)
+            out = complete(SINGLE_PROMPT, user, 500)
         except LLMError as e:
-            return (f"FAILURE_TYPE: __{e.tag}__\n"
-                    f"EVIDENCE: council did not run\n"
-                    f"ROOT_CAUSE: {e.tag}\n"
-                    f"FIX: none\nError: {e.message[:400]}")
+            fix = FALLBACK.get(failure_type, "Add an explicit guard for this failure mode.")
+            return (f"FAILURE_TYPE: __{e.tag}__\nEVIDENCE: council did not run\n"
+                    f"ROOT_CAUSE: {e.tag}\nFIX: {fix}\nError: {e.message[:400]}")
 
-        # Validate label; retry once if the model invented a category.
         label_line = ""
         for line in out.split("\n"):
             if "failure_type" in line.lower():
@@ -102,13 +139,10 @@ class CoronerAgent:
                 break
 
         if normalise(label_line) is None:
-            retry_user = (
-                f"{user}\n\n"
-                f"YOUR PREVIOUS ANSWER:\n{out}\n\n"
-                f"'{label_line.strip()}' is NOT a valid label. "
-                f"Re-answer using EXACTLY one of: {VALID}. "
-                f"Line 1 must be FAILURE_TYPE: <label>. Keep the same evidence and fix.")
-            out2 = safe_complete(CORONER_PROMPT, retry_user, 500, "Coroner")
+            retry_user = (f"{user}\n\nYOUR PREVIOUS ANSWER:\n{out}\n\n"
+                          f"'{label_line.strip()}' is NOT a valid label. Re-answer using "
+                          f"EXACTLY one of: {VALID}. Line 1 must be FAILURE_TYPE: <label>.")
+            out2 = safe_complete(SINGLE_PROMPT, retry_user, 500, "Coroner")
             if not out2.startswith("__"):
                 for line in out2.split("\n"):
                     if "failure_type" in line.lower():
@@ -116,5 +150,29 @@ class CoronerAgent:
                         if normalise(v):
                             return out2
                         break
-
         return out
+
+    # ── evaluation path — ranked with confidence ─────────────────────
+    def decide_ranked(self, trace_str, prosecutor_arg, defender_arg, failure_type):
+        for arg, who in ((prosecutor_arg, "prosecutor"), (defender_arg, "defender")):
+            if isinstance(arg, str) and arg.startswith("__"):
+                tag = arg[2:].split("__")[0] if "__" in arg[2:] else "API_ERROR"
+                return (f"PRIMARY: __{tag}__\nALTERNATIVE: none\n"
+                        f"CONFIDENCE: unknown\nAMBIGUOUS: no\n"
+                        f"EVIDENCE: council aborted — {who} did not run\n"
+                        f"ROOT_CAUSE: {tag}\nFIX: none\n{arg[:300]}")
+
+        user = (f"TRACE:\n{trace_str}\n\n"
+                f"PROSECUTOR: {prosecutor_arg[:600]}\n\n"
+                f"DEFENDER: {defender_arg[:600]}\n\n"
+                f"Apply the decision order for PRIMARY, then report ALTERNATIVE, "
+                f"CONFIDENCE and AMBIGUOUS as specified. Use only: {VALID}.")
+
+        try:
+            return complete(RANKED_PROMPT, user, 600)
+        except LLMError as e:
+            fix = FALLBACK.get(failure_type, "Add an explicit guard for this failure mode.")
+            return (f"PRIMARY: __{e.tag}__\nALTERNATIVE: none\n"
+                    f"CONFIDENCE: unknown\nAMBIGUOUS: no\n"
+                    f"EVIDENCE: council did not run\nROOT_CAUSE: {e.tag}\n"
+                    f"FIX: {fix}\nError: {e.message[:400]}")
