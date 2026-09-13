@@ -1,0 +1,27 @@
+{
+  "latency_samples": 268,
+  "latency_min_s": 0.3,
+  "latency_median_s": 18.6,
+  "latency_p90_s": 34.2,
+  "latency_max_s": 61.5,
+  "calls": {
+    "diagnosis": 3,
+    "repair_cycle": 4,
+    "with_retry": 6,
+    "override": 1,
+    "ledger_hit": 0
+  },
+  "tokens_per_call_est": 1660,
+  "tokens_per_cycle_est": 9960,
+  "price_per_m_usd": null,
+  "deployment_illustration": {
+    "tasks_per_day": 10000,
+    "failure_rate": 0.03,
+    "repeat_rate": 0.7,
+    "calls_without_ledger": 1200,
+    "calls_with_ledger": 570,
+    "reduction_pct": 52.5
+  },
+  "note": "model-call counts are exact; token counts are estimates from observed payload sizes; deployment figures are an illustration",
+  "generated": "2026-09-12 23:58:13"
+}

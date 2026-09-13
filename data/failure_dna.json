@@ -1,0 +1,1672 @@
+{
+  "n": 323,
+  "method": "pca",
+  "dims": 384,
+  "counts": {
+    "tool_misuse": 47,
+    "reasoning_loop": 42,
+    "context_collapse": 41,
+    "goal_drift": 43,
+    "prompt_injection": 40,
+    "memory_overflow": 40,
+    "hallucination": 70
+  },
+  "spreads": {
+    "tool_misuse": 0.3537,
+    "reasoning_loop": 0.2816,
+    "context_collapse": 0.2854,
+    "goal_drift": 0.2642,
+    "prompt_injection": 0.2961,
+    "memory_overflow": 0.2021,
+    "hallucination": 0.1109
+  },
+  "overlaps": [
+    {
+      "a": "tool_misuse",
+      "b": "reasoning_loop",
+      "separation": 0.437
+    },
+    {
+      "a": "reasoning_loop",
+      "b": "context_collapse",
+      "separation": 0.142
+    },
+    {
+      "a": "context_collapse",
+      "b": "reasoning_loop",
+      "separation": 0.14
+    },
+    {
+      "a": "goal_drift",
+      "b": "tool_misuse",
+      "separation": 0.603
+    },
+    {
+      "a": "prompt_injection",
+      "b": "reasoning_loop",
+      "separation": 0.207
+    },
+    {
+      "a": "memory_overflow",
+      "b": "context_collapse",
+      "separation": 0.357
+    }
+  ],
+  "points": [
+    {
+      "x": 0.3569,
+      "y": -0.0471,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.3478,
+      "y": -0.0286,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.0608,
+      "y": 0.3722,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1378,
+      "y": -0.512,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.2116,
+      "y": -0.0143,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.3647,
+      "y": -0.0349,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.2856,
+      "y": -0.0037,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1426,
+      "y": 0.2906,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1664,
+      "y": -0.525,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.2041,
+      "y": -0.0152,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1488,
+      "y": -0.5547,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.064,
+      "y": 0.3638,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.0473,
+      "y": 0.3552,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.3103,
+      "y": 0.0154,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.107,
+      "y": -0.4655,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.0608,
+      "y": 0.3722,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.0068,
+      "y": 0.2369,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.142,
+      "y": 0.308,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.0478,
+      "y": 0.1861,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1399,
+      "y": -0.4619,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.3064,
+      "y": -0.049,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.2568,
+      "y": -0.1124,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.1164,
+      "y": -0.5164,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3872,
+      "y": -0.1022,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.0159,
+      "y": 0.2183,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.1353,
+      "y": 0.2666,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.0212,
+      "y": 0.2225,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.1356,
+      "y": -0.4642,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.0575,
+      "y": -0.4547,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.078,
+      "y": 0.2429,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3234,
+      "y": -0.0396,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.2472,
+      "y": -0.1074,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3818,
+      "y": -0.1069,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.1176,
+      "y": -0.4793,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3861,
+      "y": -0.1031,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.1205,
+      "y": 0.0731,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.1114,
+      "y": 0.0708,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.1391,
+      "y": 0.2589,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3742,
+      "y": -0.1263,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3773,
+      "y": -0.1369,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.0476,
+      "y": 0.2809,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.2765,
+      "y": 0.0452,
+      "label": "context_collapse"
+    },
+    {
+      "x": -0.1109,
+      "y": -0.5205,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.0681,
+      "y": 0.2588,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3627,
+      "y": -0.0293,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.371,
+      "y": -0.0594,
+      "label": "context_collapse"
+    },
+    {
+      "x": -0.0546,
+      "y": -0.4591,
+      "label": "context_collapse"
+    },
+    {
+      "x": -0.0798,
+      "y": -0.4535,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.2676,
+      "y": -0.0176,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3758,
+      "y": -0.0679,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.2676,
+      "y": -0.0198,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.0707,
+      "y": 0.2467,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.1094,
+      "y": 0.3761,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.2705,
+      "y": -0.0457,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3665,
+      "y": -0.0405,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3107,
+      "y": 0.0482,
+      "label": "context_collapse"
+    },
+    {
+      "x": -0.1454,
+      "y": -0.5016,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3683,
+      "y": -0.0343,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3133,
+      "y": 0.0053,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.0175,
+      "y": 0.3781,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.0336,
+      "y": 0.2373,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.0408,
+      "y": 0.4286,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.1209,
+      "y": -0.3763,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0361,
+      "y": 0.2296,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.1447,
+      "y": -0.3538,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.2336,
+      "y": 0.0344,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0383,
+      "y": 0.3387,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.0231,
+      "y": 0.4463,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0522,
+      "y": 0.3223,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0529,
+      "y": 0.4117,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.291,
+      "y": 0.0516,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3003,
+      "y": 0.1538,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3452,
+      "y": 0.0016,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3478,
+      "y": 0.0425,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.2603,
+      "y": 0.0761,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3438,
+      "y": 0.0491,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.2283,
+      "y": 0.0545,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.054,
+      "y": 0.3535,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0383,
+      "y": 0.3387,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3364,
+      "y": 0.0213,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.2622,
+      "y": -0.0706,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.167,
+      "y": 0.2159,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.2808,
+      "y": -0.0928,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.0678,
+      "y": -0.5306,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3352,
+      "y": -0.0152,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3443,
+      "y": -0.0009,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.043,
+      "y": -0.4666,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3998,
+      "y": -0.1241,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.0761,
+      "y": -0.4421,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.1168,
+      "y": 0.1954,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.1329,
+      "y": -0.57,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.2788,
+      "y": -0.0937,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.2658,
+      "y": -0.0704,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3432,
+      "y": -0.0681,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.0835,
+      "y": 0.2886,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.0495,
+      "y": -0.5095,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3302,
+      "y": -0.0431,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.4026,
+      "y": -0.1149,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.0458,
+      "y": -0.4313,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.0634,
+      "y": 0.3328,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3658,
+      "y": -0.0496,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.2699,
+      "y": -0.0539,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.0634,
+      "y": 0.2444,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3745,
+      "y": -0.0788,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.2995,
+      "y": 0.1003,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3296,
+      "y": 0.0854,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3631,
+      "y": -0.07,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3482,
+      "y": 0.0566,
+      "label": "memory_overflow"
+    },
+    {
+      "x": -0.0858,
+      "y": -0.4929,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.2696,
+      "y": -0.0376,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.0066,
+      "y": 0.3435,
+      "label": "memory_overflow"
+    },
+    {
+      "x": -0.1353,
+      "y": -0.4285,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.054,
+      "y": 0.1724,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3205,
+      "y": 0.0146,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3274,
+      "y": 0.0635,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.2626,
+      "y": -0.0645,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.0745,
+      "y": 0.2328,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3403,
+      "y": 0.0532,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3631,
+      "y": -0.0813,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3546,
+      "y": 0.0084,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3569,
+      "y": -0.0471,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.3478,
+      "y": -0.0286,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.0608,
+      "y": 0.3722,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1378,
+      "y": -0.512,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.2116,
+      "y": -0.0143,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.3647,
+      "y": -0.0349,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.2856,
+      "y": -0.0037,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1426,
+      "y": 0.2906,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1664,
+      "y": -0.525,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.2041,
+      "y": -0.0152,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1488,
+      "y": -0.5547,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.064,
+      "y": 0.3638,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.0473,
+      "y": 0.3552,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.3103,
+      "y": 0.0154,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.107,
+      "y": -0.4655,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.0608,
+      "y": 0.3722,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.0068,
+      "y": 0.2369,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.142,
+      "y": 0.308,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.0478,
+      "y": 0.1861,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1399,
+      "y": -0.4619,
+      "label": "tool_misuse"
+    },
+    {
+      "x": 0.3064,
+      "y": -0.049,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.2568,
+      "y": -0.1124,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.1164,
+      "y": -0.5164,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3872,
+      "y": -0.1022,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.0159,
+      "y": 0.2183,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.1353,
+      "y": 0.2666,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.0212,
+      "y": 0.2225,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.1356,
+      "y": -0.4642,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.0575,
+      "y": -0.4547,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.078,
+      "y": 0.2429,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3234,
+      "y": -0.0396,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.2472,
+      "y": -0.1074,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3818,
+      "y": -0.1069,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.1176,
+      "y": -0.4793,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3861,
+      "y": -0.1031,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.1205,
+      "y": 0.0731,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.1114,
+      "y": 0.0708,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.1391,
+      "y": 0.2589,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3742,
+      "y": -0.1263,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.3773,
+      "y": -0.1369,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": 0.0476,
+      "y": 0.2809,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.2765,
+      "y": 0.0452,
+      "label": "context_collapse"
+    },
+    {
+      "x": -0.1109,
+      "y": -0.5205,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.0681,
+      "y": 0.2588,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3627,
+      "y": -0.0293,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.371,
+      "y": -0.0594,
+      "label": "context_collapse"
+    },
+    {
+      "x": -0.0546,
+      "y": -0.4591,
+      "label": "context_collapse"
+    },
+    {
+      "x": -0.0798,
+      "y": -0.4535,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.2676,
+      "y": -0.0176,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3758,
+      "y": -0.0679,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.2676,
+      "y": -0.0198,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.0707,
+      "y": 0.2467,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.1094,
+      "y": 0.3761,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.2705,
+      "y": -0.0457,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3665,
+      "y": -0.0405,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3107,
+      "y": 0.0482,
+      "label": "context_collapse"
+    },
+    {
+      "x": -0.1454,
+      "y": -0.5016,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3683,
+      "y": -0.0343,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.3133,
+      "y": 0.0053,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.0175,
+      "y": 0.3781,
+      "label": "context_collapse"
+    },
+    {
+      "x": 0.0336,
+      "y": 0.2373,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.0408,
+      "y": 0.4286,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.1209,
+      "y": -0.3763,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0361,
+      "y": 0.2296,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.1447,
+      "y": -0.3538,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.2336,
+      "y": 0.0344,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0383,
+      "y": 0.3387,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.0231,
+      "y": 0.4463,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0522,
+      "y": 0.3223,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0529,
+      "y": 0.4117,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.291,
+      "y": 0.0516,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3003,
+      "y": 0.1538,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3452,
+      "y": 0.0016,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3478,
+      "y": 0.0425,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.2603,
+      "y": 0.0761,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3438,
+      "y": 0.0491,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.2283,
+      "y": 0.0545,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.054,
+      "y": 0.3535,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.0383,
+      "y": 0.3387,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.3364,
+      "y": 0.0213,
+      "label": "goal_drift"
+    },
+    {
+      "x": 0.2622,
+      "y": -0.0706,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.167,
+      "y": 0.2159,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.2808,
+      "y": -0.0928,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.0678,
+      "y": -0.5306,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3352,
+      "y": -0.0152,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3443,
+      "y": -0.0009,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.043,
+      "y": -0.4666,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3998,
+      "y": -0.1241,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.0761,
+      "y": -0.4421,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.1168,
+      "y": 0.1954,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.1329,
+      "y": -0.57,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.2788,
+      "y": -0.0937,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.2658,
+      "y": -0.0704,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3432,
+      "y": -0.0681,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.0835,
+      "y": 0.2886,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.0495,
+      "y": -0.5095,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3302,
+      "y": -0.0431,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.4026,
+      "y": -0.1149,
+      "label": "prompt_injection"
+    },
+    {
+      "x": -0.0458,
+      "y": -0.4313,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.0634,
+      "y": 0.3328,
+      "label": "prompt_injection"
+    },
+    {
+      "x": 0.3658,
+      "y": -0.0496,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.2699,
+      "y": -0.0539,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.0634,
+      "y": 0.2444,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3745,
+      "y": -0.0788,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.2995,
+      "y": 0.1003,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3296,
+      "y": 0.0854,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3631,
+      "y": -0.07,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3482,
+      "y": 0.0566,
+      "label": "memory_overflow"
+    },
+    {
+      "x": -0.0858,
+      "y": -0.4929,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.2696,
+      "y": -0.0376,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.0066,
+      "y": 0.3435,
+      "label": "memory_overflow"
+    },
+    {
+      "x": -0.1353,
+      "y": -0.4285,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.054,
+      "y": 0.1724,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3205,
+      "y": 0.0146,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3274,
+      "y": 0.0635,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.2626,
+      "y": -0.0645,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.0745,
+      "y": 0.2328,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3403,
+      "y": 0.0532,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3631,
+      "y": -0.0813,
+      "label": "memory_overflow"
+    },
+    {
+      "x": 0.3546,
+      "y": 0.0084,
+      "label": "memory_overflow"
+    },
+    {
+      "x": -0.0945,
+      "y": -0.0191,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4686,
+      "y": -0.0559,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5857,
+      "y": 0.1785,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4428,
+      "y": 0.0311,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5098,
+      "y": 0.0739,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4343,
+      "y": 0.0541,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4315,
+      "y": 0.0477,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5589,
+      "y": 0.0819,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4337,
+      "y": 0.09,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4114,
+      "y": -0.0761,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5128,
+      "y": 0.0182,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5511,
+      "y": 0.0493,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5381,
+      "y": 0.0885,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5821,
+      "y": 0.0167,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.6256,
+      "y": 0.1889,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5087,
+      "y": -0.0157,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4285,
+      "y": 0.038,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4659,
+      "y": 0.1608,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.3002,
+      "y": 0.2112,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4686,
+      "y": -0.0559,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.6033,
+      "y": 0.0917,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5529,
+      "y": 0.0604,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4309,
+      "y": 0.0768,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5198,
+      "y": 0.0792,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5454,
+      "y": -0.0831,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.3061,
+      "y": 0.1511,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4464,
+      "y": 0.0504,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.3498,
+      "y": 0.0192,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.6298,
+      "y": 0.0342,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5548,
+      "y": 0.0027,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.7199,
+      "y": 0.1179,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.6347,
+      "y": 0.1511,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.3682,
+      "y": 0.0728,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4612,
+      "y": -0.0588,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5418,
+      "y": 0.0668,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.3474,
+      "y": 0.0365,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.3982,
+      "y": 0.2129,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.6186,
+      "y": -0.0313,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5666,
+      "y": 0.1229,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5665,
+      "y": -0.0159,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4117,
+      "y": 0.1327,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4299,
+      "y": -0.0042,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5857,
+      "y": 0.1785,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.443,
+      "y": 0.0548,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.491,
+      "y": -0.0014,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4615,
+      "y": -0.0025,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4611,
+      "y": 0.1867,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5152,
+      "y": 0.0501,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.3963,
+      "y": 0.1305,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4882,
+      "y": -0.0075,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4651,
+      "y": -0.0268,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.606,
+      "y": 0.0574,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.281,
+      "y": 0.1469,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.3469,
+      "y": -0.0359,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4524,
+      "y": 0.0992,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4664,
+      "y": 0.0167,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5529,
+      "y": 0.0604,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4169,
+      "y": -0.0698,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4848,
+      "y": 0.1018,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.1273,
+      "y": 0.0476,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4497,
+      "y": 0.0878,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.501,
+      "y": -0.0792,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4892,
+      "y": -0.0162,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5098,
+      "y": 0.0739,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5757,
+      "y": 0.0282,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5663,
+      "y": -0.0018,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5474,
+      "y": 0.0858,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.5621,
+      "y": 0.0398,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.4687,
+      "y": 0.1504,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.6724,
+      "y": 0.0902,
+      "label": "hallucination"
+    },
+    {
+      "x": -0.2119,
+      "y": 0.1508,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.2173,
+      "y": -0.066,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.253,
+      "y": 0.1507,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.3775,
+      "y": 0.0462,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.3328,
+      "y": 0.0154,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.3405,
+      "y": 0.0047,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.253,
+      "y": 0.1507,
+      "label": "tool_misuse"
+    },
+    {
+      "x": -0.1284,
+      "y": -0.039,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.2229,
+      "y": -0.0618,
+      "label": "reasoning_loop"
+    },
+    {
+      "x": -0.1279,
+      "y": -0.2546,
+      "label": "context_collapse"
+    },
+    {
+      "x": -0.2571,
+      "y": -0.0088,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.3032,
+      "y": -0.0186,
+      "label": "goal_drift"
+    },
+    {
+      "x": -0.2571,
+      "y": -0.0088,
+      "label": "goal_drift"
+    }
+  ]
+}
